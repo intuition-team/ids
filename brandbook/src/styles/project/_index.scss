@@ -26,3 +26,11 @@ body {
   height: 5em;
   width: 100%;
 }
+
+.theme-button {
+  position: fixed;
+  top: 1em;
+  right: 1em;
+  cursor: pointer;
+  z-index: 999999;
+}

@@ -1,12 +1,11 @@
 .wds {
   a {
-    color: $wds__link-text-color;
+    color: $wds__link-color;
     border-bottom: 1px solid $wds__link-underline-color;
     text-decoration: none;
 
     &:hover {
-      filter: $wds__link-hover-filter;
-      color: $wds__link-text-hover-color;
+      color: $wds__link-hover-color;
       border-bottom: 1px solid $wds__link-underline-hover-color;
     }
   }
@@ -40,7 +39,8 @@
     // Стиль зачеркивания заголовков маркером
     mark {
       background: none;
-      box-shadow: inset 0 -0.15em white, inset 0 -0.5em $wds__mark-color;
+      box-shadow: inset 0 -0.15em $wds__background-color,
+        inset 0 -0.5em $wds__mark-color;
     }
   }
 
@@ -199,6 +199,6 @@
     display: inline-block;
     padding: $wds__micro-padding;
     background-color: $wds__accent-color;
-    color: $wds__text-on-dark-color;
+    color: $wds__on-accent-color;
   }
 }

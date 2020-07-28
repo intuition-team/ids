@@ -4,7 +4,7 @@
   top: 0;
   left: 0;
   bottom: 0;
-  border-right: 1px solid rgba(0, 0, 50, 0.1);
+  border-right: 1px solid $wds__devider-color;
   @include wds__default-padding;
 
   .system__sidebar-logos {
@@ -44,7 +44,7 @@ h1.huge-wds-title {
   span {
     display: inline-block;
     position: relative;
-    color: $wds__text-on-dark-color;
+    color: $wds__on-accent-color;
 
     &::before {
       content: '';
@@ -68,7 +68,7 @@ h1.huge-wds-title {
     margin-bottom: 2em;
     display: flex;
     flex-wrap: wrap;
-    border-top: 1px solid $wds__light-text-color;
+    border-top: 1px solid $wds__devider-color;
     padding-top: 0.5em;
 
     .rule-no {

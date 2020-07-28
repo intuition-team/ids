@@ -1,39 +1,91 @@
 // Базовые цвета
-
-$wds__main-color: rgb(255, 221, 0) !default; // Основной
-$wds__secondary-color: none !default; // Дополнительный
-$wds__accent-color: rgb(5, 5, 5) !default; // Акцентный UI
-$wds__background-color: rgb(255, 255, 255) !default; // Фон
-$wds__text-color: rgb(5, 5, 5) !default; // Цвет текста
-$wds__light-text-color: rgba($wds__text-color, 0.3); // Линия?
-$wds__surface-color: rgb(245, 245, 245) !default; // Поверхность (она же плашка)
-$wds__error-color: rgb(240, 84, 95) !default; // Ошибка
-$wds__success-color: rgb(84, 180, 140) !default; // Саксесс
-$wds__mark-color: rgb(255, 248, 128) !default; // Маркер
-$wds__button-color: rgb(5, 5, 5) !default; // Кнопка
-$wds__code-color: rgb(200, 0, 0) !default; // Код
+$wds__background-color: rgb(255, 255, 255) !default; // фон
+$wds__text-color: rgb(5, 5, 5) !default; // цвет текста
+$wds__main-color: rgb(255, 221, 0) !default; // основной
+$wds__secondary-color: none !default; // дополнительный
+$wds__accent-color: rgb(0, 0, 0) !default; // акцентный UI
+$wds__surface-color: rgb(245, 245, 245) !default; // поверхность (она же плашка)
+$wds__error-color: rgb(240, 84, 95) !default; // ошибка
+$wds__success-color: rgb(84, 180, 140) !default; // саксесс
+$wds__mark-color: rgb(255, 248, 128) !default; // маркер
+$wds__code-color: rgb(200, 0, 0) !default; // код
 
 // Контент
-
-$wds__on-main-color: rgb(5, 5, 5) !default; // На основном цвете
-$wds__on-seccondary-color: none !default; // На дополнительном цвете
-$wds__on-tint-color: rgb(255, 255, 255) !default; // На Акцентном цвете
-$wds__on-background-color: rgb(5, 5, 5) !default; // На фоне
-$wds__text-on-dark-color: rgb(255, 255, 255) !default; // Текст в дарк моде
-$wds__text-on-main-color: rgba(0, 0, 0, 0.97) !default; // Текст в лайт моде
-$wds__on-surface-color: rgb(5, 5, 5) !default; // Текст на поверхности (плашке)
-$wds__on-error-color: rgb(5, 5, 5) !default; // На ошибке
-$wds__on-error-color: rgb(255, 255, 255) !default; // На саксессе
+$wds__on-main-color: rgb(5, 5, 5) !default; // на основном цвете
+$wds__on-seccondary-color: none !default; // на дополнительном цвете
+$wds__on-accent-color: rgb(255, 255, 255) !default; // на акцентном цвете
+$wds__on-background-color: rgb(5, 5, 5) !default; // на фоне
+$wds__on-surface-color: rgb(5, 5, 5) !default; // на поверхности (плашке)
+$wds__on-error-color: rgb(255, 255, 255) !default; // на ошибке
+$wds__on-success-color: rgb(255, 255, 255) !default; // на саксессе
 
 // Цвета элементов
+$wds__devider-color: rgba(5, 5, 5, 0.1) !default; // разделительная линия
+$wds__link-color: rgb(0, 100, 240) !default; // ссылка
+$wds__link-hover-color: rgb(0, 220, 0) !default; // ховер ссылки
+$wds__link-underline-color: rgba($wds__link-color, 0.2); // цвет подчеркивания ссылки
+$wds__link-underline-hover-color: rgba($wds__link-hover-color, 0.2); // подчеркивание ховера ссылки
+$wds__button-color: $wds__accent-color; // кнопка
+$wds__button-hover-color: rgba($wds__button-color, 0.8); // ховер кнопки
+$wds__button-text-color: $wds__on-accent-color; // текст на кнопке
+$wds__button-disabled-color: rgba($wds__button-color, 0.3); // заблокированная кнопка
 
-$wds__link-color: rgb(0, 100, 240) !default; // Ссылка
-$wds__link-hover-color: rgb(0, 220, 0) !default; // Ховер ссылки
-$wds__link-hover-filter: none !default; // Хз что это, уточнить
-$wds__link-text-color: rgba($wds__link-color, 1);
-$wds__link-underline-color: rgba($wds__link-color, 0.2);
-$wds__link-text-hover-color: rgba($wds__link-hover-color, 1);
-$wds__link-underline-hover-color: rgba($wds__link-hover-color, 0.2);
-$wds__button-text-color: $wds__text-on-dark-color;
-$wds__button-hover-color: rgba($wds__button-color, 0.8);
-$wds__button-disabled-color: rgba($wds__button-color, 0.3);
+// Дарк мод
+$wds__dark-background-color: rgb(40, 40, 40); // +
+$wds__dark-text-color: rgb(255, 255, 255); // +
+$wds__dark-main-color: rgb(255, 221, 0); // +
+$wds__dark-secondary-color: none; // −
+$wds__dark-accent-color: rgb(255, 255, 255); // +
+$wds__dark-surface-color: rgb(60, 60, 60); // +
+$wds__dark-error-color: rgb(240, 84, 95); // − нет компонента для отладки цвета
+$wds__dark-success-color: rgb(84, 180, 140); // − нет компонента для отладки цвета
+$wds__dark-mark-color: rgb(189, 180, 0); // +
+$wds__dark-code-color: rgb(200, 50, 50); // +
+
+$wds__dark-on-main-color: rgb(5, 5, 5); // +
+$wds__dark-on-seccondary-color: none; // −
+$wds__dark-on-accent-color: rgb(40, 40, 40); // +
+$wds__dark-on-background-color: rgb(255, 255, 255); // +
+$wds__dark-on-surface-color: rgb(255, 255, 255); // +
+$wds__dark-on-error-color: rgb(255, 255, 255); // +
+$wds__dark-on-success-color: rgb(255, 255, 255); // +
+
+$wds__dark-devider-color: rgba(255, 255, 255, 0.1); // +
+$wds__dark-link-color: rgb(80, 150, 255); // +
+$wds__dark-link-hover-color: rgb(100, 230, 100); // +
+$wds__dark-link-underline-color: rgba($wds__dark-link-color, 0.3); // +
+$wds__dark-link-underline-hover-color: rgba($wds__dark-link-hover-color, 0.3); // +
+$wds__dark-button-color: $wds__dark-accent-color; // +
+$wds__dark-button-hover-color: rgba($wds__dark-button-color, 0.8); // +
+$wds__dark-button-text-color: $wds__dark-on-accent-color; // +
+$wds__dark-button-disabled-color: rgba($wds__dark-button-color, 0.3); // +
+
+// Временный хардкод для ручного переключения мода дарк на лайт (расскоментить строки ниже)
+// $wds__background-color: $wds__dark-background-color;
+// $wds__text-color: $wds__dark-text-color;
+// $wds__main-color: $wds__dark-main-color;
+// $wds__secondary-color: $wds__dark-secondary-color;
+// $wds__accent-color: $wds__dark-accent-color;
+// $wds__surface-color: $wds__dark-surface-color;
+// $wds__error-color: $wds__dark-error-color;
+// $wds__success-color: $wds__dark-success-color;
+// $wds__mark-color: $wds__dark-mark-color;
+// $wds__code-color: $wds__dark-code-color;
+
+// $wds__on-main-color: $wds__dark-on-main-color;
+// $wds__on-seccondary-color: $wds__dark-on-seccondary-color;
+// $wds__on-accent-color: $wds__dark-on-accent-color;
+// $wds__on-background-color: $wds__dark-on-background-color;
+// $wds__on-surface-color: $wds__dark-on-surface-color;
+// $wds__on-error-color: $wds__dark-on-error-color;
+// $wds__on-success-color: $wds__dark-on-success-color;
+
+// $wds__devider-color: $wds__dark-devider-color;
+// $wds__link-color: $wds__dark-link-color;
+// $wds__link-hover-color: $wds__dark-link-hover-color;
+// $wds__link-underline-color: $wds__dark-link-underline-color;
+// $wds__link-underline-hover-color: $wds__dark-link-underline-hover-color;
+// $wds__button-color: $wds__dark-button-color;
+// $wds__button-hover-color: $wds__dark-button-hover-color;
+// $wds__button-text-color: $wds__dark-button-text-color;
+// $wds__button-disabled-color: $wds__dark-button-disabled-color;

@@ -15,8 +15,8 @@
     "build-cleancss": "cleancss -o dist/wds.min.css dist/wds.css",
     "build-sass": "node-sass --output-style expanded --source-map true wds.scss dist/wds.css",
     "clean": "rimraf dist",
-    "start": "npm run build-sass -- --watch",
-    "dev": "(cd brandbook && yarn start);"
+    "dev": "npm run build-sass -- --watch",
+    "start": "(cd brandbook && yarn start)"
   },
   "devDependencies": {
     "autoprefixer": "^9.8.0",
