@@ -1,0 +1,31 @@
+{
+  "name": "wds",
+  "version": "0.4.0",
+  "description": "Winvestor Design System",
+  "author": {
+    "name": "Intuition",
+    "url": "https://intuition.team"
+  },
+  "license": "MIT",
+  "repository": "https://gitlab.com/mkalygin/wds.git",
+  "main": "wds.scss",
+  "scripts": {
+    "build": "npm run build-sass && npm run build-autoprefix && npm run build-cleancss",
+    "build-autoprefix": "postcss --use autoprefixer --map false --output dist/wds.css dist/wds.css",
+    "build-cleancss": "cleancss -o dist/wds.min.css dist/wds.css",
+    "build-sass": "node-sass --output-style expanded --source-map true wds.scss dist/wds.css",
+    "clean": "rimraf dist",
+    "start": "npm run build-sass -- --watch",
+    "dev": "(cd brandbook && yarn start);"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.8.0",
+    "clean-css-cli": "^4.3.0",
+    "node-sass": "^4.14.1",
+    "postcss-cli": "^7.1.1",
+    "rimraf": "^3.0.2"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
+}

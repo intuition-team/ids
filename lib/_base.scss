@@ -1,0 +1,7 @@
+@function image-path($path) {
+  @return '#{$wds__images-path}/#{$path}';
+}
+
+img {
+  border-radius: $wds__radius-XS;
+}

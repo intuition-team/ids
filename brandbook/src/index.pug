@@ -1,0 +1,26 @@
+extends pages/layouts/main.pug
+
+block header
+  include pages/partials/design-header.pug
+
+block content
+  .plug
+  
+  .wds__wrapper
+    .wds__text
+      .wds__section
+        p Эти материалы помогут задизайнить любой продукт <a href="https://winvestor.ru">Винвестора</a> или информацию о Винвесторе.
+        a.section-link(href="/brand.pug")
+          h3 Всем: Платформа бренда
+          p Аудитория, ценности, тональность. С кем говорим и о чём. Во что верим и как это объясняем.
+        a.section-link(href="/style.pug")
+          h3 Дизайнерам: Фирменный стиль
+          p Логотипы, цвета, шрифты, иллюстрации
+        a.section-link(href="/system.pug")
+          h3 Разработчикам: Дизайн-система
+          p Принципы дизайна веб-приложений, CSS-фреймворк
+        a.section-link(href="/presskit.pug")
+          h3 Журналистам: Пресс-кит
+          p Тексты, картинки, логотипы.
+
+  .plug

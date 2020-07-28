@@ -1,0 +1,72 @@
+// Если есть доступ к body, надо добавить туда этот класс
+// Компоненты
+
+.wds__wrapper {
+  position: relative;
+  width: 76%;
+  margin: 0 auto;
+
+  @media #{$wds__mobile} {
+    width: 100%;
+    padding: 0 calc(#{$wds__density} * 0.6);
+  }
+
+  &.wds__full-width {
+    width: 100%;
+    padding: 0 calc(#{$wds__density} * 0.75);
+
+    @media #{$wds__mobile} {
+      padding: 0 calc(#{$wds__density} * 0.6);
+    }
+  }
+
+  &.wds__edge-to-edge {
+    width: 100%;
+  }
+
+  &.wds__shift-right {
+    padding-left: 6em;
+  }
+
+  &.wds__shift-left {
+    padding-right: 6em;
+  }
+}
+
+.wds {
+  color: $wds__text-color;
+  background-color: $wds__background-color;
+  font-family: $wds__font;
+
+  @include wds__media-font-scaling;
+}
+
+.wds__section {
+  margin-top: calc(#{$wds__density} * 1.5);
+
+  @media #{$wds__mobile} {
+    margin-top: calc(#{$wds__density} / 2);
+  }
+}
+
+.wds__text {
+  width: 85%;
+
+  @media #{$wds__mobile} {
+    width: 100%;
+  }
+}
+
+.wds__grid {
+  margin-top: calc(#{$wds__density} * 1);
+  display: flex;
+  flex-wrap: wrap;
+
+  .wds__grid-cell {
+    width: 50%;
+
+    @media #{$wds__mobile} {
+      width: 100%;
+    }
+  }
+}

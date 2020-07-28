@@ -1,0 +1,23 @@
+include ../mixins/meta
+
+doctype html
+
+html
+  head
+    block meta
+      +meta()
+    block stylesheets
+      link(rel='stylesheet', href='./styles/main.scss')
+      link(rel="icon", href="./assets/favicon.png")
+    block head-additions
+
+  body.wds
+    header
+      block header
+    main
+      block content
+    footer
+      block footer
+
+    block javascripts
+      script(src='./scripts/main.js')

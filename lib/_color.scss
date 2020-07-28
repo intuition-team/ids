@@ -1,0 +1,39 @@
+// Базовые цвета
+
+$wds__main-color: rgb(255, 221, 0) !default; // Основной
+$wds__secondary-color: none !default; // Дополнительный
+$wds__accent-color: rgb(5, 5, 5) !default; // Акцентный UI
+$wds__background-color: rgb(255, 255, 255) !default; // Фон
+$wds__text-color: rgb(5, 5, 5) !default; // Цвет текста
+$wds__light-text-color: rgba($wds__text-color, 0.3); // Линия?
+$wds__surface-color: rgb(245, 245, 245) !default; // Поверхность (она же плашка)
+$wds__error-color: rgb(240, 84, 95) !default; // Ошибка
+$wds__success-color: rgb(84, 180, 140) !default; // Саксесс
+$wds__mark-color: rgb(255, 248, 128) !default; // Маркер
+$wds__button-color: rgb(5, 5, 5) !default; // Кнопка
+$wds__code-color: rgb(200, 0, 0) !default; // Код
+
+// Контент
+
+$wds__on-main-color: rgb(5, 5, 5) !default; // На основном цвете
+$wds__on-seccondary-color: none !default; // На дополнительном цвете
+$wds__on-tint-color: rgb(255, 255, 255) !default; // На Акцентном цвете
+$wds__on-background-color: rgb(5, 5, 5) !default; // На фоне
+$wds__text-on-dark-color: rgb(255, 255, 255) !default; // Текст в дарк моде
+$wds__text-on-main-color: rgba(0, 0, 0, 0.97) !default; // Текст в лайт моде
+$wds__on-surface-color: rgb(5, 5, 5) !default; // Текст на поверхности (плашке)
+$wds__on-error-color: rgb(5, 5, 5) !default; // На ошибке
+$wds__on-error-color: rgb(255, 255, 255) !default; // На саксессе
+
+// Цвета элементов
+
+$wds__link-color: rgb(0, 100, 240) !default; // Ссылка
+$wds__link-hover-color: rgb(0, 220, 0) !default; // Ховер ссылки
+$wds__link-hover-filter: none !default; // Хз что это, уточнить
+$wds__link-text-color: rgba($wds__link-color, 1);
+$wds__link-underline-color: rgba($wds__link-color, 0.2);
+$wds__link-text-hover-color: rgba($wds__link-hover-color, 1);
+$wds__link-underline-hover-color: rgba($wds__link-hover-color, 0.2);
+$wds__button-text-color: $wds__text-on-dark-color;
+$wds__button-hover-color: rgba($wds__button-color, 0.8);
+$wds__button-disabled-color: rgba($wds__button-color, 0.3);

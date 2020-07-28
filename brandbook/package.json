@@ -1,0 +1,61 @@
+{
+  "name": "wds",
+  "version": "0.4.0",
+  "description": "Winvestor Design System Example",
+  "repository": "https://gitlab.com/mkalygin/wds.git",
+  "scripts": {
+    "start": "yarn && yarn clear && parcel serve src/index.pug --open",
+    "build": "yarn && yarn clear && parcel build src/*.pug",
+    "clear": "rimraf static/assets",
+    "deploy": "yarn build && yarn copy && yarn restart",
+    "deploy:ci": "yarn build && yarn copy:ci && yarn restart:ci",
+    "copy": "source .env && rsync -qazP $DEPLOY_FILES $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_TARGET --delete",
+    "copy:ci": "rsync -qazP $DEPLOY_FILES $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_TARGET --delete",
+    "restart": "source .env && ssh $DEPLOY_USER@$DEPLOY_HOST $DEPLOY_RESTART",
+    "restart:ci": "ssh $DEPLOY_USER@$DEPLOY_HOST \"$DEPLOY_RESTART\"",
+    "lint": "yarn eslint && yarn stylelint",
+    "eslint": "eslint --ext .jsx,.js src",
+    "stylelint": "stylelint \"src/**/*.scss\" --syntax scss",
+    "prettier": "prettier \"src/**/*.{js,jsx,scss}\" --write"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,scss}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "css-loader": "2.0.1",
+    "eslint": "5.10.0",
+    "eslint-config-airbnb": "17.1.0",
+    "eslint-config-prettier": "3.3.0",
+    "eslint-plugin-import": "2.14.0",
+    "eslint-plugin-jsx-a11y": "6.1.1",
+    "eslint-plugin-prettier": "3.0.0",
+    "husky": "2.3.0",
+    "lint-staged": "8.1.7",
+    "mini-css-extract-plugin": "0.5.0",
+    "node-sass": "4.13.1",
+    "prettier": "1.15.3",
+    "rimraf": "2.6.2",
+    "sass": "1.23.7",
+    "sass-loader": "7.1.0",
+    "style-loader": "0.23.1",
+    "stylelint": "9.9.0",
+    "stylelint-config-recommended": "2.1.0",
+    "stylelint-scss": "3.4.1",
+    "url-loader": "1.1.2"
+  },
+  "dependencies": {
+    "jquery": "3.3.1",
+    "parcel-bundler": "1.12.4",
+    "photoswipe": "4.1.3",
+    "pug": "2.0.3",
+    "tooltipster": "4.2.7"
+  }
+}

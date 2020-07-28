@@ -1,0 +1,28 @@
+body {
+  min-width: 1100px;
+  max-width: 2000px;
+}
+
+.design-header {
+  @include wds__default-padding;
+}
+
+.design-logo {
+  img {
+    width: auto;
+    height: 2.5em;
+  }
+}
+
+.section-link {
+  display: block;
+  background-color: $wds__surface-color;
+  padding: calc(#{$wds__density} * 0.75);
+  border-radius: $wds__radius;
+  margin-bottom: calc(#{$wds__density} * 0.75);
+}
+
+.plug {
+  height: 5em;
+  width: 100%;
+}

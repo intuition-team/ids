@@ -1,0 +1,11 @@
+// Здесь задаём настройки (переопределяем константы) для своего проекта
+$pswp__assets-path: '../../node_modules/photoswipe/src/css/default-skin/';
+
+@import '../../../lib/all';
+@import 'project/all';
+
+@import 'node_modules/photoswipe/src/css/main';
+@import 'node_modules/photoswipe/src/css/default-skin/default-skin';
+
+// Здесь подключаем свой шрифт
+@include font-face('Vaccine Sans', 'Vaccine Sans_Regular');

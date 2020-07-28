@@ -1,0 +1,28 @@
+.wds {
+  form {
+    margin: 0 0 0.6em 0;
+  }
+
+  button {
+    border: 0;
+    background-color: $wds__button-color;
+    color: $wds__button-text-color;
+    border-radius: $wds__radius;
+    padding: $wds__padding;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $wds__button-hover-color;
+      color: $wds__button-text-color;
+    }
+  }
+
+  .pswp {
+    button {
+      background-color: transparent;
+      &:hover {
+        background-color: transparent;
+      }
+    }
+  }
+}

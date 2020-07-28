@@ -1,0 +1,58 @@
+// Настройки
+
+$wds__button-padding-top: 0.4em !default;
+$wds__button-padding-bottom: 0.5em !default;
+$wds__button-padding-left-right: 1em !default;
+
+// Переменные
+
+$wds__padding: $wds__button-padding-top $wds__button-padding-left-right
+  $wds__button-padding-bottom;
+$wds__micro-padding: calc(#{$wds__button-padding-top} / 3)
+  $wds__button-padding-top calc(#{$wds__button-padding-bottom} / 3);
+
+// Миксины
+
+@mixin wds__default-padding {
+  padding: calc(#{$wds__density} * 0.75);
+}
+
+// Компоненты
+
+.wds__stack {
+  &-XS {
+    height: $wds__density;
+
+    @media #{$wds__mobile} {
+      height: calc(#{$wds__density} / 3);
+    }
+  }
+  &-S {
+    height: $wds__density * 2;
+
+    @media #{$wds__mobile} {
+      height: calc(#{$wds__density} / 2);
+    }
+  }
+  &-M {
+    height: $wds__density * 4;
+
+    @media #{$wds__mobile} {
+      height: $wds__density;
+    }
+  }
+  &-L {
+    height: $wds__density * 8;
+
+    @media #{$wds__mobile} {
+      height: calc(#{$wds__density} * 2);
+    }
+  }
+  &-XL {
+    height: $wds__density * 16;
+
+    @media #{$wds__mobile} {
+      height: calc(#{$wds__density} * 4);
+    }
+  }
+}
