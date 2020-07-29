@@ -10,12 +10,14 @@
   "repository": "https://gitlab.com/mkalygin/wds.git",
   "main": "wds.scss",
   "scripts": {
-    "build": "npm run build-sass && npm run build-autoprefix && npm run build-cleancss",
+    "build": "yarn build-wds && yarn build-brandbook",
+    "build-wds": "yarn build-sass && yarn build-autoprefix && yarn build-cleancss",
+    "build-brandbook": "(cd brandbook && yarn build)",
     "build-autoprefix": "postcss --use autoprefixer --map false --output dist/wds.css dist/wds.css",
     "build-cleancss": "cleancss -o dist/wds.min.css dist/wds.css",
     "build-sass": "node-sass --output-style expanded --source-map true wds.scss dist/wds.css",
     "clean": "rimraf dist",
-    "dev": "npm run build-sass -- --watch",
+    "dev": "yarn build-sass -- --watch",
     "start": "(cd brandbook && yarn start)"
   },
   "devDependencies": {
