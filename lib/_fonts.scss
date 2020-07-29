@@ -63,7 +63,7 @@ $wds__font: 'Root UI', Arial, sans-serif !default;
 
 // Подключение файлов
 
-@include font-face('Root UI', 'PT Root UI_Light', 300, normal);
-@include font-face('Root UI', 'PT Root UI_Regular', 400, normal);
-@include font-face('Root UI', 'PT Root UI_Medium', 500, normal);
-@include font-face('Root UI', 'PT Root UI_Bold', 700, normal);
+@include font-face('Root UI', 'PT_Root_UI_Light', 300, normal);
+@include font-face('Root UI', 'PT_Root_UI_Regular', 400, normal);
+@include font-face('Root UI', 'PT_Root_UI_Medium', 500, normal);
+@include font-face('Root UI', 'PT_Root_UI_Bold', 700, normal);
