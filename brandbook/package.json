@@ -4,7 +4,8 @@
   "description": "Winvestor Design System Example",
   "repository": "https://gitlab.com/mkalygin/wds.git",
   "scripts": {
-    "start": "yarn && yarn clear && parcel serve src/index.pug --open",
+    "start": "yarn && yarn clear && parcel serve src/*.pug",
+    "prestart": "open-cli http://localhost:1234/index.html",
     "build": "yarn && yarn clear && parcel build src/*.pug",
     "clear": "rimraf static/assets",
     "deploy": "yarn build && yarn copy && yarn restart",
@@ -53,6 +54,7 @@
   },
   "dependencies": {
     "jquery": "3.3.1",
+    "opn-cli": "5.0.0",
     "parcel-bundler": "1.12.4",
     "photoswipe": "4.1.3",
     "pug": "2.0.3",
