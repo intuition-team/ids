@@ -19,7 +19,7 @@ jobs:
       - name: Deploy
         uses: easingthemes/ssh-deploy@v2.1.1
         env:
-          SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           ARGS: "-qazP --delete"
           SOURCE: "brandbook/dist/"
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
