@@ -30,9 +30,5 @@
   },
   "dependencies": {
     "normalize.css": "^8.0.1"
-  },
-  "files": [
-    "dist",
-    "lib"
-  ]
+  }
 }
