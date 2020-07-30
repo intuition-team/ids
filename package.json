@@ -34,6 +34,6 @@
   },
   "files": [
     "dist",
-    "lib",
+    "lib"
   ]
 }
