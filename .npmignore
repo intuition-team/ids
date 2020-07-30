@@ -4,3 +4,6 @@ brandbook
 .gitignore
 .npmignore
 yarn.lock
+!node_modules/
+node_modules/*
+!node_modules/normalize.css
