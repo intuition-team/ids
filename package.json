@@ -1,13 +1,14 @@
 {
-  "name": "wds",
-  "version": "0.4.0",
+  "name": "@intuition.team/wds",
+  "version": "0.1.0",
   "description": "Winvestor Design System",
   "author": {
-    "name": "Intuition",
-    "url": "https://intuition.team"
+    "name": "Intuition Design Bureau",
+    "url": "https://intuition.team",
+    "email": "e@intuition.team"
   },
-  "license": "MIT",
-  "repository": "https://gitlab.com/mkalygin/wds.git",
+  "license": "LGPL-2.1-only",
+  "repository": "https://github.com/intuition-team/wds.git",
   "main": "wds.scss",
   "scripts": {
     "build": "yarn build-wds && yarn build-brandbook",
