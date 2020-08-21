@@ -1,6 +1,6 @@
 {
   "name": "@intuition.team/wds",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Winvestor Design System",
   "author": {
     "name": "Intuition Design Bureau",
@@ -11,7 +11,7 @@
   "repository": "https://github.com/intuition-team/wds.git",
   "main": "wds.scss",
   "scripts": {
-    "build": "yarn build-wds && yarn build-brandbook",
+    "build": "yarn && yarn clean && yarn build-wds && yarn build-brandbook",
     "build-wds": "yarn build-sass && yarn build-autoprefix && yarn build-cleancss",
     "build-brandbook": "(cd brandbook && yarn build)",
     "build-autoprefix": "postcss --use autoprefixer --map false --output dist/wds.css dist/wds.css",

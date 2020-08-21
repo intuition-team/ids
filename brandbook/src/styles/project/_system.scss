@@ -4,7 +4,7 @@
   top: 0;
   left: 0;
   bottom: 0;
-  border-right: 1px solid $wds__devider-color;
+  border-right: 1px solid theme-color(wds__divider-color);
   @include wds__default-padding;
 
   .system__sidebar-logos {
@@ -44,7 +44,7 @@ h1.huge-wds-title {
   span {
     display: inline-block;
     position: relative;
-    color: $wds__on-accent-color;
+    color: theme-color(wds__on-accent-color);
 
     &::before {
       content: '';
@@ -56,7 +56,7 @@ h1.huge-wds-title {
 
       // height: 1em;
 
-      background-color: $wds__accent-color;
+      background-color: theme-color(wds__accent-color);
       border-radius: 0.13em;
       z-index: -1;
     }
@@ -68,7 +68,7 @@ h1.huge-wds-title {
     margin-bottom: 2em;
     display: flex;
     flex-wrap: wrap;
-    border-top: 1px solid $wds__devider-color;
+    border-top: 1px solid theme-color(wds__divider-color);
     padding-top: 0.5em;
 
     .rule-no {

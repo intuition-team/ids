@@ -16,7 +16,7 @@ body {
 
 .section-link {
   display: block;
-  background-color: $wds__surface-color;
+  background-color: theme-color(wds__surface-color);
   padding: calc(#{$wds__density} * 0.75);
   border-radius: $wds__radius;
   margin-bottom: calc(#{$wds__density} * 0.75);

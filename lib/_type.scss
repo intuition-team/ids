@@ -1,12 +1,12 @@
 .wds {
   a {
-    color: $wds__link-color;
-    border-bottom: 1px solid $wds__link-underline-color;
+    color: theme-color(wds__link-color);
+    border-bottom: 1px solid theme-color(wds__link-underline-color);
     text-decoration: none;
 
     &:hover {
-      color: $wds__link-hover-color;
-      border-bottom: 1px solid $wds__link-underline-hover-color;
+      color: theme-color(wds__link-hover-color);
+      border-bottom: 1px solid theme-color(wds__link-underline-hover-color);
     }
   }
 
@@ -39,8 +39,8 @@
     // Стиль зачеркивания заголовков маркером
     mark {
       background: none;
-      box-shadow: inset 0 -0.15em $wds__background-color,
-        inset 0 -0.5em $wds__mark-color;
+      box-shadow: inset 0 -0.15em theme-color(wds__background-color),
+        inset 0 -0.5em theme-color(wds__mark-color);
     }
   }
 
@@ -103,8 +103,8 @@
   }
 
   mark {
-    color: $wds__text-color;
-    background-color: $wds__mark-color;
+    color: theme-color(wds__text-color);
+    background-color: theme-color(wds__mark-color);
   }
 
   ul,
@@ -148,7 +148,7 @@
   aside {
     margin: 0;
     margin-bottom: calc(#{$wds__density} * 0.75);
-    background: $wds__surface-color;
+    background: theme-color(wds__surface-color);
     padding: calc(#{$wds__density} * 0.75);
     padding-right: calc(#{$wds__density} * 2);
     border-radius: $wds__radius;
@@ -158,8 +158,8 @@
     font-family: $wds__font;
     font-weight: 500;
     padding: $wds__micro-padding;
-    background: $wds__surface-color;
-    color: $wds__code-color;
+    background: theme-color(wds__surface-color);
+    color: theme-color(wds__code-color);
   }
 
   a.button {
@@ -198,7 +198,7 @@
   .wds__label {
     display: inline-block;
     padding: $wds__micro-padding;
-    background-color: $wds__accent-color;
-    color: $wds__on-accent-color;
+    background-color: theme-color(wds__accent-color);
+    color: theme-color(wds__on-accent-color);
   }
 }

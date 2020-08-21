@@ -34,8 +34,8 @@
 }
 
 .wds {
-  color: $wds__text-color;
-  background-color: $wds__background-color;
+  color: theme-color(wds__text-color);
+  background-color: theme-color(wds__background-color);
   font-family: $wds__font;
 
   @include wds__media-font-scaling;

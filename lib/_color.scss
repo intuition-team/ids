@@ -1,91 +1,65 @@
-// Базовые цвета
-$wds__background-color: rgb(255, 255, 255) !default; // фон
-$wds__text-color: rgb(5, 5, 5) !default; // цвет текста
-$wds__main-color: rgb(255, 221, 0) !default; // основной
-$wds__secondary-color: none !default; // дополнительный
-$wds__accent-color: rgb(0, 0, 0) !default; // акцентный UI
-$wds__surface-color: rgb(245, 245, 245) !default; // поверхность (она же плашка)
-$wds__error-color: rgb(240, 84, 95) !default; // ошибка
-$wds__success-color: rgb(84, 180, 140) !default; // саксесс
-$wds__mark-color: rgb(255, 248, 128) !default; // маркер
-$wds__code-color: rgb(200, 0, 0) !default; // код
+$use-css-variables: true !default;
+$theme-colors: ();
 
-// Контент
-$wds__on-main-color: rgb(5, 5, 5) !default; // на основном цвете
-$wds__on-seccondary-color: none !default; // на дополнительном цвете
-$wds__on-accent-color: rgb(255, 255, 255) !default; // на акцентном цвете
-$wds__on-background-color: rgb(5, 5, 5) !default; // на фоне
-$wds__on-surface-color: rgb(5, 5, 5) !default; // на поверхности (плашке)
-$wds__on-error-color: rgb(255, 255, 255) !default; // на ошибке
-$wds__on-success-color: rgb(255, 255, 255) !default; // на саксессе
+@mixin define-theme($args...) {
+  @each $name, $color, $color-dark in $args {
+    $theme-colors: map-merge(
+      $theme-colors,
+      ("wds__#{$name}": #{$color}, "wds__dark-#{$name}": #{$color-dark})
+    ) !global;
+  }
 
-// Цвета элементов
-$wds__devider-color: rgba(5, 5, 5, 0.1) !default; // разделительная линия
-$wds__link-color: rgb(0, 100, 240) !default; // ссылка
-$wds__link-hover-color: rgb(0, 220, 0) !default; // ховер ссылки
-$wds__link-underline-color: rgba($wds__link-color, 0.2); // цвет подчеркивания ссылки
-$wds__link-underline-hover-color: rgba($wds__link-hover-color, 0.2); // подчеркивание ховера ссылки
-$wds__button-color: $wds__accent-color; // кнопка
-$wds__button-hover-color: rgba($wds__button-color, 0.8); // ховер кнопки
-$wds__button-text-color: $wds__on-accent-color; // текст на кнопке
-$wds__button-disabled-color: rgba($wds__button-color, 0.3); // заблокированная кнопка
+  @if $use-css-variables {
+    :root {
+      @each $name, $color, $color-dark in $args {
+        --wds__#{$name}: #{$color};
+      }
+    }
 
-// Дарк мод
-$wds__dark-background-color: rgb(40, 40, 40); // +
-$wds__dark-text-color: rgb(255, 255, 255); // +
-$wds__dark-main-color: rgb(255, 221, 0); // +
-$wds__dark-secondary-color: none; // −
-$wds__dark-accent-color: rgb(255, 255, 255); // +
-$wds__dark-surface-color: rgb(60, 60, 60); // +
-$wds__dark-error-color: rgb(240, 84, 95); // − нет компонента для отладки цвета
-$wds__dark-success-color: rgb(84, 180, 140); // − нет компонента для отладки цвета
-$wds__dark-mark-color: rgb(100, 100, 100); // +
-$wds__dark-code-color: rgb(200, 50, 50); // +
+    :root.dark-theme {
+      @each $name, $color, $color-dark in $args {
+        --wds__#{$name}: #{$color-dark};
+      }
+    }
+  }
+}
 
-$wds__dark-on-main-color: rgb(5, 5, 5); // +
-$wds__dark-on-seccondary-color: none; // −
-$wds__dark-on-accent-color: rgb(40, 40, 40); // +
-$wds__dark-on-background-color: rgb(255, 255, 255); // +
-$wds__dark-on-surface-color: rgb(255, 255, 255); // +
-$wds__dark-on-error-color: rgb(255, 255, 255); // +
-$wds__dark-on-success-color: rgb(255, 255, 255); // +
+@function theme-color($name) {
+  @if $use-css-variables {
+    @return var(--#{$name});
+  } @else {
+    @return map-get($theme-colors, $name);
+  }
+}
 
-$wds__dark-devider-color: rgba(255, 255, 255, 0.1); // +
-$wds__dark-link-color: rgb(80, 150, 255); // +
-$wds__dark-link-hover-color: rgb(100, 230, 100); // +
-$wds__dark-link-underline-color: rgba($wds__dark-link-color, 0.3); // +
-$wds__dark-link-underline-hover-color: rgba($wds__dark-link-hover-color, 0.3); // +
-$wds__dark-button-color: $wds__dark-accent-color; // +
-$wds__dark-button-hover-color: rgba($wds__dark-button-color, 0.8); // +
-$wds__dark-button-text-color: $wds__dark-on-accent-color; // +
-$wds__dark-button-disabled-color: rgba($wds__dark-button-color, 0.3); // +
+@include define-theme(
+  // Базовые цвета
+  ("background-color", "rgb(255, 255, 255)", "rgb(40, 40, 40)"), // фон
+  ("text-color", "rgb(5, 5, 5)", "rgb(255, 255, 255)"), // цвет текста
+  ("main-color", "rgb(255, 221, 0)", "rgb(255, 221, 0)"), // основной
+  ("accent-color", "rgb(0, 0, 0)", "rgb(255, 255, 255)"), // акцентный UI
+  ("surface-color", "rgb(245, 245, 245)", "rgb(60, 60, 60)"), // поверхность (она же плашка)
+  ("error-color", "rgb(240, 84, 95)", "rgb(240, 84, 95)"), // ошибка
+  ("success-color", "rgb(84, 180, 140)", "rgb(84, 180, 140)"), // саксесс
+  ("mark-color", "rgb(255, 248, 128)", "rgb(100, 100, 100)"), // маркер
+  ("code-color", "rgb(200, 0, 0)", "rgb(200, 50, 50)"), // код
 
-// Временный хардкод для ручного переключения мода дарк на лайт (расскоментить строки ниже)
-// $wds__background-color: $wds__dark-background-color;
-// $wds__text-color: $wds__dark-text-color;
-// $wds__main-color: $wds__dark-main-color;
-// $wds__secondary-color: $wds__dark-secondary-color;
-// $wds__accent-color: $wds__dark-accent-color;
-// $wds__surface-color: $wds__dark-surface-color;
-// $wds__error-color: $wds__dark-error-color;
-// $wds__success-color: $wds__dark-success-color;
-// $wds__mark-color: $wds__dark-mark-color;
-// $wds__code-color: $wds__dark-code-color;
+  // Контент
+  ("on-main-color", "rgb(5, 5, 5)", "rgb(5, 5, 5)"), // на основном цвете
+  ("on-accent-color", "rgb(255, 255, 255)", "rgb(40, 40, 40)"), // на акцентном цвете
+  ("on-background-color", "rgb(5, 5, 5)", "rgb(255, 255, 255)"), // на фоне
+  ("on-surface-color", "rgb(5, 5, 5)", "rgb(255, 255, 255)"), // на поверхности (плашке)
+  ("on-error-color", "rgb(255, 255, 255)", "rgb(255, 255, 255)"), // на ошибке
+  ("on-success-color", "rgb(255, 255, 255)", "rgb(255, 255, 255)"), // на саксессе
 
-// $wds__on-main-color: $wds__dark-on-main-color;
-// $wds__on-seccondary-color: $wds__dark-on-seccondary-color;
-// $wds__on-accent-color: $wds__dark-on-accent-color;
-// $wds__on-background-color: $wds__dark-on-background-color;
-// $wds__on-surface-color: $wds__dark-on-surface-color;
-// $wds__on-error-color: $wds__dark-on-error-color;
-// $wds__on-success-color: $wds__dark-on-success-color;
-
-// $wds__devider-color: $wds__dark-devider-color;
-// $wds__link-color: $wds__dark-link-color;
-// $wds__link-hover-color: $wds__dark-link-hover-color;
-// $wds__link-underline-color: $wds__dark-link-underline-color;
-// $wds__link-underline-hover-color: $wds__dark-link-underline-hover-color;
-// $wds__button-color: $wds__dark-button-color;
-// $wds__button-hover-color: $wds__dark-button-hover-color;
-// $wds__button-text-color: $wds__dark-button-text-color;
-// $wds__button-disabled-color: $wds__dark-button-disabled-color;
+  // Цвета элементов
+  ("divider-color", "rgba(5, 5, 5, 0.1)", "rgba(255, 255, 255, 0.1)"), // разделительная линия
+  ("link-color", "rgb(0, 100, 240)", "rgb(80, 150, 255)"), // ссылка
+  ("link-underline-color", "rgba(0, 100, 240, 0.2)", "rgba(80, 150, 255, 0.3)"), // цвет подчеркивания ссылки
+  ("link-hover-color", "rgb(0, 220, 0)", "rgb(100, 230, 100)"), // ховер ссылки
+  ("link-underline-hover-color", "rgba(0, 220, 0, 0.2)", "rgba(100, 230, 100, 0.3)"), // подчеркивание ховера ссылки
+  ("button-color", "rgb(0, 0, 0)", "rgb(255, 255, 255)"), // кнопка
+  ("button-hover-color", "rgba(0, 0, 0, 0.8)", "rgba(255, 255, 255, 0.8)"), // ховер кнопки
+  ("button-text-color", "rgb(255, 255, 255)", "rgb(40, 40, 40)"), // текст на кнопке
+  ("button-disabled-color", "rgba(0, 0, 0, 0.3)", "rgba(255, 255, 255, 0.3)"), // заблокированная кнопка
+);

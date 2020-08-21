@@ -5,15 +5,15 @@
 
   button {
     border: 0;
-    background-color: $wds__button-color;
-    color: $wds__button-text-color;
+    background-color: theme-color(wds__button-color);
+    color: theme-color(wds__button-text-color);
     border-radius: $wds__radius;
     padding: $wds__padding;
     cursor: pointer;
 
     &:hover {
-      background-color: $wds__button-hover-color;
-      color: $wds__button-text-color;
+      background-color: theme-color(wds__button-hover-color);
+      color: theme-color(wds__button-text-color);
     }
   }
 

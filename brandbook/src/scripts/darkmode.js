@@ -1,14 +1,18 @@
-let page = document.querySelector('.wds');
-let themeButton = document.querySelector('.theme-button');
+const page = document.querySelector('html');
+const themeButton = document.querySelector('.theme-button');
 
-themeButton.textContent = 'Ночь';
+if (themeButton) {
+  themeButton.textContent = 'Ночь';
+  themeButton.addEventListener('click', event => {
+    event.stopPropagation();
+    event.preventDefault();
 
-themeButton.onclick = function() {
-  page.classList.toggle('dark');
+    page.classList.toggle('dark-theme');
 
-  if (page.classList.contains('dark')) {
-    themeButton.textContent = 'День';
-  } else {
-    themeButton.textContent = 'Ночь';
-  }
-};
+    if (page.classList.contains('dark-theme')) {
+      themeButton.textContent = 'День';
+    } else {
+      themeButton.textContent = 'Ночь';
+    }
+  });
+}
