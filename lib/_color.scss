@@ -11,14 +11,24 @@ $theme-colors: ();
 
   @if $use-css-variables {
     :root {
-      @each $name, $color, $color-dark in $args {
-        --wds__#{$name}: #{$color};
+      @each $name, $color, $color-dark, $scheme in $args {
+        @if $scheme == "rgba" {
+          --wds__#{$name}: rgba(#{$color});
+        } @else {
+          --wds__#{$name}: rgb(#{$color});
+          --wds__#{$name}-base: #{$color};
+        }
       }
     }
 
     :root.dark-theme {
-      @each $name, $color, $color-dark in $args {
-        --wds__#{$name}: #{$color-dark};
+      @each $name, $color, $color-dark, $scheme in $args {
+        @if $scheme == "rgba" {
+          --wds__#{$name}: rgba(#{$color-dark});
+        } @else {
+          --wds__#{$name}: rgb(#{$color-dark});
+          --wds__#{$name}-base: #{$color-dark};
+        }
       }
     }
   }
@@ -32,34 +42,43 @@ $theme-colors: ();
   }
 }
 
+@function theme-color-base($name) {
+  @if $use-css-variables {
+    @return var(--#{$name}-base);
+  } @else {
+    @return map-get($theme-colors, $name);
+  }
+}
+
 @include define-theme(
+  // Указываем компоненты цвета, а не сами цвета, чтобы можно было использовать переменные с разными значениями alpha
   // Базовые цвета
-  ("background-color", "rgb(255, 255, 255)", "rgb(40, 40, 40)"), // фон
-  ("text-color", "rgb(5, 5, 5)", "rgb(255, 255, 255)"), // цвет текста
-  ("main-color", "rgb(255, 221, 0)", "rgb(255, 221, 0)"), // основной
-  ("accent-color", "rgb(0, 0, 0)", "rgb(255, 255, 255)"), // акцентный UI
-  ("surface-color", "rgb(245, 245, 245)", "rgb(60, 60, 60)"), // поверхность (она же плашка)
-  ("error-color", "rgb(240, 84, 95)", "rgb(240, 84, 95)"), // ошибка
-  ("success-color", "rgb(84, 180, 140)", "rgb(84, 180, 140)"), // саксесс
-  ("mark-color", "rgb(255, 248, 128)", "rgb(100, 100, 100)"), // маркер
-  ("code-color", "rgb(200, 0, 0)", "rgb(200, 50, 50)"), // код
+  ("background-color", "255, 255, 255", "40, 40, 40"), // фон
+  ("text-color", "5, 5, 5", "255, 255, 255"), // цвет текста
+  ("main-color", "255, 221, 0", "255, 221, 0"), // основной
+  ("accent-color", "0, 0, 0", "255, 255, 255"), // акцентный UI
+  ("surface-color", "245, 245, 245", "60, 60, 60"), // поверхность (она же плашка)
+  ("error-color", "240, 84, 95", "240, 84, 95"), // ошибка
+  ("success-color", "84, 180, 140", "84, 180, 140"), // саксесс
+  ("mark-color", "255, 248, 128", "100, 100, 100"), // маркер
+  ("code-color", "200, 0, 0", "200, 50, 50"), // код
 
   // Контент
-  ("on-main-color", "rgb(5, 5, 5)", "rgb(5, 5, 5)"), // на основном цвете
-  ("on-accent-color", "rgb(255, 255, 255)", "rgb(40, 40, 40)"), // на акцентном цвете
-  ("on-background-color", "rgb(5, 5, 5)", "rgb(255, 255, 255)"), // на фоне
-  ("on-surface-color", "rgb(5, 5, 5)", "rgb(255, 255, 255)"), // на поверхности (плашке)
-  ("on-error-color", "rgb(255, 255, 255)", "rgb(255, 255, 255)"), // на ошибке
-  ("on-success-color", "rgb(255, 255, 255)", "rgb(255, 255, 255)"), // на саксессе
+  ("on-main-color", "5, 5, 5", "5, 5, 5"), // на основном цвете
+  ("on-accent-color", "255, 255, 255", "40, 40, 40"), // на акцентном цвете
+  ("on-background-color", "5, 5, 5", "255, 255, 255"), // на фоне
+  ("on-surface-color", "5, 5, 5", "255, 255, 255"), // на поверхности (плашке)
+  ("on-error-color", "255, 255, 255", "255, 255, 255"), // на ошибке
+  ("on-success-color", "255, 255, 255", "255, 255, 255"), // на саксессе
 
   // Цвета элементов
-  ("divider-color", "rgba(5, 5, 5, 0.1)", "rgba(255, 255, 255, 0.1)"), // разделительная линия
-  ("link-color", "rgb(0, 100, 240)", "rgb(80, 150, 255)"), // ссылка
-  ("link-underline-color", "rgba(0, 100, 240, 0.2)", "rgba(80, 150, 255, 0.3)"), // цвет подчеркивания ссылки
-  ("link-hover-color", "rgb(0, 220, 0)", "rgb(100, 230, 100)"), // ховер ссылки
-  ("link-underline-hover-color", "rgba(0, 220, 0, 0.2)", "rgba(100, 230, 100, 0.3)"), // подчеркивание ховера ссылки
-  ("button-color", "rgb(0, 0, 0)", "rgb(255, 255, 255)"), // кнопка
-  ("button-hover-color", "rgba(0, 0, 0, 0.8)", "rgba(255, 255, 255, 0.8)"), // ховер кнопки
-  ("button-text-color", "rgb(255, 255, 255)", "rgb(40, 40, 40)"), // текст на кнопке
-  ("button-disabled-color", "rgba(0, 0, 0, 0.3)", "rgba(255, 255, 255, 0.3)"), // заблокированная кнопка
+  ("divider-color", "5, 5, 5, 0.1", "255, 255, 255, 0.1", "rgba"), // разделительная линия
+  ("link-color", "0, 100, 240", "80, 150, 255"), // ссылка
+  ("link-underline-color", "0, 100, 240, 0.2", "80, 150, 255, 0.3", "rgba"), // цвет подчеркивания ссылки
+  ("link-hover-color", "0, 220, 0", "100, 230, 100"), // ховер ссылки
+  ("link-underline-hover-color", "0, 220, 0, 0.2", "100, 230, 100, 0.3", "rgba"), // подчеркивание ховера ссылки
+  ("button-color", "0, 0, 0", "255, 255, 255"), // кнопка
+  ("button-hover-color", "0, 0, 0, 0.8", "255, 255, 255, 0.8", "rgba), // ховер кнопки
+  ("button-text-color", "255, 255, 255", "40, 40, 40"), // текст на кнопке
+  ("button-disabled-color", "0, 0, 0, 0.3", "255, 255, 255, 0.3", "rgba), // заблокированная кнопка
 );
