@@ -200,5 +200,12 @@
     padding: $wds__micro-padding;
     background-color: theme-color(wds__accent-color);
     color: theme-color(wds__on-accent-color);
+    border: 2px solid theme-color(wds__accent-color);
+
+    &.outline {
+      background-color: theme-color(wds__on-accent-color);
+      color: theme-color(main-color);
+      border: 2px solid theme-color(wds__accent-color);
+    }
   }
 }
