@@ -162,6 +162,18 @@
     color: theme-color(wds__code-color);
   }
 
+  details {
+    padding: .5em;
+    cursor: pointer;
+    border: 1px solid theme-color(wds__divider-color);
+    border-radius: $wds__radius;
+
+    summary {
+      padding-bottom: $wds__micro-padding;
+    }
+
+  }
+
   a.button {
   }
 
@@ -201,6 +213,7 @@
     background-color: theme-color(wds__accent-color);
     color: theme-color(wds__on-accent-color);
     border: 2px solid theme-color(wds__accent-color);
+    border-radius: $wds__radius;
 
     &.outline {
       background-color: theme-color(wds__on-accent-color);
