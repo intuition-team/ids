@@ -12,7 +12,7 @@
     cursor: pointer;
 
     &:hover {
-      background-color: rgba(theme-color-base(wds__accent-color), .8));
+      background-color: rgba(theme-color-base(wds__accent-color), .8);
       color: theme-color-base(wds__on-accent-color);
     }
   }
