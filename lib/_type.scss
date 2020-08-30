@@ -1,4 +1,13 @@
 .wds {
+  
+  section {
+    margin-top: calc(#{$wds__density} * 1.5);
+  
+    @media #{$wds__mobile} {
+      margin-top: calc(#{$wds__density} / 2);
+    }
+  }
+  
   a {
     color: theme-color(wds__link-color);
     border-bottom: 1px solid theme-color(wds__link-underline-color);
@@ -230,13 +239,17 @@
     padding: $wds__micro-padding;
     background-color: theme-color(wds__accent-color);
     color: theme-color(wds__on-accent-color);
-    border: 2px solid theme-color(wds__accent-color);
-    border-radius: $wds__radius;
+    border-radius: $wds__radius-S;
 
-    &.outline {
+    &.wds__label-outline {
       background-color: theme-color(wds__on-accent-color);
       color: theme-color(main-color);
       border: 2px solid theme-color(wds__accent-color);
+    }
+
+    &.wds__label-S {
+      font-size: .9em;
+
     }
   }
 }

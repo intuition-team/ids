@@ -1,27 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 24.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- Generator: Adobe Illustrator 24.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#FFF880;filter:url(#Adobe_OpacityMaskFilter);}
-	.st1{mask:url(#mask0_1_);}
-	.st2{fill:#FFF880;}
-	.st3{fill:#FFF100;}
-	.st4{fill:#FFE700;}
-	.st5{fill:#FFDD00;}
+	.st0{fill:#FFF880;}
+	.st1{fill:#FFF100;}
+	.st2{fill:#FFE700;}
+	.st3{fill:#FFDD00;}
 </style>
-<defs>
-	<filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="0" y="0" width="100" height="100">
-		<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
-	</filter>
-</defs>
-<mask maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="100" id="mask0_1_">
+<g>
 	<path class="st0" d="M50,100c27.6,0,50-22.4,50-50S77.6,0,50,0S0,22.4,0,50S22.4,100,50,100z"/>
-</mask>
-<g class="st1">
-	<path class="st2" d="M50,100c27.6,0,50-22.4,50-50S77.6,0,50,0S0,22.4,0,50S22.4,100,50,100z"/>
-	<path class="st3" d="M37.7,100c20.8,0,37.7-16.9,37.7-37.7S58.6,24.5,37.7,24.5S0,41.4,0,62.3S16.9,100,37.7,100z"/>
-	<path class="st4" d="M25.9,100c14.3,0,25.9-11.6,25.9-25.9S40.2,48.2,25.9,48.2S0,59.8,0,74.1S11.6,100,25.9,100z"/>
-	<path class="st5" d="M17.7,100c9.8,0,17.7-7.9,17.7-17.7s-7.9-17.7-17.7-17.7C7.9,64.5,0,72.5,0,82.3S7.9,100,17.7,100z"/>
+	<path class="st1" d="M37.7,24.5c-18.9,0-34.5,13.9-37.3,32l0,0c1.2,9.1,4.8,17.4,10.2,24.3l0,0c2.5,3.2,5.3,6,8.5,8.5l0,0
+		c6.9,5.4,15.2,9,24.3,10.2c18.1-2.8,31.9-18.4,31.9-37.3C75.4,41.5,58.6,24.5,37.7,24.5z"/>
+	<path class="st2" d="M25.9,48.2c-10.7,0-20,6.5-23.9,15.9C6.8,80.4,19.6,93.2,35.9,98c9.3-3.9,15.9-13.1,15.9-23.9
+		C51.8,59.8,40.2,48.2,25.9,48.2z"/>
+	<path class="st3" d="M17.7,64.6c-5.3-0.1-10,2.3-13.3,6c5,11.1,13.9,20,25,25c3.7-3.2,6-8,6-13.3C35.4,72.5,27.5,64.6,17.7,64.6z"
+		/>
 </g>
 </svg>

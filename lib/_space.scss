@@ -8,8 +8,7 @@ $wds__button-padding-left-right: 1em !default;
 
 $wds__padding: $wds__button-padding-top $wds__button-padding-left-right
   $wds__button-padding-bottom;
-$wds__micro-padding: calc(#{$wds__button-padding-top} / 3)
-  $wds__button-padding-top calc(#{$wds__button-padding-bottom} / 3);
+$wds__micro-padding: 0 calc(#{$wds__density} * 0.2);
 
 // Миксины
 

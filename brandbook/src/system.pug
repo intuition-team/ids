@@ -5,26 +5,20 @@ block header
     .system__sidebar-logos
       a.system__sign(href="/index.pug")
         img(src="/assets/images/winvestor-sign.svg")
-      a.system__sign(href="/index.pug")
+      a.system__sign(href="#top")
         img(src="/assets/images/wds-sign.svg")
     .system__sidebar-nav
       .system__sidebar-nav-link
         a(href="#principles") Принципы
-      //- .system__sidebar-nav-link
-      //-    a(href="#") Как начать
       .system__sidebar-nav-link
         a(href="#components") Компоненты
-      //- .system__sidebar-nav-link
-      //-   a(href="#context") Установка контекста
-      //- .system__sidebar-nav-link
-      //-   a(href="#typography") Типографика
-      //- .system__sidebar-nav-link
-      //-   a(href="#color") Цвет
+      .system__sidebar-nav-link
+        a(href="#variables") Переменные
 
 block content
   a.theme-button
 
-  .plug
+  .plug#top
   .wds__wrapper.wds__shift-right
     .wds__text
 
@@ -49,7 +43,7 @@ block content
 
       p WDS предоставляет компоненты, переменные и миксины. Компоненты — это готовые к использованию элементы интерфейса, а переменные и миксины — это инструменты для создания собственных элементов.
 
-      .wds__stack-XS
+      .wds__stack-S
       h2(id="principles") Принципы
 
 
@@ -86,27 +80,14 @@ block content
       //-   h3(id="dimensions") Отступы
 
 
-      .wds__section
-        h3(id="color") Цвет
 
-        .wds__stack-XS
-        h4
-          code .wds__error-color
-        p.wds__error-color Всё плохо.
-
-        .wds__stack-XS
-        h4
-          code .wds__success-color
-        p.wds__success-color А, нет, всё хорошо.
 
       .wds__section
-        .wds__stack-XS
+        .wds__stack-S
         h2(id="components") Компоненты
         .wds__devider-line
 
       .wds__section
-        //- h4 1. Заголовки
-        //- aside
         h3
           code &lt;h1&gt;
         h1 Заголовок первого уровня
@@ -132,8 +113,6 @@ block content
         h6 Заголовок шестого уровня
 
       .wds__section
-        //- .wds__stack-XS
-        //- h3 2. Оформление
         .wds__stack-XS
         h3
           code &lt;p&gt;
@@ -163,7 +142,7 @@ block content
         .wds__stack-XS
         h3
           code &lt;ol&gt;
-        p Нумерованный список, используется для
+        p Нумерованный список
 
         ol
           li Пункт номер 1
@@ -174,7 +153,7 @@ block content
         .wds__stack-XS
         h3
           code &lt;ul&gt;
-        p Ненумерованный список, используется для
+        p Ненумерованный список
         ul
           li Пункт номер 1
           li Пункт номер 2
@@ -195,9 +174,10 @@ block content
 
         p Используется перед заголовком
         .wds__label Прелестно
+        .wds__stack-XS
 
-        p Можно поменять стиль с помощью класса <code>.outline</code>
-        .wds__label.outline Просто прелестно
+        p Можно поменять стиль с помощью класса <code>.wds__label-outline</code>
+        .wds__label.wds__label-outline Просто прелестно
 
         .wds__stack-XS
         h3
@@ -259,5 +239,17 @@ block content
         button Отправить
         .wds__stack-XS
 
+      .wds__section
+        h2(id="variables") Переменные
+
+        .wds__stack-XS
+        h4
+          code .wds__error-color
+        p.wds__error-color Цвет для индикации ошибки
+
+        .wds__stack-XS
+        h4
+          code .wds__success-color
+        p.wds__success-color Цвет для индикации успешного выполнения
 
   .plug

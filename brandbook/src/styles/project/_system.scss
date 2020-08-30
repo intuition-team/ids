@@ -6,6 +6,11 @@
   bottom: 0;
   border-right: 1px solid theme-color(wds__divider-color);
   @include wds__default-padding;
+  z-index: 10000;
+
+  @media #{$wds__mobile} {
+    display: none;
+  }
 
   .system__sidebar-logos {
     display: flex;
@@ -24,6 +29,11 @@
       img {
         width: auto;
         height: 2.5em;
+      }
+
+      &.rounded {
+        overflow: hidden;
+        border-radius: 50%;
       }
     }
   }

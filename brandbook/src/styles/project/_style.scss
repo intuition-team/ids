@@ -1,0 +1,28 @@
+.right-shifted {
+  @media #{$wds__desktop} {
+    padding-left: 12em;
+  }
+}
+
+.palette {
+  display: flex;
+  flex-wrap: wrap;
+
+  .palette-bar {
+    width: 25%;
+    height: 5em;
+    padding: calc(#{$wds__density} * 0.4) calc(#{$wds__density} * 0.5);
+
+    @media #{$wds__mobile} {
+      width: 50%;
+    }
+
+    // &:first-child {
+    //   border-radius: .5em 0 0 .5em;
+    // }
+
+    // &:last-child {
+    //   border-radius: 0 .5em .5em 0;
+    // }
+  }
+}

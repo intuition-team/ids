@@ -1,12 +1,71 @@
 extends pages/layouts/main.pug
 
-block header 
-  include pages/partials/design-header.pug
+block header
+  .system__sidebar
+    .system__sidebar-logos
+      a.system__sign(href="/index.pug")
+        img(src="/assets/images/winvestor-sign.svg")
+      a.system__sign.rounded(href="#top")
+        img(src="/assets/images/style-icon.jpg")
+    h4 Фирменный стиль Винвестора
+    .system__sidebar-nav
+      .system__sidebar-nav-link
+        a(href="#colour") Цвет
+      .system__sidebar-nav-link
+        a(href="#logo") Логотип
+      .system__sidebar-nav-link
+        a(href="#type") Типографика
+      .system__sidebar-nav-link
+        a(href="#illustration") Иллюстрации
 
 block content
-  .plug
-  .wds__wrapper
+  a.theme-button
+  .wds__wrapper.wds__edge-to-edge.right-shifted#top
+    figure
+      img(src="/assets/images/platov-wide.jpg")
+  .wds__wrapper.wds__shift-right
     .wds__text
+      
+
       .wds__section
+        h2#colour Цвет
+        p Есть три фирменные цветовые палитры: базовая, расширенная и техническая. Базовая — это оттенки жёлтого, они используются только в графической части логотипа. Расширенная — это палитра для иллюстраций и любой фирменной графики. Техническая — для интерфейсов.
+        
+        section
+          p Базовая палитра:
+          .palette
+            .palette-bar(style="background: rgba(255,221,0)") RGB 255 221 0
+            .palette-bar(style="background: rgba(255,231,0)") RGB 255 231 0
+            .palette-bar(style="background: rgba(255,241,0)") RGB 255 241 0
+            .palette-bar(style="background: rgba(255,248,128)") RGB 255 248 128
+        section
+          p Расширенная палитра:
+          .palette
+            .palette-bar(style="background: rgba(20,150,255)") RGB 20 150 255
+            .palette-bar(style="background: rgba(94,98,243)") RGB 94 98 243
+            .palette-bar(style="background: rgba(115,43,151)") RGB 115 43 151
+            .palette-bar(style="background: rgba(245,86,99)") RGB 245 86 99
+            .palette-bar(style="background: rgba(46,200,134)") RGB 46 200 134
+            .palette-bar(style="background: rgba(70,78,90)") RGB 70 78 90
+            .palette-bar(style="background: rgba(40,51,68)") RGB 40 51 68
+        section
+          p Техническая:
+          .palette
+            .palette-bar(style="background: rgba(255,255,0)") RGB 255 255 0
+            .palette-bar(style="background: rgba(255,235,0)") RGB 255 235 0
+            .palette-bar(style="background: rgba(255,215,0)") RGB 255 215 0
+
+      .wds__section
+        h2#logo Логотип
+        p 
+      .wds__section
+        h2#type Типографика
+        p 
+      .wds__section
+        h2#illustration Иллюстрации
+        p 
+
+      
+
 
   .plug

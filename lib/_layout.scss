@@ -25,11 +25,15 @@
   }
 
   &.wds__shift-right {
-    padding-left: 6em;
+    @media #{$wds__desktop} {
+      padding-left: 6em;
+    }
   }
 
   &.wds__shift-left {
-    padding-right: 6em;
+    @media #{$wds__desktop} {
+      padding-right: 6em;
+    }
   }
 }
 
