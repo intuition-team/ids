@@ -16,13 +16,19 @@
     @media #{$wds__mobile} {
       width: 50%;
     }
+  }
+}
 
-    // &:first-child {
-    //   border-radius: .5em 0 0 .5em;
-    // }
+.logos-palette {
+  display: flex;
+  flex-wrap: wrap;
 
-    // &:last-child {
-    //   border-radius: 0 .5em .5em 0;
-    // }
+  .inverted-logo-bar {
+    width: 50%;
+    height: 10em;
+    background-image: url('/assets/images/winvestor-inverted-logo-ru.svg');
+    background-repeat: no-repeat;
+    background-position: center 45%;
+    background-size: 65% auto;
   }
 }

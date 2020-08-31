@@ -27,41 +27,72 @@ block content
     .wds__text
       
 
-      .wds__section
+      section
         h2#colour Цвет
-        p Есть три фирменные цветовые палитры: базовая, расширенная и техническая. Базовая — это оттенки жёлтого, они используются только в графической части логотипа. Расширенная — это палитра для иллюстраций и любой фирменной графики. Техническая — для интерфейсов.
+        p Есть три фирменные цветовые палитры: базовая, расширенная и техническая.
+        p Базовая — это оттенки жёлтого, они используются только в графической части логотипа. Расширенная палитра — для иллюстраций и фирменной графики. Техническая — для интерфейсных компонентов дизайн-системы.
         
         section
-          p Базовая палитра:
+          p Базовая палитра
           .palette
-            .palette-bar(style="background: rgba(255,221,0)") RGB 255 221 0
-            .palette-bar(style="background: rgba(255,231,0)") RGB 255 231 0
-            .palette-bar(style="background: rgba(255,241,0)") RGB 255 241 0
-            .palette-bar(style="background: rgba(255,248,128)") RGB 255 248 128
+            .palette-bar(style="background-color: rgba(255,221,0)") RGB 255 221 0
+            .palette-bar(style="background-color: rgba(255,231,0)") RGB 255 231 0
+            .palette-bar(style="background-color: rgba(255,241,0)") RGB 255 241 0
+            .palette-bar(style="background-color: rgba(255,248,128)") RGB 255 248 128
         section
-          p Расширенная палитра:
+          p Расширенная палитра
           .palette
-            .palette-bar(style="background: rgba(20,150,255)") RGB 20 150 255
-            .palette-bar(style="background: rgba(94,98,243)") RGB 94 98 243
-            .palette-bar(style="background: rgba(115,43,151)") RGB 115 43 151
-            .palette-bar(style="background: rgba(245,86,99)") RGB 245 86 99
-            .palette-bar(style="background: rgba(46,200,134)") RGB 46 200 134
-            .palette-bar(style="background: rgba(70,78,90)") RGB 70 78 90
-            .palette-bar(style="background: rgba(40,51,68)") RGB 40 51 68
+            .palette-bar(style="background-color: rgba(20,150,255)") RGB 20 150 255
+            .palette-bar(style="background-color: rgba(94,98,243)") RGB 94 98 243
+            .palette-bar(style="background-color: rgba(115,43,151)") RGB 115 43 151
+            .palette-bar(style="background-color: rgba(245,86,99)") RGB 245 86 99
+            .palette-bar(style="background-color: rgba(46,200,134)") RGB 46 200 134
+            .palette-bar(style="background-color: rgba(70,78,90)") RGB 70 78 90
+            .palette-bar(style="background-color: rgba(40,51,68)") RGB 40 51 68
         section
-          p Техническая:
+          p Техническая
           .palette
-            .palette-bar(style="background: rgba(255,255,0)") RGB 255 255 0
-            .palette-bar(style="background: rgba(255,235,0)") RGB 255 235 0
-            .palette-bar(style="background: rgba(255,215,0)") RGB 255 215 0
+            .palette-bar(style="background-color: rgba(5,5,5); color: grey") text
+            .palette-bar(style="background-color: rgba(200, 0, 0)") code
+            .palette-bar(style="background-color: rgba(0, 100, 240)") link
+            .palette-bar(style="background-color: rgba(0, 220, 0)") hover
+            .palette-bar(style="background-color: rgba(0, 0, 0, 0.3)") disabled
+            .palette-bar(style="background-color: rgba(240, 84, 95)") error
+            .palette-bar(style="background-color: rgba(84, 180, 140)") success
+            .palette-bar(style="background-color: rgba(245,245,245)") surface
+            .palette-bar(style="background-color: rgba(255,221,0)") main
+            .palette-bar(style="background-color: rgba(255, 248, 128)") mark
+            .palette-bar(style="background-color: rgba(255, 255, 255)") background
 
-      .wds__section
+      .wds__stack-S
+      section
         h2#logo Логотип
-        p 
-      .wds__section
+        p Основная версия логотипа представляет собой жёлтый фирменный круг с чёрной подписью:
+      section
+        figure
+          img(src="/assets/images/winvestor-main-logo-ru.svg")
+    .wds__text
+      section
+      p Основная версия используется только на белом фоне. Версия для цветного фоне не просто инвертирована, в ней по-другому раскрашен круг:
+
+      section
+        .logos-palette
+          .inverted-logo-bar(style="background-color: rgba(46,200,134)")
+          .inverted-logo-bar(style="background-color: rgba(245,86,99)")
+          .inverted-logo-bar(style="background-color: rgba(94,98,243)")
+          .inverted-logo-bar(style="background-color: rgba(115,43,151)")
+          .inverted-logo-bar(style="background-color: rgba(70,78,90)")
+          .inverted-logo-bar(style="background-color: rgba(40,51,68)")
+
+      section
+        p Допускается использование знака без текстовой подписи.
+
+      .wds__stack-S
+      section
         h2#type Типографика
         p 
-      .wds__section
+      .wds__stack-S
+      section
         h2#illustration Иллюстрации
         p 
 
