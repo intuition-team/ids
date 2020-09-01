@@ -4,7 +4,7 @@
   "description": "Winvestor Design System Brandbook",
   "repository": "https://github.com/intuition-team/wds.git",
   "scripts": {
-    "start": "parcel serve src/*.pug",
+    "start": "parcel serve src/index.pug src/*.pug",
     "prestart": "yarn && yarn clean && open-cli http://localhost:1234/index.html",
     "build": "yarn && yarn clean && parcel build src/*.pug",
     "clean": "rimraf static/assets",
