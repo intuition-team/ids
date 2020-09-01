@@ -32,3 +32,23 @@
     background-size: 65% auto;
   }
 }
+
+.font-letter {
+  font-size: 2.5em;
+  line-height: calc(#{$wds__density} / 1.2);
+  margin-bottom: 0.5em;
+
+  &.regular {
+    font-weight: 400;
+  }
+  &.medium {
+    font-weight: 500;
+  }
+  &.bold {
+    font-weight: 700;
+  }
+
+  @media #{$wds__mobile} {
+    font-size: 2.2em;
+  }
+}
