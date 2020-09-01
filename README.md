@@ -1,24 +1,26 @@
-## Подготовка среды
+## Как использовать
 
-### Mac OS
-
-1. Установить [Homebrew](https://brew.sh):
+1. Установить зависимость
     ```shell
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    npm install @intuition.team/wds
+    ```
+   или
+    ```shell
+    yarn add @intuition.team/wds
     ```
 
-2. Установить [Yarn](https://yarnpkg.com/lang/en/):
-    ```shell
-    brew install yarn
+2. Импортировать css файл
+    ```css
+    @import 'node_modules/@intuition.team/wds/dist/wds';
+    ```
+   или scss файл
+    ```css
+    @import 'node_modules/@intuition.team/wds/wds';
     ```
 
-### Windows
+## Как запустить локально
 
-1. [Скачать](https://yarnpkg.com/lang/en/docs/install/#windows-stable) и установить Yarn.
-
-## Как начать пользоваться
-
-1. Перейти в папку проекта.
+1. Склонировать код и перейти в папку проекта.
 
 2. Установить зависимости:
     ```shell
