@@ -1,7 +1,7 @@
-.wds__devider-line {
+.wds__divider-line {
   display: block;
   width: 100%;
   height: 1px;
-  background-color: theme-color(wds__divider-color);
+  background-color: rgba(theme-color-base(wds__text-color), 0.2);;
   margin-bottom: $wds__density;
 }
