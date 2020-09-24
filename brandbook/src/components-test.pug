@@ -1,0 +1,40 @@
+extends pages/layouts/main.pug
+
+block header 
+  include pages/partials/design-header.pug
+
+block content
+  //- .plug
+  
+  //- .wds__label Найти деньги
+  .wds__wrapper
+    .wds__text
+      .wds__section
+        h1 Компоненты
+      .wds__stack-XS
+      .wds__section
+        h3 Кнопка
+        p default
+        button Кликни меня
+        .wds__stack-XS
+        p disabled
+        button(disabled) Кликни меня
+        .wds__section
+        h3 Кнопка-ссылка
+        p default
+        a.wds__button-link(href="/components-test.pug") Кликни меня
+        .wds__stack-XS
+        p disabled
+        button(disabled) Кликни меня
+      .wds__section
+        h3 Инпут
+        .wds__grid.wds__grid-size-XL
+          .wds__grid-cell
+            p default
+            input(type='text' placeholder='Введи сюда свой текст')
+            p disabled
+            input(type='text' placeholder='Введи сюда свой текст' disabled)
+
+          
+
+  .plug

@@ -13,7 +13,75 @@
 
     &:hover {
       background-color: rgba(theme-color-base(wds__accent-color), .8);
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 5px theme-color(wds__main-color);
+    }
+
+    &:disabled {
+      opacity: .15;
+      cursor: default;
+      &:hover {
+        background-color: theme-color(wds__accent-color);
+      }
+    }
+  }
+
+  a {
+    &.wds__button-link {
+      background-color: theme-color(wds__accent-color);
       color: theme-color(wds__on-accent-color);
+      border-radius: $wds__radius;
+      padding: $wds__padding;
+      cursor: pointer;
+
+      &:hover {
+        background-color: rgba(theme-color-base(wds__accent-color), .8);
+      }
+
+      &:focus {
+        box-shadow: 0 0 0 5px theme-color(wds__main-color);
+      }
+
+      &:disabled {
+        opacity: .15;
+        cursor: default;
+        &:hover {
+          background-color: theme-color(wds__accent-color);
+        }
+      }
+    }
+  }
+
+  input[type='text'] {
+    width: 100%;
+    margin: 0em 0 1em 0;
+    height: 2em;
+    border: 0;
+    background: transparent;
+    color: theme-color(wds__text-color);
+    border-bottom: 2px solid theme-color(wds__text-color);
+
+    &::placeholder {
+      color: rgba(theme-color-base(wds__text-color), .6);
+    }
+
+    &:hover {
+      border-bottom: 2px solid rgba(theme-color-base(wds__text-color), .6);
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 5px theme-color(wds__main-color);
+    }
+
+    &:disabled {
+      opacity: .35;
+      cursor: default;
+
+      &:hover {
+        border-bottom: 2px solid theme-color(wds__text-color);
+      }
     }
   }
 
