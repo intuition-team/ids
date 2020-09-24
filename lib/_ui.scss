@@ -17,6 +17,7 @@
 
     &:focus {
       box-shadow: 0 0 0 5px theme-color(wds__main-color);
+      outline: none;
     }
 
     &:disabled {
@@ -34,6 +35,7 @@
       color: theme-color(wds__on-accent-color);
       border-radius: $wds__radius;
       padding: $wds__padding;
+      display: inline-block;
       cursor: pointer;
 
       &:hover {
@@ -42,11 +44,13 @@
 
       &:focus {
         box-shadow: 0 0 0 5px theme-color(wds__main-color);
+        outline: none;
       }
 
       &:disabled {
         opacity: .15;
         cursor: default;
+
         &:hover {
           background-color: theme-color(wds__accent-color);
         }
@@ -55,13 +59,51 @@
   }
 
   input[type='text'] {
+    display: inline-block;
     width: 100%;
-    margin: 0em 0 1em 0;
+    margin: .5em 0 1em 0;
+    padding: 0;
+    padding-bottom: calc(#{$wds__density} / 1.7);
     height: 2em;
     border: 0;
     background: transparent;
     color: theme-color(wds__text-color);
     border-bottom: 2px solid theme-color(wds__text-color);
+
+
+    &.option2 {
+      width: 100%;
+      margin: 0em 0 1em 0;
+      padding: $wds__padding;
+      height: 3em;
+      border: 1px solid rgba(theme-color-base(wds__text-color), .4);
+      border-radius: $wds__radius;
+      background: transparent;
+      color: theme-color(wds__text-color);
+
+      &:hover {
+        border: 1px solid rgba(theme-color-base(wds__text-color), .4);
+        border-bottom: 2px solid theme-color(wds__text-color);
+      }
+
+      &:active {
+        border: 1px solid rgba(theme-color-base(wds__text-color), .4);
+        border-bottom: 2px solid theme-color(wds__text-color);
+      }
+
+      &:disabled {
+        opacity: .35;
+        cursor: default;
+  
+        &:hover {
+          border: 1px solid rgba(theme-color-base(wds__text-color), .4);
+        }
+      }
+    }
+
+    &:active {
+      border-bottom: 2px solid theme-color(wds__text-color);
+    }
 
     &::placeholder {
       color: rgba(theme-color-base(wds__text-color), .6);
@@ -73,6 +115,7 @@
 
     &:focus {
       box-shadow: 0 0 0 5px theme-color(wds__main-color);
+      outline: none;
     }
 
     &:disabled {
@@ -82,6 +125,203 @@
       &:hover {
         border-bottom: 2px solid theme-color(wds__text-color);
       }
+    }
+  }
+
+  textarea {
+    width: 100%;
+    margin: 0em 0 1em 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: theme-color(wds__text-color);
+    border-bottom: 2px solid theme-color(wds__text-color);
+    resize: none;
+    overflow: auto;
+
+    &::placeholder {
+      color: rgba(theme-color-base(wds__text-color), .6);
+    }
+
+    &:hover {
+      border-bottom: 2px solid rgba(theme-color-base(wds__text-color), .6);
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 5px theme-color(wds__main-color);
+      outline: none;
+    }
+
+    &:disabled {
+      opacity: .35;
+      cursor: default;
+
+      &:hover {
+        border-bottom: 2px solid theme-color(wds__text-color);
+      }
+    }
+
+    &.option2 {
+      width: 100%;
+      margin: 0em 0 1em 0;
+      padding: calc(#{$wds__density} / 1.7);
+      height: 4em;
+      border: 1px solid rgba(theme-color-base(wds__text-color), .4);
+      border-radius: $wds__radius;
+      background: transparent;
+      color: theme-color(wds__text-color);
+
+      &:hover {
+        border: 1px solid rgba(theme-color-base(wds__text-color), .4);
+        border-bottom: 2px solid theme-color(wds__text-color);
+      }
+
+      &:active {
+        border: 1px solid rgba(theme-color-base(wds__text-color), .4);
+        border-bottom: 2px solid theme-color(wds__text-color);
+      }
+
+      &:disabled {
+        opacity: .35;
+        cursor: default;
+  
+        &:hover {
+          border: 1px solid rgba(theme-color-base(wds__text-color), .4);
+        }
+      }
+    }
+  }
+
+  
+
+  input[type='checkbox'] {
+    -webkit-appearance: none;
+    display: inline-block;
+    position: relative;
+    width: 1em; height: 1em;
+    border: 1px solid rgba(theme-color-base(wds__text-color), .4);
+    border-radius: $wds__radius;
+    margin-right: .5em;
+    cursor: pointer;
+
+    // label {
+    //   display: inline-block;
+    //   line-height: .8em;
+    //   padding: 0;
+    //   margin: 0;
+    // }
+
+    &:hover {
+      border: 1px solid theme-color(wds__text-color);
+    }
+
+    &:checked {
+      border: 1px solid rgba(theme-color-base(wds__accent-color), 1);
+      background-color: theme-color(wds__accent-color);
+
+      &:after {
+        content: '';
+        width: 1em;
+        height: 1em;
+        position: absolute;
+        left: -.05em;
+        top: -.05em;
+        background-image: url("/assets/images/check-white.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      &:hover {
+        background-color: rgba(theme-color-base(wds__text-color), .8);
+        border: 1px solid rgba(theme-color-base(wds__accent-color), .8);
+      }
+    }
+    
+    &:disabled {
+      opacity: .35;
+      cursor: default;
+      
+      &:hover {
+        border: 1px solid rgba(theme-color-base(wds__text-color), .4);
+      }
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 5px theme-color(wds__main-color);
+      outline: none;
+    }
+  }
+
+  input[type='radio'] {
+    -webkit-appearance: none;
+    display: inline-block;
+    position: relative;
+    width: 1em; height: 1em;
+    border: 1px solid rgba(theme-color-base(wds__text-color), .4);
+    border-radius: 50%;
+    margin-right: .5em;
+    cursor: pointer;
+
+    // label {
+    //   display: inline-block;
+    //   line-height: .8em;
+    //   padding: 0;
+    //   margin: 0;
+    // }
+
+    &:hover {
+      border: 1px solid theme-color(wds__text-color);
+    }
+
+    &:checked {
+      border: 1px solid rgba(theme-color-base(wds__accent-color), 1);
+      background-color: theme-color(wds__accent-color);
+
+      &:after {
+        content: '';
+        width: .3em;
+        height: .3em;
+        background-color: theme-color(wds__on-accent-color);
+        border-radius: 50%;
+        position: absolute;
+        left: .3em;
+        top: .3em;
+        color: theme-color(wds__on-accent-color);
+      }
+
+      &:hover {
+        background-color: rgba(theme-color-base(wds__text-color), .8);
+        border: 1px solid rgba(theme-color-base(wds__accent-color), .8);
+      }
+    }
+    
+    &:disabled {
+      opacity: .35;
+      cursor: default;
+      
+      &:hover {
+        border: 1px solid rgba(theme-color-base(wds__text-color), .4);
+      }
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 5px theme-color(wds__main-color);
+      outline: none;
+    }
+  }
+
+  table {
+    width: 100%;
+    
+    th {
+      text-align: left;
+      padding: .7em 0;
+      border-bottom: 2px solid theme-color(wds__accent-color);
+    }
+
+    td {
+      padding: .7em 0;
+      border-bottom: 1px solid rgba(theme-color-base(wds__accent-color), .15);
     }
   }
 
