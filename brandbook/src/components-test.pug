@@ -72,20 +72,21 @@ block content
         .wds__grid.wds__grid-size-M.wds__grid-inset-L
           .wds__grid-cell
             p default
-            input(type='checkbox' id='email-login')
-            label(for='email-login') Выбери меня
+            .wds__checkbox
+              input(type='checkbox' id='email-login')
+              label Выбери меня
           .wds__grid-cell
             p checked
             input(type='checkbox' id='email-login' checked)
-            label(for='email-login') Выбери меня
+            label Выбери меня
           .wds__grid-cell
             p disabled
             input(type='checkbox' id='email-login' disabled)
-            label(for='email-login') Выбери меня
+            label Выбери меня
           .wds__grid-cell
             p disabled checked
             input(type='checkbox' id='email-login' checked disabled)
-            label(for='email-login') Выбери меня
+            label Выбери меня
 
         h3 Радиокнопка
         .wds__grid.wds__grid-size-M.wds__grid-inset-L
@@ -109,11 +110,23 @@ block content
         h3 Таблица
         table
           tr 
-            th Список публикаций
+            th Название
+            th Категория
+            th Дата публикации
+            th Действия
           tr 
             td Название публикации
+            td Letters
+            td 20.20.2020
+            td Иконки :)
           tr 
             td Название публикации
+            td Letters
+            td 20.20.2020
+            td Иконки :)
           tr 
             td Название публикации
+            td Letters
+            td 20.20.2020
+            td Иконки :)
   .plug
