@@ -126,7 +126,9 @@
         cursor: default;
 
         &:hover {
+          border: none;
           border-bottom: 2px solid theme-color(wds__text-color);
+          
         }
       }
     }
@@ -196,6 +198,7 @@
         cursor: default;
 
         &:hover {
+          border: none;
           border-bottom: 2px solid theme-color(wds__text-color);
         }
       }
