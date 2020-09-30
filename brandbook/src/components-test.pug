@@ -7,7 +7,7 @@ block content
   .wds__wrapper
     .wds__text
       .wds__section
-        h1 Компоненты
+        h2 Компоненты
       .wds__stack-XXS
 
       .wds__section
@@ -39,13 +39,13 @@ block content
             p disabled
             input(type='text' placeholder='Введи сюда свой текст' disabled)
 
-        .wds-text-input
+        .wds__form-field
           label Выбери меня
           input(type='text' placeholder='Введи сюда свой текст')
-        .wds-text-input
+        .wds__form-field
           label Выбери меня
           input(type='text' placeholder='Введи сюда свой текст')
-        .wds-text-input
+        .wds__form-field
           label Выбери меня
           input(type='text' placeholder='Введи сюда свой текст')
 
@@ -124,20 +124,35 @@ block content
               input(type='radio' id='email-login' checked disabled)
               label(for='email-login') Выбери меня
 
+        //- h3 Радиогруппа
+        //- .wds__radiogroup-line
+        //-   .wds__radio
+        //-     input(type='radio' name='radiogroup')
+        //-     label Выбери меня
+        //-   .wds__radio
+        //-     input(type='radio' name='radiogroup')
+        //-     label Выбери меня
+        //-   .wds__radio
+        //-     input(type='radio' name='radiogroup')
+        //-     label Выбери меня
+        //-   .wds__radio
+        //-     input(type='radio' name='radiogroup')
+        //-     label Выбери меня
+
         h3 Радиогруппа
-        .wds__radiogroup
-          .wds__radio
-            input(type='radio' name='radiogroup')
-            label(for='email-login') Выбери меня
-          .wds__radio
-            input(type='radio' name='radiogroup')
-            label(for='email-login') Выбери меня
-          .wds__radio
-            input(type='radio' name='radiogroup')
-            label(for='email-login') Выбери меня
-          .wds__radio
-            input(type='radio' name='radiogroup')
-            label(for='email-login') Выбери меня
+        .wds__radiogroup-buttons
+          .wds__radio-button
+            input(type='radio' id='option1' name='radiobuttons')
+            label(for='option1') Письма 
+          .wds__radio-button
+            input(type='radio' id='option2' name='radiobuttons')
+            label(for='option2') Найти деньги
+          .wds__radio-button
+            input(type='radio' id='option3' name='radiobuttons')
+            label(for='option3') Что делать с деньгами
+          .wds__radio-button
+            input(type='radio' id='option4' name='radiobuttons')
+            label(for='option4') Как инвестировать
 
       .wds__section
         h3 Таблица

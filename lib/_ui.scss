@@ -334,8 +334,7 @@
         }
 
         &:hover {
-          background-color: rgba(theme-color-base(wds__text-color), .8);
-          border: 1px solid rgba(theme-color-base(wds__accent-color), .8);
+          cursor: default;
         }
       }
       
@@ -353,9 +352,62 @@
         outline: none;
       }
     }
+
+    
   }
 
-  .wds__radiogroup {
+  .wds__radiogroup-buttons {
+    display: flex;
+    flex-direction: row;
+    border-radius: $wds__radius;
+
+    .wds__radio-button {
+      input[type='radio'] {
+        display: none;
+
+        &:checked + label {
+          background-color: theme-color(wds__accent-color);
+          color: theme-color(wds__on-accent-color);
+        }
+      }
+
+      label {
+        padding: $wds__padding;
+        background-color: rgba(theme-color-base(wds__text-color), .1);
+        cursor: pointer;
+
+        &:hover {
+          background-color: rgba(theme-color-base(wds__text-color), .15);
+        }
+      }
+
+      &:first-child {
+        label {
+          border-radius: $wds__radius 0 0 $wds__radius;
+        }
+      }
+
+      &:last-child {
+        label {
+          border-radius: 0 $wds__radius $wds__radius 0;
+        }
+      }
+    }
+
+    &:disabled {
+      opacity: .35;
+      cursor: default;
+      
+      &:hover {
+        label {
+          background-color: rgba(theme-color-base(wds__text-color), .1);
+        }
+      }
+    }
+    
+  }
+
+  .wds__radiogroup-line {
     display: flex;
     flex-direction: row;
 
