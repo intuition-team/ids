@@ -59,23 +59,36 @@
     }
   }
 
+  .wds-text-input {
+    margin-bottom: $wds__density;
+  }
+
+  .wds-textarea {
+    margin-bottom: $wds__density;
+  }
+
+
   input[type='text'] {
     width: 100%;
     padding: $wds__padding;
     padding-left: calc(#{$wds__density} / 2);
-    border: 1px solid rgba(theme-color-base(wds__text-color), .2);
-    border-bottom: 2px solid rgba(theme-color-base(wds__text-color), .2);
+    border: 1px solid rgba(theme-color-base(wds__text-color), .4);
+    border-bottom: 2px solid rgba(theme-color-base(wds__text-color), .4);
     border-radius: $wds__radius;
     background: transparent;
     color: theme-color(wds__text-color);
 
+    // placeholder {
+    //   color: rgba(theme-color-base(wds__text-color), .1);
+    // }
+
     &:hover {
-      border: 1px solid rgba(theme-color-base(wds__text-color), .3);
+      border: 1px solid rgba(theme-color-base(wds__text-color), .4);
       border-bottom: 2px solid theme-color(wds__text-color);
     }
 
     &:active {
-      border: 1px solid rgba(theme-color-base(wds__text-color), .3);
+      border: 1px solid rgba(theme-color-base(wds__text-color), .4);
       border-bottom: 2px solid theme-color(wds__text-color);
     }
 
@@ -90,8 +103,8 @@
       cursor: default;
 
       &:hover {
-        border: 1px solid rgba(theme-color-base(wds__text-color), .2);
-        border-bottom: 2px solid rgba(theme-color-base(wds__text-color), .2);
+        border: 1px solid rgba(theme-color-base(wds__text-color), .4);
+        border-bottom: 2px solid rgba(theme-color-base(wds__text-color), .4);
       }
     }
     
@@ -143,8 +156,8 @@
     padding: $wds__padding;
     padding-left: calc(#{$wds__density} / 2);;
     height: 4em;
-    border: 1px solid rgba(theme-color-base(wds__text-color), .2);
-    border-bottom: 2px solid rgba(theme-color-base(wds__text-color), .2);
+    border: 1px solid rgba(theme-color-base(wds__text-color), .4);
+    border-bottom: 2px solid rgba(theme-color-base(wds__text-color), .4);
     border-radius: $wds__radius;
     background: transparent;
     color: theme-color(wds__text-color);
@@ -152,7 +165,7 @@
     overflow: auto;
 
     &:hover {
-      border: 1px solid rgba(theme-color-base(wds__text-color), .3);
+      border: 1px solid rgba(theme-color-base(wds__text-color), .4);
       border-bottom: 2px solid theme-color(wds__text-color);
     }
 
@@ -163,7 +176,7 @@
     }
 
     &:active {
-      border: 1px solid rgba(theme-color-base(wds__text-color), .3);
+      border: 1px solid rgba(theme-color-base(wds__text-color), .4);
       border-bottom: 2px solid theme-color(wds__text-color);
     }
 
@@ -172,8 +185,8 @@
       cursor: default;
 
       &:hover {
-        border: 1px solid rgba(theme-color-base(wds__text-color), .2);
-        border-bottom: 2px solid rgba(theme-color-base(wds__text-color), .2);
+        border: 1px solid rgba(theme-color-base(wds__text-color), .4);
+        border-bottom: 2px solid rgba(theme-color-base(wds__text-color), .4);
       }
     }
     
