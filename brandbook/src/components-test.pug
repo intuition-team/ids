@@ -4,9 +4,6 @@ block header
   include pages/partials/design-header.pug
 
 block content
-  //- .plug
-  
-  //- .wds__label Найти деньги
   .wds__wrapper
     .wds__text
       .wds__section
@@ -15,7 +12,7 @@ block content
 
       .wds__section
         h3 Кнопка
-        .wds__grid.wds__grid-size-M.wds__grid-inset-L
+        .wds__grid.wds__grid-size-L.wds__grid-inset-L
           .wds__grid-cell
             p default
             button Кликни меня
@@ -24,7 +21,7 @@ block content
             button(disabled) Кликни меня
 
         h3 Кнопка-ссылка
-        .wds__grid.wds__grid-size-M.wds__grid-inset-L
+        .wds__grid.wds__grid-size-L.wds__grid-inset-L
           .wds__grid-cell
             p default
             a.wds__button-link(href="/components-test.pug") Кликни меня
@@ -37,6 +34,7 @@ block content
           .wds__grid-cell
             p default
             input(type='text' placeholder='Введи сюда свой текст')
+            
           .wds__grid-cell
             p disabled
             input(type='text' placeholder='Введи сюда свой текст' disabled)
@@ -54,7 +52,9 @@ block content
         .wds__grid.wds__grid-size-XL.wds__grid-inset-L
           .wds__grid-cell
             p default
+            
             input.option2(type='text' placeholder='Введи сюда свой текст')
+            
           .wds__grid-cell
             p disabled
             input.option2(type='text' placeholder='Введи сюда свой текст' disabled)
@@ -73,40 +73,63 @@ block content
           .wds__grid-cell
             p default
             .wds__checkbox
-              input(type='checkbox' id='email-login')
+              input(type='checkbox')
               label Выбери меня
           .wds__grid-cell
             p checked
-            input(type='checkbox' id='email-login' checked)
-            label Выбери меня
+            .wds__checkbox
+              input(type='checkbox' checked)
+              label Выбери меня
           .wds__grid-cell
             p disabled
-            input(type='checkbox' id='email-login' disabled)
-            label Выбери меня
+            .wds__checkbox
+              input(type='checkbox' disabled)
+              label Выбери меня
           .wds__grid-cell
             p disabled checked
-            input(type='checkbox' id='email-login' checked disabled)
-            label Выбери меня
+            .wds__checkbox
+              input(type='checkbox' checked disabled)
+              label Выбери меня
 
         h3 Радиокнопка
         .wds__grid.wds__grid-size-M.wds__grid-inset-L
           .wds__grid-cell
             p default
-            input(type='radio' id='email-login')
-            label(for='email-login') Выбери меня
+            .wds__radio
+              input(type='radio' id='email-login')
+              label(for='email-login') Выбери меня
           .wds__grid-cell
             p checked
-            input(type='radio' id='email-login' checked)
-            label(for='email-login') Выбери меня
+            .wds__radio
+              input(type='radio' id='email-login' checked)
+              label(for='email-login') Выбери меня
           .wds__grid-cell
             p disabled
-            input(type='radio' id='email-login' disabled)
-            label(for='email-login') Выбери меня
+            .wds__radio
+              input(type='radio' id='email-login' disabled)
+              label(for='email-login') Выбери меня
           .wds__grid-cell
             p disabled checked
-            input(type='radio' id='email-login' checked disabled)
+            .wds__radio
+              input(type='radio' id='email-login' checked disabled)
+              label(for='email-login') Выбери меня
+
+        h3 Радиогруппа
+        .wds__radiogroup
+          .wds__radio
+            input(type='radio' name='radiogroup')
             label(for='email-login') Выбери меня
-        
+          .wds__radio
+            input(type='radio' name='radiogroup')
+            label(for='email-login') Выбери меня
+          .wds__radio
+            input(type='radio' name='radiogroup')
+            label(for='email-login') Выбери меня
+          .wds__radio
+            input(type='radio' name='radiogroup')
+            label(for='email-login') Выбери меня
+            
+      .wds__section
         h3 Таблица
         table
           tr 
