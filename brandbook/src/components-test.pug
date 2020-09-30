@@ -53,10 +53,10 @@ block content
         .wds__grid.wds__grid-size-XL.wds__grid-inset-L
           .wds__grid-cell
             p default
-            textarea(type='text' placeholder='Введи сюда свой текст')
+            textarea(placeholder='Введи сюда свой текст')
           .wds__grid-cell
             p disabled
-            textarea(type='text' placeholder='Введи сюда свой текст' disabled)
+            textarea(placeholder='Введи сюда свой текст' disabled)
         
         h3 Инпут вариант 2
         .wds__grid.wds__grid-size-XL.wds__grid-inset-L
@@ -73,10 +73,10 @@ block content
         .wds__grid.wds__grid-size-XL.wds__grid-inset-L
           .wds__grid-cell
             p default
-            textarea.option2(type='text' placeholder='Введи сюда свой текст')
+            textarea.option2(placeholder='Введи сюда свой текст')
           .wds__grid-cell
             p disabled
-            textarea.option2(type='text' placeholder='Введи сюда свой текст' disabled)
+            textarea.option2(placeholder='Введи сюда свой текст' disabled)
 
         h3 Чекбокс
         .wds__grid.wds__grid-size-M.wds__grid-inset-L
@@ -140,17 +140,17 @@ block content
         //-     label Выбери меня
 
         h3 Радиогруппа
-        .wds__radiogroup-buttons
-          .wds__radio-button
+        .wds__radiogroup-toggle
+          .wds__radiogroup-option
             input(type='radio' id='option1' name='radiobuttons')
             label(for='option1') Письма 
-          .wds__radio-button
+          .wds__radiogroup-option
             input(type='radio' id='option2' name='radiobuttons')
             label(for='option2') Найти деньги
-          .wds__radio-button
+          .wds__radiogroup-option
             input(type='radio' id='option3' name='radiobuttons')
             label(for='option3') Что делать с деньгами
-          .wds__radio-button
+          .wds__radiogroup-option
             input(type='radio' id='option4' name='radiobuttons')
             label(for='option4') Как инвестировать
 

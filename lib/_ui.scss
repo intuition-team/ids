@@ -361,12 +361,12 @@
     
   }
 
-  .wds__radiogroup-buttons {
+  .wds__radiogroup-toggle {
     display: flex;
     flex-direction: row;
     border-radius: $wds__radius;
 
-    .wds__radio-button {
+    .wds__radiogroup-option {
       white-space: nowrap;
       
       input[type='radio'] {
@@ -445,6 +445,14 @@
     td {
       padding: calc(#{$wds__density} * 0.6) 0;
       border-bottom: 1px solid rgba(theme-color-base(wds__text-color), .15);
+    }
+
+    tr {
+      &:last-child {
+        td {
+          border-bottom: none;
+        }
+      }
     }
   }
 

@@ -237,7 +237,80 @@ block content
         h3
           code &lt;button&gt;
         button Отправить
-        .wds__stack-XS
+        .wds__stack-S
+
+        h3
+          code .wds__button-link
+        a.wds__button-link(href="/system.pug") Кликни меня
+        .wds__stack-S
+
+        h3
+          code &lt;input type="text"&gt;
+        input(type='text' placeholder='Введи сюда свой текст')
+        .wds__stack-S
+
+        h3
+          code &lt;input.option2 type="text"&gt;
+        input.option2(type='text' placeholder='Введи сюда свой текст')
+        .wds__stack-S
+
+        h3
+          code &lt;textarea&gt;
+        textarea(placeholder='Введи сюда свой текст')
+        .wds__stack-S
+
+        h3
+          code .wds__checkbox
+        .wds__checkbox
+          input(type='checkbox')
+          label Выбери меня
+        .wds__stack-S
+
+        h3
+          code .wds__radio
+        .wds__radio
+          input(type='radio' id='email-login')
+          label(for='email-login') Выбери меня
+        .wds__stack-S
+
+        h3
+          code .wds__radiogroup-toggle
+        .wds__radiogroup-toggle
+          .wds__radiogroup-option
+            input(type='radio' id='option1' name='radiobuttons')
+            label(for='option1') Вариант 1
+          .wds__radiogroup-option
+            input(type='radio' id='option2' name='radiobuttons')
+            label(for='option2') Вариант 2
+          .wds__radiogroup-option
+            input(type='radio' id='option3' name='radiobuttons')
+            label(for='option3') Вариант 3
+          .wds__radiogroup-option
+            input(type='radio' id='option4' name='radiobuttons')
+            label(for='option4') Вариант 4
+        .wds__stack-S
+
+        h3
+          code &lt;table&gt;
+        table
+          tr 
+            th Колонка1 
+            th Колонка2
+            th Колонка3 
+          tr 
+            td Колонка1
+            td Колонка2
+            td Колонка3
+          tr 
+            td Колонка1
+            td Колонка2
+            td Колонка3
+          tr 
+            td Колонка1
+            td Колонка2
+            td Колонка3
+
+        .wds__stack-S
 
       .wds__section
         h2(id="variables") Переменные
