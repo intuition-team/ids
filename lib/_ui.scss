@@ -12,6 +12,7 @@
     border-radius: $wds__radius;
     padding: $wds__padding;
     line-height: $wds__density;
+    white-space: nowrap;
     cursor: pointer;
 
     &:hover {
@@ -39,6 +40,7 @@
       border-radius: $wds__radius;
       padding: $wds__padding;
       display: inline-block;
+      white-space: nowrap;
       cursor: pointer;
 
       &:hover {
@@ -252,6 +254,7 @@
       margin-right: .5em;
       vertical-align: baseline;
       cursor: pointer;
+      flex-shrink: 0;
   
       &:hover {
         border: 1px solid theme-color(wds__text-color);
@@ -311,6 +314,7 @@
       border: 1px solid rgba(theme-color-base(wds__text-color), .4);
       border-radius: 50%;
       margin-right: .5em;
+      flex-shrink: 0;
       cursor: pointer;
       
       &:hover {
@@ -331,6 +335,7 @@
           left: .3em;
           top: .3em;
           color: theme-color(wds__on-accent-color);
+          flex-shrink: 0;
         }
 
         &:hover {
@@ -362,6 +367,8 @@
     border-radius: $wds__radius;
 
     .wds__radio-button {
+      white-space: nowrap;
+      
       input[type='radio'] {
         display: none;
 
