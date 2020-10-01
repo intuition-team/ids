@@ -29,6 +29,11 @@ block content
             p disabled
             a.wds__button-link(href="/components-test.pug" disabled) Кликни меня
 
+      .section
+        .error-plate
+          | Да уж конечно, похоже приключилась некоторая ошибка :(
+        .success-plate
+          | Ну! Можешь же, когда захочешь!
         h3 Инпут
         .wds__grid.wds__grid-size-XL.wds__grid-inset-L
           .wds__grid-cell
@@ -41,7 +46,9 @@ block content
 
         .wds__form-field
           label Выбери меня
-          input(type='text' placeholder='Введи сюда свой текст')
+          input.error-state(type='text' placeholder='Введи сюда свой текст')
+          .form-error-message
+            | Это поле обязательно для заполнения
         .wds__form-field
           label Выбери меня
           input(type='text' placeholder='Введи сюда свой текст')

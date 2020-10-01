@@ -9,3 +9,23 @@
 .wds__admin-form {
   width: 100%;
 }
+
+.error-plate {
+  display: block;
+  width: 20em;
+  padding: $wds__padding;
+  border-radius: $wds__radius;
+  background-color: rgba(theme-color-base(wds__error-color), 0.15);
+  color: theme-color(wds__error-color);
+  margin-bottom: $wds__density;
+}
+
+.success-plate {
+  display: block;
+  width: 20em;
+  padding: $wds__padding;
+  border-radius: $wds__radius;
+  background-color: rgba(theme-color-base(wds__success-color), 0.15);
+  color: theme-color(wds__success-color);
+  margin-bottom: $wds__density;
+}

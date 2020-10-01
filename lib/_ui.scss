@@ -67,6 +67,13 @@
     margin-bottom: $wds__density;
   }
 
+  // .form-error-message {
+  //   color: theme-color(wds__error-color);
+  //   font-size: 0.8em;
+  //   line-height: 1.2em;
+  //   margin-top: .2em;
+  // }
+
   input[type='text'] {
     width: 100%;
     padding: $wds__padding;
@@ -79,6 +86,10 @@
 
     // placeholder {
     //   color: rgba(theme-color-base(wds__text-color), .1);
+    // }
+
+    // &.error-state {
+    //   border-bottom: 2px solid theme-color(wds__error-color);
     // }
 
     &:hover {
