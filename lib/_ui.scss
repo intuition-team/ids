@@ -5,6 +5,13 @@
     margin: 0 0 0.6em 0;
   }
 
+  .form-error-message {
+    color: theme-color(wds__error-color);
+    font-size: 0.8em;
+    line-height: 1.2em;
+    margin-top: .2em;
+  }
+
   button {
     border: 0;
     background-color: theme-color(wds__accent-color);
@@ -67,13 +74,6 @@
     margin-bottom: $wds__density;
   }
 
-  // .form-error-message {
-  //   color: theme-color(wds__error-color);
-  //   font-size: 0.8em;
-  //   line-height: 1.2em;
-  //   margin-top: .2em;
-  // }
-
   input[type='text'] {
     width: 100%;
     padding: $wds__padding;
@@ -84,13 +84,9 @@
     background: transparent;
     color: theme-color(wds__text-color);
 
-    // placeholder {
-    //   color: rgba(theme-color-base(wds__text-color), .1);
-    // }
-
-    // &.error-state {
-    //   border-bottom: 2px solid theme-color(wds__error-color);
-    // }
+    &.error-state {
+      border-bottom: 2px solid theme-color(wds__error-color);
+    }
 
     &:hover {
       border: 1px solid rgba(theme-color-base(wds__text-color), .4);
