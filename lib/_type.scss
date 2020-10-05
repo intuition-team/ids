@@ -204,7 +204,7 @@
     }
 
     figcaption {
-      margin-top: calc(#{$wds__density} * 0.75);
+      margin-top: calc(#{$wds__density} * 0.25);
       font-size: 0.8em;
       line-height: $wds__density;
       opacity: 0.7;
