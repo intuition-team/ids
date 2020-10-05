@@ -1,6 +1,6 @@
 {
   "name": "@intuition.team/wds-brandbook",
-  "version": "0.1.5",
+  "version": "0.2.0",
   "description": "Winvestor Design System Brandbook",
   "repository": "https://github.com/intuition-team/wds.git",
   "scripts": {
