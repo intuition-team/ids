@@ -5,7 +5,7 @@
     margin: 0 0 0.6em 0;
   }
 
-  .form-error-message {
+  .wds-form-error-message {
     color: theme-color(wds__error-color);
     font-size: 0.8em;
     line-height: 1.2em;
@@ -84,7 +84,7 @@
     background: transparent;
     color: theme-color(wds__text-color);
 
-    &.error-state {
+    &.wds__input-error-state {
       border-bottom: 2px solid theme-color(wds__error-color);
     }
 
@@ -137,7 +137,7 @@
       }
 
       &:hover {
-        border-bottom: 2px solid rgba(theme-color-base(wds__text-color), .6);
+        border-bottom: 2px solid rgba(theme-color-base(wds__text-color),   .6);
       }
 
       &:focus {
