@@ -77,6 +77,33 @@
       white-space: nowrap;
       cursor: pointer;
 
+      &.size-XS {
+        font-size: .6em;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        padding-top: $wds__density/2.5;
+      }
+
+      &.size-S {
+        font-size: .8em;
+      }
+
+      &.size-M {} //default
+
+      &.size-L {
+        font-size: 1.5em;
+        padding-top: $wds__density/6;
+        padding-bottom: $wds__density/4;
+        padding: $wds__density/6 $wds__density/1.5 $wds__density/4;
+      }
+
+      &.size-XL {
+        font-size: 2.5em;
+        padding-top: $wds__density/6;
+        padding-bottom: $wds__density/4;
+        padding: $wds__density/6 $wds__density/1.5 $wds__density/4;
+      }
+
       &:hover {
         background-color: rgba(theme-color-base(wds__accent-color), .8);
       }
