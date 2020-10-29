@@ -74,7 +74,9 @@
     margin-bottom: $wds__density;
   }
 
-  input[type='text'] {
+  input[type='text'], 
+  input[type='email'], 
+  input[type='number'] {
     width: 100%;
     padding: $wds__padding;
     padding-left: calc(#{$wds__density} / 2);
