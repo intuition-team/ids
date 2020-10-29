@@ -107,6 +107,24 @@
     background: transparent;
     color: theme-color(wds__text-color);
 
+    &.size-XS {
+      font-size: .6em;
+    }
+
+    &.size-S {
+      font-size: .8em;
+    }
+
+    &.size-M {} //default
+
+    &.size-L {
+      font-size: 1.5em;
+    }
+
+    &.size-XL {
+      font-size: 2.5em;
+    }
+
     &.wds__input-error-state {
       border-bottom: 2px solid theme-color(wds__error-color);
     }
