@@ -22,6 +22,27 @@
     white-space: nowrap;
     cursor: pointer;
 
+    &.size-XS {
+      font-size: .6em;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding-top: 0.5em;
+    }
+
+    &.size-S {
+      font-size: .8em;
+    }
+
+    &.size-M {} //default
+
+    &.size-L {
+      font-size: 1.5em;
+    }
+
+    &.size-XL {
+      font-size: 2.5em;
+    }
+
     &:hover {
       background-color: rgba(theme-color-base(wds__accent-color), .8);
     }
