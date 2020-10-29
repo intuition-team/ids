@@ -1,3 +1,13 @@
+# 0.3.0 (29 октября 2020)
+
+## Новое в wds
+1. Пять размеров для `<input type="text">`, `<button>` и `<a class="wds__button-link">`: `.size-XS`, `.size-S`, `.size-M`, `.size-L`, `.size-XL`. Размер по умолчанию — `.size-M`, на него не применяются дополнительные стили.
+
+## Исправлено
+
+1. Паддинги `$wds__padding` теперь пересчитываются от `$wds__density`.
+2. Стили `<input type="text">` применяются ещё к `<input type="number">` и `<input type="email">`.
+
 # 0.2.1 (5 октября 2020)
 
 ## Исправлено
