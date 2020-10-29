@@ -237,7 +237,7 @@
   textarea {
     width: 100%;
     padding: $wds__density/3 $wds__density $wds__density/2;
-    padding-left: calc(#{$wds__density} / 2);;
+    padding-left: calc(#{$wds__density} / 2);
     height: 4em;
     border: 1px solid rgba(theme-color-base(wds__text-color), .4);
     border-bottom: 2px solid rgba(theme-color-base(wds__text-color), .4);
