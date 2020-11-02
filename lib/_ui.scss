@@ -128,9 +128,7 @@
     margin-bottom: $wds__density;
   }
 
-  input[type='text'], 
-  input[type='email'], 
-  input[type='number'] {
+  input {
     width: 100%;
     padding: $wds__density/3 $wds__density $wds__density/2;
     padding-left: calc(#{$wds__density} / 2);
@@ -335,6 +333,7 @@
       border: 1px solid rgba(theme-color-base(wds__text-color), .4);
       border-radius: $wds__radius-S;
       margin-right: .5em;
+      padding: 0;
       vertical-align: baseline;
       cursor: pointer;
       flex-shrink: 0;
@@ -400,6 +399,7 @@
       margin-right: .3em;
       margin-top: .13em;
       margin-bottom: .6em;
+      padding: 0;
       -webkit-appearance: none;
       display: inline-block;
       vertical-align: top;
