@@ -10,22 +10,22 @@
   width: 100%;
 }
 
-.wds__error-plate {
+.wds__error-toast,
+.wds__success-toast {
+  position: relative;
   display: block;
   width: 20em;
   padding: $wds__padding;
   border-radius: $wds__radius;
-  background-color: rgba(theme-color-base(wds__error-color), 0.15);
-  color: theme-color(wds__error-color);
   margin-bottom: $wds__density;
 }
 
-.wds__success-plate {
-  display: block;
-  width: 20em;
-  padding: $wds__padding;
-  border-radius: $wds__radius;
+.wds__error-toast {
+  background-color: rgba(theme-color-base(wds__error-color), 0.15);
+  color: theme-color(wds__error-color);
+}
+
+.wds__success-toast {
   background-color: rgba(theme-color-base(wds__success-color), 0.15);
   color: theme-color(wds__success-color);
-  margin-bottom: $wds__density;
 }
