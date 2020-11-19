@@ -1,0 +1,17 @@
+version: "2.3"
+
+services:
+  design-system: 
+    build:
+      context: ./
+      labels:
+        org.label-schema.vendor: "Winvestor"
+        org.label-schema.url: "http://design.winvestor.ru"
+        org.label-schema.name: "winvestor/design-system"
+        org.label-schema.description: "Design System for Winvestor"
+
+    image: harbor.rnds.pro/winvestor/design-system:${TAG-latest}
+
+    ports: 
+      - 8080:80
+      
