@@ -16,7 +16,7 @@
     background-color: theme-color(wds__accent-color);
     color: theme-color(wds__on-accent-color);
     border-radius: $wds__radius;
-    padding: $wds__density/3 $wds__density $wds__density/2;
+    padding: $wds__density/3 $wds__density $wds__density/2.5;
     line-height: $wds__density;
     white-space: nowrap;
     cursor: pointer;
@@ -36,16 +36,12 @@
 
     &.size-L {
       font-size: 1.5em;
-      padding-top: $wds__density/6;
-      padding-bottom: $wds__density/4;
-      padding: $wds__density/6 $wds__density/1.5 $wds__density/4;
+      padding: $wds__density/5 $wds__density/1.5 $wds__density/4; //мб не 5, а 4.5
     }
 
     &.size-XL {
       font-size: 2.5em;
-      padding-top: $wds__density/6;
-      padding-bottom: $wds__density/4;
-      padding: $wds__density/6 $wds__density/1.5 $wds__density/4;
+      padding: $wds__density/5 $wds__density/1.5 $wds__density/4;
     }
 
     &:hover {
@@ -91,16 +87,12 @@
 
       &.size-L {
         font-size: 1.5em;
-        padding-top: $wds__density/6;
-        padding-bottom: $wds__density/4;
-        padding: $wds__density/6 $wds__density/1.5 $wds__density/4;
+        padding: $wds__density/5 $wds__density/1.5 $wds__density/4;
       }
 
       &.size-XL {
         font-size: 2.5em;
-        padding-top: $wds__density/6;
-        padding-bottom: $wds__density/4;
-        padding: $wds__density/6 $wds__density/1.5 $wds__density/4;
+        padding: $wds__density/5 $wds__density/1.5 $wds__density/4;
       }
 
       &:hover {
@@ -129,7 +121,7 @@
 
   input {
     width: 100%;
-    padding: $wds__density/3 $wds__density $wds__density/2;
+    padding: $wds__density/3 $wds__density $wds__density/2.5;
     padding-left: calc(#{$wds__density} / 2);
     border: 1px solid theme-color(wds__text-color);
     border-bottom: 2px solid theme-color(wds__text-color);
@@ -149,13 +141,13 @@
 
     &.size-L {
       font-size: 1.5em;
-      padding-top: $wds__density/6;
+      padding-top: $wds__density/5;
       padding-bottom: $wds__density/4;
     }
 
     &.size-XL {
       font-size: 2.5em;
-      padding-top: $wds__density/6;
+      padding-top: $wds__density/5;
       padding-bottom: $wds__density/4;
     }
 
@@ -178,7 +170,7 @@
       width: 100%;
       margin: .5em 0 1em 0;
       padding-left: 0;
-      height: 2em;
+      // height: 2em; //?????
       border: 0;
       border-radius: .3em .3em 0 0;
       background: transparent;
@@ -207,7 +199,7 @@
 
   textarea {
     width: 100%;
-    padding: $wds__density/3 $wds__density $wds__density/2;
+    padding: $wds__density/3 $wds__density $wds__density/2.5;
     padding-left: calc(#{$wds__density} / 2);
     height: 4em;
     border: 1px solid theme-color(wds__text-color);
@@ -429,7 +421,7 @@
       }
 
       label {
-        padding: $wds__density/3 $wds__density $wds__density/2;
+        padding: $wds__density/3 $wds__density $wds__density/2.5;
         background-color: rgba(theme-color-base(wds__text-color), .1);
         cursor: pointer;
 
