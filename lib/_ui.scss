@@ -11,7 +11,7 @@
     margin-top: .2em;
   }
 
-  button {
+  button, a.wds__button-link {
     border: 0;
     background-color: theme-color(wds__accent-color);
     color: theme-color(wds__on-accent-color);
@@ -64,54 +64,7 @@
 
   a {
     &.wds__button-link {
-      background-color: theme-color(wds__accent-color);
-      color: theme-color(wds__on-accent-color);
-      border-radius: $wds__radius;
-      padding: $wds__density/3 $wds__density $wds__density/2;
       display: inline-block;
-      white-space: nowrap;
-      cursor: pointer;
-
-      &.size-XS {
-        font-size: .6em;
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-        padding-top: $wds__density/2.5;
-      }
-
-      &.size-S {
-        font-size: .8em;
-      }
-
-      &.size-M {} //default
-
-      &.size-L {
-        font-size: 1.5em;
-        padding: $wds__density/5 $wds__density/1.5 $wds__density/4;
-      }
-
-      &.size-XL {
-        font-size: 2.5em;
-        padding: $wds__density/5 $wds__density/1.5 $wds__density/4;
-      }
-
-      &:hover {
-        background-color: rgba(theme-color-base(wds__accent-color), .8);
-      }
-
-      &:focus {
-        box-shadow: 0 0 0 5px theme-color(wds__main-color);
-        outline: none;
-      }
-
-      &:disabled {
-        opacity: .15;
-        cursor: default;
-
-        &:hover {
-          background-color: theme-color(wds__accent-color);
-        }
-      }
     }
   }
 
@@ -119,7 +72,7 @@
     margin-bottom: $wds__density;
   }
 
-  input {
+  input, textarea {
     width: 100%;
     padding: $wds__density/3 $wds__density $wds__density/2.5;
     padding-left: calc(#{$wds__density} / 2);
@@ -170,7 +123,6 @@
       width: 100%;
       margin: .5em 0 1em 0;
       padding-left: 0;
-      // height: 2em; //?????
       border: 0;
       border-radius: .3em .3em 0 0;
       background: transparent;
@@ -198,62 +150,13 @@
   }
 
   textarea {
-    width: 100%;
-    padding: $wds__density/3 $wds__density $wds__density/2.5;
-    padding-left: calc(#{$wds__density} / 2);
     height: 4em;
-    border: 1px solid theme-color(wds__text-color);
-    border-bottom: 2px solid theme-color(wds__text-color);
-    border-radius: $wds__radius;
-    background: transparent;
-    color: theme-color(wds__text-color);
     resize: none;
     overflow: auto;
 
-    &:focus {
-      box-shadow: 0 0 0 5px theme-color(wds__main-color);
-      outline: none;
-    }
-
-    &:disabled {
-      opacity: .35;
-      cursor: default;
-    }
-    
-
     &.wds__input-text-line {
-      width: 100%;
       margin: 0em 0 1em 0;
-      padding-left: 0;
-      border: 0;
-      border-radius: .3em .3em 0 0;
-      background: transparent;
-      color: theme-color(wds__text-color);
-      border-bottom: 2px solid theme-color(wds__text-color);
       height: 2.5em;
-      
-
-      &::placeholder {
-        color: rgba(theme-color-base(wds__text-color), .6);
-      }
-
-      &:active {
-        border-radius: $wds__radius;
-      }
-
-      &:focus {
-        border-radius: $wds__radius;
-      }
-
-      &:disabled {
-        opacity: .35;
-        cursor: default;
-
-        &:hover {
-          border: none;
-          border-bottom: 2px solid theme-color(wds__text-color);
-        }
-      }
     }
   }
 
