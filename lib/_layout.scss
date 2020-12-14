@@ -42,7 +42,7 @@
   background-color: theme-color(wds__background-color);
   font-family: $wds__font;
 
-  @include wds__media-font-scaling;
+  line-height: $wds__density;
 }
 
 .wds__section {

@@ -31,31 +31,6 @@ $wds__font: 'Root UI', Arial, sans-serif !default;
   }
 }
 
-@mixin wds__media-font-scaling {
-  font-size: 20px;
-  line-height: $wds__density;
-
-  @media screen and (max-width: 1350px) {
-    font-size: 19px;
-  }
-
-  @media screen and (max-width: 1300px) {
-    font-size: 18px;
-  }
-
-  @media screen and (max-width: 1250px) {
-    font-size: 17px;
-  }
-
-  @media screen and (max-width: 1200px) {
-    font-size: 16px;
-  }
-
-  @media #{$wds__mobile} {
-    font-size: 17px;
-    line-height: $wds__density;
-  }
-}
 
 @mixin wds__normalize-line-height {
   line-height: $wds__density;
