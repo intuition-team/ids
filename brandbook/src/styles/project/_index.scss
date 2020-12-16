@@ -18,33 +18,30 @@ body {
   }
 }
 
-.brandbook-sections {
-  margin-top: 1em;
-  display: flex;
-  flex-wrap: wrap;
+.brandbook-section {
+  display: block;
+  margin-right: 2%;
 
-  .section-link {
-    width: 48%;
-    margin-right: 2%;
-    display: block;
-    background-color: theme-color(wds__surface-color);
-    padding: calc(#{$wds__density} * 0.75);
-    border-radius: $wds__radius;
-    margin-bottom: calc(#{$wds__density} * 0.75);
+  height: 20em;
 
-    h2 {
-      margin-top: 0.2em;
-      line-height: 1;
-    }
+  background-color: theme-color(wds__surface-color);
+  padding: calc(#{$wds__density} * 0.75);
+  padding-right: 3em;
+  border-radius: $wds__radius;
+  margin-bottom: calc(#{$wds__density} * 0.75);
 
+  h2 {
+    margin-top: 0.2em;
+    line-height: 1;
+  }
+
+  .wds__label {
+    background-color: theme-color(wds__link-color);
+  }
+
+  &:hover {
     .wds__label {
-      background-color: theme-color(wds__link-color);
-    }
-
-    &:hover {
-      .wds__label {
-        background-color: theme-color(wds__link-hover-color);
-      }
+      background-color: theme-color(wds__link-hover-color);
     }
   }
 }
@@ -54,10 +51,18 @@ body {
   width: 100%;
 }
 
-.theme-button {
-  position: fixed;
-  top: 1em;
-  right: 1em;
-  cursor: pointer;
-  z-index: 999999;
+.wds {
+  .theme-button {
+    position: fixed;
+    top: 1em;
+    right: 1em;
+    cursor: pointer;
+    z-index: 999999;
+    border-bottom: 0;
+
+    &:hover {
+      opacity: 0.9;
+      border-bottom: 0;
+    }
+  }
 }

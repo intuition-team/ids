@@ -2,7 +2,7 @@ const page = document.querySelector('html');
 const themeButton = document.querySelector('.theme-button');
 
 if (themeButton) {
-  themeButton.textContent = 'Ночь';
+  themeButton.textContent = '🌘';
   themeButton.addEventListener('click', event => {
     event.stopPropagation();
     event.preventDefault();
@@ -10,9 +10,9 @@ if (themeButton) {
     page.classList.toggle('dark-theme');
 
     if (page.classList.contains('dark-theme')) {
-      themeButton.textContent = 'День';
+      themeButton.textContent = '🌔';
     } else {
-      themeButton.textContent = 'Ночь';
+      themeButton.textContent = '🌘';
     }
   });
 }
