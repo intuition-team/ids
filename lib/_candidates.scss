@@ -2,7 +2,7 @@
   display: block;
   width: 100%;
   height: 1px;
-  background-color: rgba(theme-color-base(wds__text-color), 0.2);
+  background-color: rgba(var(--wds__text-RGB), 0.2);
   margin-bottom: $wds__density;
 }
 
@@ -21,11 +21,11 @@
 }
 
 .wds__error-toast {
-  background-color: rgba(theme-color-base(wds__error-color), 0.15);
-  color: theme-color(wds__error-color);
+  background-color: rgba(var(--wds__error-RGB), 0.15);
+  color: RGB(var(--wds__error-RGB));
 }
 
 .wds__success-toast {
-  background-color: rgba(theme-color-base(wds__success-color), 0.15);
-  color: theme-color(wds__success-color);
+  background-color: rgba(var(--wds__success-RGB), 0.15);
+  color: RGB(var(--wds__success-RGB));
 }

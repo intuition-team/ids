@@ -5,7 +5,7 @@
   }
 
   .wds__form-error-message {
-    color: theme-color(wds__error-color);
+    color: RGB(var(--wds__error-RGB));
     font-size: 0.8em;
     line-height: 1.2em;
     margin-top: .2em;
@@ -13,8 +13,8 @@
 
   button, a.wds__button-link {
     border: 0;
-    background-color: theme-color(wds__accent-color);
-    color: theme-color(wds__on-accent-color);
+    background-color: RGB(var(--wds__accent-RGB));
+    color: RGB(var(--wds__on-accent-RGB));
     border-radius: $wds__radius;
     padding: $wds__density/3 $wds__density $wds__density/2.5;
     line-height: $wds__density;
@@ -45,11 +45,11 @@
     }
 
     &:hover {
-      background-color: rgba(theme-color-base(wds__accent-color), .8);
+      background-color: rgba(var(--wds__accent-RGB), .8);
     }
 
     &:focus {
-      box-shadow: 0 0 0 5px theme-color(wds__main-color);
+      box-shadow: 0 0 0 5px RGB(var(--wds__outline-RGB));
       outline: none;
     }
 
@@ -57,7 +57,7 @@
       opacity: .15;
       cursor: default;
       &:hover {
-        background-color: theme-color(wds__accent-color);
+        background-color: RGB(var(--wds__accent-RGB));
       }
     }
   }
@@ -76,11 +76,11 @@
     width: 100%;
     padding: $wds__density/3 $wds__density $wds__density/2.5;
     padding-left: calc(#{$wds__density} / 2);
-    border: 1px solid theme-color(wds__text-color);
-    border-bottom: 2px solid theme-color(wds__text-color);
+    border: 1px solid RGB(var(--wds__text-RGB));
+    border-bottom: 2px solid RGB(var(--wds__text-RGB));
     border-radius: $wds__radius;
     background: transparent;
-    color: theme-color(wds__text-color);
+    color: RGB(var(--wds__text-RGB));
 
     &.size-XS {
       font-size: .6em;
@@ -105,11 +105,11 @@
     }
 
     &.wds__input-error-state {
-      border-bottom: 2px solid theme-color(wds__error-color);
+      border-bottom: 2px solid RGB(var(--wds__error-RGB));
     }
 
     &:focus {
-      box-shadow: 0 0 0 5px theme-color(wds__main-color);
+      box-shadow: 0 0 0 5px RGB(var(--wds__outline-RGB));
       outline: none;
     }
 
@@ -126,16 +126,16 @@
       border: 0;
       border-radius: .3em .3em 0 0;
       background: transparent;
-      color: theme-color(wds__text-color);
-      border-bottom: 2px solid theme-color(wds__text-color);
+      color: RGB(var(--wds__text-RGB));
+      border-bottom: 2px solid RGB(var(--wds__text-RGB));
 
       &:active {
-        border-bottom: 2px solid theme-color(wds__text-color);
+        border-bottom: 2px solid RGB(var(--wds__text-RGB));
         border-radius: $wds__radius;
       }
 
       &::placeholder {
-        color: rgba(theme-color-base(wds__text-color), .6);
+        color: rgba(var(--wds__text-RGB), .6);
       }
 
       &:focus {
@@ -178,7 +178,7 @@
       display: inline-block;
       position: relative;
       width: 1em; height: 1em;
-      border: 1px solid rgba(theme-color-base(wds__text-color), .4);
+      border: 1px solid rgba(var(--wds__text-RGB), .4);
       border-radius: $wds__radius-S;
       margin-right: .5em;
       padding: 0;
@@ -188,12 +188,12 @@
       overflow: hidden;
   
       &:hover {
-        border: 1px solid theme-color(wds__text-color);
+        border: 1px solid RGB(var(--wds__text-RGB));
       }
   
       &:checked {
-        border: 1px solid rgba(theme-color-base(wds__accent-color), 1);
-        background-color: theme-color(wds__accent-color);
+        border: 1px solid rgba(var(--wds__accent-RGB), 1);
+        background-color: RGB(var(--wds__accent-RGB));
         
         
         &:before {
@@ -201,8 +201,8 @@
           position: absolute;
           width: .4em;
           height: .6em;
-          border-right: 2px solid theme-color(wds__on-accent-color);
-          border-bottom: 2px solid theme-color(wds__on-accent-color);
+          border-right: 2px solid RGB(var(--wds__on-accent-RGB));
+          border-bottom: 2px solid RGB(var(--wds__on-accent-RGB));
           left: .25em;
           top: .025em;
           transform: rotate(45deg);
@@ -214,8 +214,8 @@
         }
   
         &:hover {
-          background-color: rgba(theme-color-base(wds__text-color), .8);
-          border: 1px solid rgba(theme-color-base(wds__accent-color), .8);
+          background-color: rgba(var(--wds__text-RGB), .8);
+          border: 1px solid rgba(var(--wds__accent-RGB), .8);
         }
       }
       
@@ -224,12 +224,12 @@
         cursor: default;
         
         &:hover {
-          border: 1px solid rgba(theme-color-base(wds__text-color), .4);
+          border: 1px solid rgba(var(--wds__text-RGB), .4);
         }
       }
   
       &:focus {
-        box-shadow: 0 0 0 5px theme-color(wds__main-color);
+        box-shadow: 0 0 0 5px RGB(var(--wds__outline-RGB));
         outline: none;
       }
     }
@@ -252,29 +252,29 @@
       vertical-align: top;
       position: relative;
       width: 1em; height: 1em;
-      border: 1px solid rgba(theme-color-base(wds__text-color), .4);
+      border: 1px solid rgba(var(--wds__text-RGB), .4);
       border-radius: 50%;
       
       
       
       &:hover {
-        border: 1px solid theme-color(wds__text-color);
+        border: 1px solid RGB(var(--wds__text-RGB));
       }
 
       &:checked {
-        border: 1px solid rgba(theme-color-base(wds__accent-color), 1);
-        background-color: theme-color(wds__accent-color);
+        border: 1px solid rgba(var(--wds__accent-RGB), 1);
+        background-color: RGB(var(--wds__accent-RGB));
 
         &:after {
           content: '';
           width: .3em;
           height: .3em;
-          background-color: theme-color(wds__on-accent-color);
+          background-color: RGB(var(--wds__on-accent-RGB));
           border-radius: 50%;
           position: absolute;
           left: .3em;
           top: .3em;
-          color: theme-color(wds__on-accent-color);
+          color: RGB(var(--wds__on-accent-RGB));
           flex-shrink: 0;
         }
 
@@ -288,12 +288,12 @@
         cursor: default;
         
         &:hover {
-          border: 1px solid rgba(theme-color-base(wds__text-color), .4);
+          border: 1px solid rgba(var(--wds__text-RGB), .4);
         }
       }
 
       &:focus {
-        box-shadow: 0 0 0 5px theme-color(wds__main-color);
+        box-shadow: 0 0 0 5px RGB(var(--wds__outline-RGB));
         outline: none;
       }
     }
@@ -313,23 +313,23 @@
         display: none;
 
         &:checked + label {
-          background-color: theme-color(wds__accent-color);
-          color: theme-color(wds__on-accent-color);
+          background-color: RGB(var(--wds__accent-RGB));
+          color: RGB(var(--wds__on-accent-RGB));
         }
 
         &:focus {
-          box-shadow: 0 0 0 5px theme-color(wds__main-color);
+          box-shadow: 0 0 0 5px RGB(var(--wds__outline-RGB));
           outline: none;
         }
       }
 
       label {
         padding: $wds__density/3 $wds__density $wds__density/2.5;
-        background-color: rgba(theme-color-base(wds__text-color), .1);
+        background-color: rgba(var(--wds__text-RGB), .1);
         cursor: pointer;
 
         &:hover {
-          background-color: rgba(theme-color-base(wds__text-color), .15);
+          background-color: rgba(var(--wds__text-RGB), .15);
         }
       }
 
@@ -352,7 +352,7 @@
       
       &:hover {
         label {
-          background-color: rgba(theme-color-base(wds__text-color), .1);
+          background-color: rgba(var(--wds__text-RGB), .1);
         }
       }
     }
@@ -366,12 +366,12 @@
     th {
       text-align: left;
       padding: .5em 0;
-      border-bottom: 2px solid theme-color(wds__accent-color);
+      border-bottom: 2px solid RGB(var(--wds__accent-RGB));
     }
 
     td {
       padding: calc(#{$wds__density} * 0.6) 0;
-      border-bottom: 1px solid rgba(theme-color-base(wds__text-color), .15);
+      border-bottom: 1px solid rgba(var(--wds__text-RGB), .15);
     }
 
     tr {

@@ -1,79 +1,43 @@
-$use-css-variables: true !default;
-$theme-colors: ();
+:root {
+  --wds__background-RGB: 255, 255, 255;
+  --wds__text-RGB: 5, 5, 5;
+  --wds__accent-RGB: 0, 0, 0;
+  --wds__main-RGB: var(--wds__accent-RGB);
+  --wds__surface-RGB: 245, 245, 245;
+  --wds__error-RGB: 240, 84, 95;
+  --wds__success-RGB: 84, 180, 140;
+  --wds__mark-RGB: 255, 248, 128;
+  --wds__code-RGB: 200, 0, 0;
 
-@mixin define-theme($args...) {
-  @each $name, $color, $color-dark in $args {
-    $theme-colors: map-merge(
-      $theme-colors,
-      ("wds__#{$name}": #{$color}, "wds__dark-#{$name}": #{$color-dark})
-    ) !global;
-  }
+  --wds__on-main-RGB: var(--wds__background-RGB);
+  --wds__on-accent-RGB: var(--wds__background-RGB);
+  --wds__on-surface-RGB: var(--wds__text-RGB);
 
-  @if $use-css-variables {
-    :root {
-      @each $name, $color, $color-dark, $scheme in $args {
-        @if $scheme == "rgba" {
-          --wds__#{$name}: rgba(#{$color});
-        } @else {
-          --wds__#{$name}: rgb(#{$color});
-          --wds__#{$name}-base: #{$color};
-        }
-      }
-    }
-
-    :root.dark-theme {
-      @each $name, $color, $color-dark, $scheme in $args {
-        @if $scheme == "rgba" {
-          --wds__#{$name}: rgba(#{$color-dark});
-        } @else {
-          --wds__#{$name}: rgb(#{$color-dark});
-          --wds__#{$name}-base: #{$color-dark};
-        }
-      }
-    }
-  }
+  --wds__link-RGB: 0, 100, 240;
+  --wds__hover-RGB: 0, 220, 0;
+  --wds__outline-RGB: var(--wds__surface-RGB);
 }
 
-@function theme-color($name) {
-  @if $use-css-variables {
-    @return var(--#{$name});
-  } @else {
-    @return map-get($theme-colors, $name);
-  }
+.winvestor-theme {
+  --wds__outline-RGB: 255, 221, 0;
 }
 
-@function theme-color-base($name) {
-  @if $use-css-variables {
-    @return var(--#{$name}-base);
-  } @else {
-    @return map-get($theme-colors, $name);
-  }
+.winvestor-dark-theme { 
+  --wds__background-RGB: 40, 40, 40;
+  --wds__text-RGB: 255, 255, 255;
+  --wds__accent-RGB: 255, 255, 255;
+  --wds__main-RGB: var(--wds__accent-RGB);
+  --wds__surface-RGB: 60, 60, 60;
+  --wds__error-RGB: 229, 0, 60;
+  --wds__success-RGB: 0, 229, 121;
+  --wds__mark-RGB: 100, 100, 100;
+  --wds__code-RGB: 200, 50, 50;
+
+  --wds__on-main-RGB: 5, 5, 5;
+  --wds__on-accent-RGB: 40, 40, 40;
+  --wds__on-surface-RGB: var(--wds__text-RGB);
+
+  --wds__link-RGB: 80, 150, 255;
+  --wds__hover-RGB: 100, 230, 100;
+  --wds__outline-RGB: 255, 221, 0;
 }
-
-@include define-theme(
-  // Указываем компоненты цвета, а не сами цвета, чтобы можно было использовать переменные с разными значениями alpha
-  // Базовые цвета
-  ("background-color", "255, 255, 255", "40, 40, 40"), // фон
-  ("text-color", "5, 5, 5", "255, 255, 255"), // цвет текста
-  ("main-color", "255, 221, 0", "255, 221, 0"), // основной
-  ("accent-color", "0, 0, 0", "255, 255, 255"), // акцентный UI
-  ("surface-color", "245, 245, 245", "60, 60, 60"), // поверхность (она же плашка)
-  ("error-color", "240, 84, 95", "229, 0, 60"), // ошибка
-  ("success-color", "84, 180, 140", "0, 229, 121"), // саксесс
-  ("mark-color", "255, 248, 128", "100, 100, 100"), // маркер
-  ("code-color", "200, 0, 0", "200, 50, 50"), // код
-
-  // Контент
-  ("on-main-color", "5, 5, 5", "5, 5, 5"), // на основном цвете
-  ("on-accent-color", "255, 255, 255", "40, 40, 40"), // на акцентном цвете
-  ("on-background-color", "5, 5, 5", "255, 255, 255"), // на фоне
-  ("on-surface-color", "5, 5, 5", "255, 255, 255"), // на поверхности (плашке)
-  ("on-error-color", "255, 255, 255", "255, 255, 255"), // на ошибке
-  ("on-success-color", "255, 255, 255", "255, 255, 255"), // на саксессе
-
-  // Цвета элементов
-  ("link-color", "0, 100, 240", "80, 150, 255"), // ссылка
-  ("link-hover-color", "0, 220, 0", "100, 230, 100"), // ховер ссылки
-  ("link-underline-color", "0, 100, 240, .2", "80, 150, 255, .2", "rgba"), // подчеркивание ссылки
-  ("link-underline-hover-color", "0, 220, 0, .2", "100, 230, 100, .2", "rgba"), // ховер подчеркивания ссылки
-);

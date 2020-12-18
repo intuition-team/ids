@@ -7,9 +7,9 @@ if (themeButton) {
     event.stopPropagation();
     event.preventDefault();
 
-    page.classList.toggle('dark-theme');
+    page.classList.toggle('winvestor-dark-theme');
 
-    if (page.classList.contains('dark-theme')) {
+    if (page.classList.contains('winvestor-dark-theme')) {
       themeButton.textContent = '🌔';
     } else {
       themeButton.textContent = '🌘';

@@ -38,8 +38,8 @@
 }
 
 .wds {
-  color: theme-color(wds__text-color);
-  background-color: theme-color(wds__background-color);
+  color: RGB(var(--wds__text-RGB));
+  background-color: RGB(var(--wds__background-RGB));
   font-family: $wds__font;
 
   font-size: var(--step-0);
