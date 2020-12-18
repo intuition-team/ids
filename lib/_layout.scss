@@ -71,6 +71,30 @@
     align-items: flex-end;
   }
 
+  .wds__grid-cell {
+    width: 50%;
+    
+    &.wds__grid-cell-align-bottom {
+      align-self: flex-end;
+    }
+
+    @media #{$wds__mobile} {
+      width: 100%;
+    }
+  }
+
+  &.wds__grid-with-gaps {
+    justify-content: space-between;
+
+    .wds__grid-cell {
+      width: 49.5%;
+  
+      @media #{$wds__mobile} {
+        width: 100%;
+      }
+    }
+  }
+
   &.wds__grid-size-XXL {
     .wds__grid-cell {
       width: calc(100% / 2);
@@ -161,15 +185,5 @@
   }
 
 
-  .wds__grid-cell {
-    width: 50%;
-    
-    &.wds__grid-cell-align-bottom {
-      align-self: flex-end;
-    }
 
-    @media #{$wds__mobile} {
-      width: 100%;
-    }
-  }
 }

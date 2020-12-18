@@ -22,6 +22,7 @@
     "start": "(cd brandbook && yarn start)"
   },
   "dependencies": {
+    "css-loader": "^5.0.1",
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {

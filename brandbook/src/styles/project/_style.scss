@@ -4,6 +4,21 @@
   }
 }
 
+.future-card {
+  width: 98%;
+
+  .future-card-image {
+    padding-bottom: 63%;
+    background-size: cover;
+    background-position: 100% 30%;
+    border-radius: 0.4em;
+  }
+
+  .future-card-text-plate {
+    padding: 0.8em 2em 2em 0;
+  }
+}
+
 .palette {
   display: flex;
   flex-wrap: wrap;
