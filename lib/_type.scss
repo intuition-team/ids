@@ -1,54 +1,56 @@
 :root {
   --fluid-min-width: 1000;
-  --fluid-max-width: 1350;
+  --fluid-max-width: 1600;
 
   --fluid-screen: 100vw; // шрифт растягивается с этим параметром. если его зафиксировать в пикс, не растягивается
   --fluid-bp: calc(
     (var(--fluid-screen) - var(--fluid-min-width) / 16 * 1rem) /
       (var(--fluid-max-width) - var(--fluid-min-width))
   );
-}
 
-:root {
-  --f--2-min: 7.11;
-  --f--2-max: 8.89;
-  --step--2: calc(
-    ((var(--f--2-min) / 16) * 1rem) + (var(--f--2-max) - var(--f--2-min)) *
-      var(--fluid-bp)
-  );
-
-  --f--1-min: 10.67;
-  --f--1-max: 13.33;
-  --step--1: calc(
-    ((var(--f--1-min) / 16) * 1rem) + (var(--f--1-max) - var(--f--1-min)) *
-      var(--fluid-bp)
-  );
-
-  --f-0-min: 16.00;
-  --f-0-max: 20.00;
+  //базовое
+  --type-scale-desktop: 1.5; //коэффициент увеличения шрифта десктоп
+  --f-0-min: 16.00; //размер шрифта мин десктоп
+  --f-0-max: 20.00; //размер шрифта макс десктоп
   --step-0: calc(
     ((var(--f-0-min) / 16) * 1rem) + (var(--f-0-max) - var(--f-0-min)) *
       var(--fluid-bp)
   );
 
-  --f-1-min: 24.00;
-  --f-1-max: 30.00;
+  //положительные
+  --f-1-min: calc(var(--f-0-min) * var(--type-scale-desktop));
+  --f-1-max: calc(var(--f-0-max) * var(--type-scale-desktop));
   --step-1: calc(
     ((var(--f-1-min) / 16) * 1rem) + (var(--f-1-max) - var(--f-1-min)) *
       var(--fluid-bp)
   );
 
-  --f-2-min: 36.00;
-  --f-2-max: 45.00;
+  --f-2-min: calc(var(--f-1-min) * var(--type-scale-desktop));
+  --f-2-max: calc(var(--f-1-max) * var(--type-scale-desktop));
   --step-2: calc(
     ((var(--f-2-min) / 16) * 1rem) + (var(--f-2-max) - var(--f-2-min)) *
       var(--fluid-bp)
   );
 
-  --f-3-min: 54.00;
-  --f-3-max: 67.50;
+  --f-3-min: calc(var(--f-2-min) * var(--type-scale-desktop));
+  --f-3-max: calc(var(--f-2-max) * var(--type-scale-desktop));
   --step-3: calc(
     ((var(--f-3-min) / 16) * 1rem) + (var(--f-3-max) - var(--f-3-min)) *
+      var(--fluid-bp)
+  );
+
+  //отрицательные
+  --f--1-min: calc(var(--f-0-min) / var(--type-scale-desktop));
+  --f--1-max: calc(var(--f-0-max) / var(--type-scale-desktop));
+  --step--1: calc(
+    ((var(--f--1-min) / 16) * 1rem) + (var(--f--1-max) - var(--f--1-min)) *
+      var(--fluid-bp)
+  );
+
+  --f--2-min: calc(var(--f--1-min) / var(--type-scale-desktop));
+  --f--2-max: calc(var(--f--1-max) / var(--type-scale-desktop));
+  --step--2: calc(
+    ((var(--f--2-min) / 16) * 1rem) + (var(--f--2-max) - var(--f--2-min)) *
       var(--fluid-bp)
   );
 }
@@ -61,7 +63,7 @@
 }
 
 // на ширине больше 1350 шрифт не увеличивается
-@media screen and (min-width: 1350px) {
+@media screen and (min-width: 1600px) {
   :root {
     --fluid-screen: calc(var(--fluid-max-width) * 1px);
   }
@@ -71,52 +73,11 @@
   :root {
     --fluid-min-width: 320;
     --fluid-max-width: 768;
-
     --fluid-screen: calc(var(768) * 1px);
-  }
 
-  :root {
-    --f--2-min: 9.57;
-    --f--2-max: 9.57;
-    --step--2: calc(
-      ((var(--f--2-min) / 16) * 1rem) + (var(--f--2-max) - var(--f--2-min)) *
-        var(--fluid-bp)
-    );
-  
-    --f--1-min: 12.75;
-    --f--1-max: 12.75;
-    --step--1: calc(
-      ((var(--f--1-min) / 16) * 1rem) + (var(--f--1-max) - var(--f--1-min)) *
-        var(--fluid-bp)
-    );
-  
-    --f-0-min: 17.00;
-    --f-0-max: 17.00;
-    --step-0: calc(
-      ((var(--f-0-min) / 16) * 1rem) + (var(--f-0-max) - var(--f-0-min)) *
-        var(--fluid-bp)
-    );
-  
-    --f-1-min: 22.66;
-    --f-1-max: 22.66;
-    --step-1: calc(
-      ((var(--f-1-min) / 16) * 1rem) + (var(--f-1-max) - var(--f-1-min)) *
-        var(--fluid-bp)
-    );
-  
-    --f-2-min: 30.21;
-    --f-2-max: 30.21;
-    --step-2: calc(
-      ((var(--f-2-min) / 16) * 1rem) + (var(--f-2-max) - var(--f-2-min)) *
-        var(--fluid-bp)
-    );
-  
-    --f-3-min: 40.27;
-    --f-3-max: 40.27;
-    --step-3: calc(
-      ((var(--f-3-min) / 16) * 1rem) + (var(--f-3-max) - var(--f-3-min)) *
-        var(--fluid-bp)
-    );
+    --type-scale-desktop: 1.333; //коэффициент увеличения шрифта телефон
+    --f-0-min: 17.00; //размер шрифта мин телефон
+    --f-0-max: 17.00; //размер шрифта макс телефон
   }
 }
 
@@ -201,13 +162,13 @@
   }
 
   h5 {
-    font-size: var(--step--1);
+    font-size: calc(var(--step-0) * 0.8);
     line-height: $wds__density;
     margin-bottom: 0.7em;
   }
 
   h6 {
-    font-size: var(--step--2);
+    font-size: calc(var(--step-0) * 0.6);
     text-transform: uppercase;
     line-height: $wds__density;
     margin-bottom: 0.7em;
