@@ -7,26 +7,32 @@ block header
         img(src="/assets/images/winvestor-sign.svg")
       a.system__sign.rounded(href="#top")
         img(src="/assets/images/platform-icon.png")
-    h4 Брендплатформа Винвестора
+
     .system__sidebar-nav
       .system__sidebar-nav-link
-        a(href="#values") Ценности
-      .system__sidebar-nav-link
+        a(href="#brand") Бренд
+      .system__sidebar-nav-link.inner
         a(href="#audience") Аудитория
+      .system__sidebar-nav-link.inner
+        a(href="#values") Ценности
+    .system__sidebar-nav
       .system__sidebar-nav-link
+        a(href="#syle") Фирменный стиль
+      .system__sidebar-nav-link.inner
         a(href="#colour") Цвет
-      .system__sidebar-nav-link
+      .system__sidebar-nav-link.inner
         a(href="#logo") Логотип
-      .system__sidebar-nav-link
+      .system__sidebar-nav-link.inner
         a(href="#type") Типографика
-      .system__sidebar-nav-link
-        a(href="#illustration") Иллюстрации
+      .system__sidebar-nav-link.inner
+        a(href="#graphic") Графика
 
 
 block content
   a.theme-button
   .wds__stack-M
   .wds__wrapper.wds__shift-right#top
+    h1#brand Винвестор
     p.wds__lead Винвестор — это онлайн-пространство для покупки и продажи финансовых продуктов. Мы предлагаем инструменты долгосрочного инвестирования, не обещаем заоблачной прибыли, нормально объясняем, действуем строго в рамках российских законов.
     p.wds__lead Мы создаём будущее с новой культурой потребления инвестиционных инструментов, для начала в России.
 
@@ -36,30 +42,15 @@ block content
         .future-card
           .future-card-image(style="background-image: url('/assets//images/package.jpg')")
           .future-card-text-plate
-            p В 2025 году в России 20% населения будут владеть инвестиционными продуктами,
+            p Мы считаем, что в 2025 году в России 20% населения будут владеть инвестиционными продуктами,
             h3 а покупать их станет <mark>не сложнее, чем продукты в супермаркете</mark>.
 
       .wds__grid-cell
         .future-card
           .future-card-image(style="background-image: url('/assets//images/winwestor.jpg')")
           .future-card-text-plate
-            p Винвестор предоставит биржевые и внебиржевые инструменты, страховые продукты, вклады и кредиты всех ключевых поставщиков, позволяя собрать 
-            h3 <mark>единый портфель</mark> бумаг, приобретённых у разных брокеров и управляющих компаний <mark>в одном личном кабинете</mark>.
-
-      .wds__grid-cell
-        .future-card
-          .future-card-image(style="background-image: url('/assets/images/crosssing.jpg')")
-          .future-card-text-plate
-            p Рынок станет двунаправленным: можно будет не только искать готовые предложения, но и размещать запросы — например,
-            h3 сказать «интересуют биоинженерные компании» <mark>и получить предложения от нескольких продавцов.</mark>
-
-      .wds__grid-cell
-        .future-card
-          .future-card-image(style="background-image: url('/assets/images/adviser.jpg')")
-          .future-card-text-plate
-            p Винвестор обеспечит всех участников рынка достоверной информацией, помогая
-            h3 принимать <mark>осознанные решения</mark> и делать инвестиции, о которых не придётся жалеть.
-            p Лицензированные инвестиционные и финансовые советники сыграют в этом важнейшую роль: мы упростим получение консультаций, дадим возможность безопасно предоставлять доступ к своему портфелю для инвестиционных рекомендаций.
+            p Мы предоставим биржевые и внебиржевые инструменты ключевых брокеров и управляющих компаний, позволяя собрать 
+            h3 <mark>единый портфель</mark> бумаг от разных поставщиков <mark>в одном личном кабинете</mark>.
 
       .wds__section
         h2(id="audience") Аудитория
@@ -79,239 +70,6 @@ block content
           li недавно начал зарабатывать, задумался о финансах (должны быть наши)
 
         p Не наш сегмент: те, кто пользуются давно и постоянно. У нас для них пока нет продукта.
-
-
-  .wds__wrapper.wds__shift-right
-    .wds__text
-      section
-        figure
-          img(src="/assets/images/winvestor-main-logo-ru.svg")
-      section
-        h2#colour Цвет
-        p Есть три фирменные цветовые палитры: базовая, расширенная и техническая.
-        p Базовая — это оттенки жёлтого, они используются только в графической части логотипа. Расширенная палитра — для иллюстраций и фирменной графики. Техническая — для интерфейсных компонентов дизайн-системы.
-
-        section
-          p Базовая палитра
-          .palette
-            .palette-bar(style="background-color: rgb(255,221,0)") RGB 255 221 0
-            .palette-bar(style="background-color: rgb(255,231,0)") RGB 255 231 0
-            .palette-bar(style="background-color: rgb(255,241,0)") RGB 255 241 0
-            .palette-bar(style="background-color: rgb(255,248,128)") RGB 255 248 128
-        section
-          p Расширенная палитра
-          .palette
-            .palette-bar(style="background-color: rgb(20,150,255)") RGB 20 150 255
-            .palette-bar(style="background-color: rgb(94,98,243)") RGB 94 98 243
-            .palette-bar(style="background-color: rgb(115,43,151)") RGB 115 43 151
-            .palette-bar(style="background-color: rgb(245,86,99)") RGB 245 86 99
-            .palette-bar(style="background-color: rgb(46,200,134)") RGB 46 200 134
-            .palette-bar(style="background-color: rgb(70,78,90)") RGB 70 78 90
-            .palette-bar(style="background-color: rgb(40,51,68)") RGB 40 51 68
-        section
-          p Техническая
-          .palette
-            .palette-bar(style="background-color: rgb(5,5,5); color: grey") text
-            .palette-bar(style="background-color: rgb(200, 0, 0)") code
-            .palette-bar(style="background-color: rgb(0, 100, 240)") link
-            .palette-bar(style="background-color: rgb(0, 220, 0)") hover
-            .palette-bar(style="background-color: rgba(0, 0, 0, 0.3)") disabled
-            .palette-bar(style="background-color: rgb(240, 84, 95)") error
-            .palette-bar(style="background-color: rgb(84, 180, 140)") success
-            .palette-bar(style="background-color: rgb(245,245,245)") surface
-            .palette-bar(style="background-color: rgb(255,221,0)") main
-            .palette-bar(style="background-color: rgb(255, 248, 128)") mark
-            .palette-bar(style="background-color: rgb(255, 255, 255)") background
-
-      .wds__stack-S
-      section
-        h2#logo Логотип
-        p Основная версия логотипа представляет собой жёлтый фирменный круг с чёрной подписью:
-      section
-        p
-          a(href="/assets/images/winvestor-main-logo-ru.svg" download) Скачать SVG
-
-    .wds__text
-      section
-      p Допускается использование знака без текстовой подписи.
-      p Основная версия используется только на белом фоне. Версия для цветного фоне не просто инвертирована, в ней по-другому раскрашен круг:
-
-      section
-        .logos-palette
-          .inverted-logo-bar(style="background-color: rgb(46,200,134)")
-          .inverted-logo-bar(style="background-color: rgb(245,86,99)")
-          .inverted-logo-bar(style="background-color: rgb(94,98,243)")
-          .inverted-logo-bar(style="background-color: rgb(115,43,151)")
-          .inverted-logo-bar(style="background-color: rgb(70,78,90)")
-          .inverted-logo-bar(style="background-color: rgb(40,51,68)")
-
-      section
-        p
-          a(href="/assets/images/winvestor-inverted-logo-ru.svg" download) Скачать SVG
-        
-
-      .wds__stack-S
-      section
-        h2#type Типографика
-        p Фирменный шрифт Винвестора — Root UI в начертаниях Regular, Medium и Bold. 
-    .wds__grid.wds__grid-size-XS
-      .wds__grid-cell
-        .font-letter.bold Аа
-      .wds__grid-cell
-        .font-letter.bold Бб
-      .wds__grid-cell
-        .font-letter.bold Вв
-      .wds__grid-cell
-        .font-letter.bold Гг
-      .wds__grid-cell
-        .font-letter.bold Дд
-      .wds__grid-cell
-        .font-letter.bold Её
-      .wds__grid-cell
-        .font-letter.bold Жж
-      .wds__grid-cell
-        .font-letter.bold Зз
-      .wds__grid-cell
-        .font-letter.bold Ий
-      .wds__grid-cell
-        .font-letter.bold Кк
-      .wds__grid-cell
-        .font-letter.bold Лл
-      .wds__grid-cell
-        .font-letter.bold Мм
-      .wds__grid-cell
-        .font-letter.medium НН
-      .wds__grid-cell
-        .font-letter.medium Оо
-      .wds__grid-cell
-        .font-letter.medium Пп
-      .wds__grid-cell
-        .font-letter.medium Рр
-      .wds__grid-cell
-        .font-letter.medium Сс
-      .wds__grid-cell
-        .font-letter.medium Тт
-      .wds__grid-cell
-        .font-letter.medium Уу
-      .wds__grid-cell
-        .font-letter.medium Фф
-      .wds__grid-cell
-        .font-letter.medium Хх
-      .wds__grid-cell
-        .font-letter.medium Цц
-      .wds__grid-cell
-        .font-letter.medium Чч
-      .wds__grid-cell
-        .font-letter.medium Шш
-      .wds__grid-cell
-        .font-letter.regular Щщ
-      .wds__grid-cell
-        .font-letter.regular Ьъ
-      .wds__grid-cell
-        .font-letter.regular Ыы
-      .wds__grid-cell
-        .font-letter.regular Ээ
-      .wds__grid-cell
-        .font-letter.regular Юю
-      .wds__grid-cell
-        .font-letter.regular Яя
-      .wds__grid-cell
-        .font-letter.regular 1₽
-      .wds__grid-cell
-        .font-letter.regular 2@
-      .wds__grid-cell
-        .font-letter.regular 3#
-      .wds__grid-cell
-        .font-letter.regular 4$
-      .wds__grid-cell
-        .font-letter.regular 5%
-      .wds__grid-cell
-        .font-letter.regular 6^
-      .wds__grid-cell
-        .font-letter.regular 7&
-      .wds__grid-cell
-        .font-letter.regular 8*
-      .wds__grid-cell
-        .font-letter.regular 9˚
-      .wds__grid-cell
-        .font-letter.regular 0
-      .wds__text
-        section
-          p Узнаваемая особенность заголовков Винвестора — частичное смысловое выделение подчёркиванием:
-          h1 Маркетспейс<br><mark>инвестиционных<br>продуктов</mark>
-        section
-          p PT Root — закрытый гротеск с фиксированной шириной знаков в различных начертаниях — эта особенность позволяет переключаться между начертаниями без изменения длины строки, что особенно удобно для заголовков и элементов интерфейса.
-          p
-            a(href="https://www.paratype.ru/fonts/pt/pt-root-ui") Скачать шрифт
-
-      .wds__stack-S
-    .wds__text
-      section
-        h2#illustration Иллюстрации
-        p Фирменная графика Винвестора использует расширенную палитру и отличается характерными приёмами:
-    .wds__grid.wds__grid-size-L.wds__grid-align-bottom.wds__grid-inset-L
-      .wds__grid-cell        
-        figure
-          img(src="/assets/images/illustrations/style_2020.04-06.png")
-          figcaption Градиент с «шумной» текстурой
-      .wds__grid-cell        
-        figure
-          img(src="/assets/images/illustrations/style_2020.04-07.png")
-          figcaption Сочетание линий и градиентных заливок
-      .wds__grid-cell        
-        figure
-          img(src="/assets/images/illustrations/style_2020.04-08.png")
-          figcaption Характерные тонкие линии
-      .wds__grid-cell        
-        figure
-          img(src="/assets/images/illustrations/style_2020.04-09.png")
-          figcaption Паттерн из живописных мазков
-      .wds__grid-cell        
-        figure
-          img(src="/assets/images/illustrations/style_2020.04-10.png")
-          figcaption Геометричные фигуры с искажениями
-      .wds__grid-cell        
-        figure
-          img(src="/assets/images/illustrations/style_2020.04-12.png")
-          figcaption Жёсткие тени остроугольной формы
-    .wds__text
-      p Несколько готовых к использованию иллюстраций:
-
-    .wds__grid.wds__grid-size-M.wds__grid-align-bottom.wds__grid-inset-L
-      .wds__grid-cell        
-        figure
-          img(src="/assets/images/illustrations/apartment.png")
-      .wds__grid-cell        
-        figure
-          img(src="/assets/images/illustrations/fireman.png")
-      .wds__grid-cell        
-        figure
-          img(src="/assets/images/illustrations/boomerang.png")
-      .wds__grid-cell        
-        figure
-          img(src="/assets/images/illustrations/pelican.png")
-      .wds__grid-cell        
-        figure
-          img(src="/assets/images/illustrations/antelope.png")
-      .wds__grid-cell        
-        figure
-          img(src="/assets/images/illustrations/Color-line-03.png")
-      .wds__grid-cell        
-        figure
-          img(src="/assets/images/illustrations/Color-line-04.png")
-      .wds__grid-cell        
-        figure
-          img(src="/assets/images/illustrations/Color-line-05.png")
-      .wds__grid-cell        
-        figure
-          img(src="/assets/images/illustrations/Color-line-02.png")
-    .wds__text
-      section
-        p
-          a(href="https://yadi.sk/d/f7vyFAo4CAm9LA/%D0%98%D0%BB%D0%BB%D1%8E%D1%81%D1%82%D1%80%D0%B0%D1%86%D0%B8%D0%B8") Скачать иллюстрации
-
-      
-
 
   .wds__wrapper.wds__shift-right    
     .wds__text
@@ -432,6 +190,160 @@ block content
             .rule-comment
               h5 Почему
               p Не обещаем заоблачную прибыль.
+
+  .wds__wrapper.wds__shift-right
+    .wds__text
+      section#syle
+        figure
+          img(src="/assets/images/winvestor-main-logo-ru.svg")
+      section
+        h2#colour Цвет
+        p Есть три фирменные цветовые палитры: базовая, расширенная и техническая.
+        p Базовая — это оттенки жёлтого, они используются только в графической части логотипа. Расширенная палитра — для иллюстраций и фирменной графики. Техническая — для интерфейсных компонентов дизайн-системы.
+
+        section
+          p Базовая палитра
+          .palette
+            .palette-bar(style="background-color: rgb(255,221,0)") RGB 255 221 0
+            .palette-bar(style="background-color: rgb(255,231,0)") RGB 255 231 0
+            .palette-bar(style="background-color: rgb(255,241,0)") RGB 255 241 0
+            .palette-bar(style="background-color: rgb(255,248,128)") RGB 255 248 128
+        section
+          p Расширенная палитра
+          .palette
+            .palette-bar(style="background-color: rgb(20,150,255)") RGB 20 150 255
+            .palette-bar(style="background-color: rgb(94,98,243)") RGB 94 98 243
+            .palette-bar(style="background-color: rgb(115,43,151)") RGB 115 43 151
+            .palette-bar(style="background-color: rgb(245,86,99)") RGB 245 86 99
+            .palette-bar(style="background-color: rgb(46,200,134)") RGB 46 200 134
+            .palette-bar(style="background-color: rgb(70,78,90)") RGB 70 78 90
+            .palette-bar(style="background-color: rgb(40,51,68)") RGB 40 51 68
+        section
+          p Техническая
+          .palette
+            .palette-bar(style="background-color: rgb(5,5,5); color: grey") text
+            .palette-bar(style="background-color: rgb(200, 0, 0)") code
+            .palette-bar(style="background-color: rgb(0, 100, 240)") link
+            .palette-bar(style="background-color: rgb(0, 220, 0)") hover
+            .palette-bar(style="background-color: rgba(0, 0, 0, 0.3)") disabled
+            .palette-bar(style="background-color: rgb(240, 84, 95)") error
+            .palette-bar(style="background-color: rgb(84, 180, 140)") success
+            .palette-bar(style="background-color: rgb(245,245,245)") surface
+            .palette-bar(style="background-color: rgb(255,221,0)") main
+            .palette-bar(style="background-color: rgb(255, 248, 128)") mark
+            .palette-bar(style="background-color: rgb(255, 255, 255)") background
+
+      .wds__stack-S
+      section
+        h2#logo Логотип
+        p Основная версия логотипа представляет собой жёлтый фирменный круг с чёрной подписью:
+      section
+        p
+          a(href="/assets/images/winvestor-main-logo-ru.svg" download) Скачать SVG
+
+    .wds__text
+      section
+      p Допускается использование знака без текстовой подписи.
+      p Основная версия используется только на белом фоне. Версия для цветного фоне не просто инвертирована, в ней по-другому раскрашен круг:
+
+      section
+        .logos-palette
+          .inverted-logo-bar(style="background-color: rgb(46,200,134)")
+          .inverted-logo-bar(style="background-color: rgb(245,86,99)")
+          .inverted-logo-bar(style="background-color: rgb(94,98,243)")
+          .inverted-logo-bar(style="background-color: rgb(115,43,151)")
+          .inverted-logo-bar(style="background-color: rgb(70,78,90)")
+          .inverted-logo-bar(style="background-color: rgb(40,51,68)")
+
+      section
+        p
+          a(href="/assets/images/winvestor-inverted-logo-ru.svg" download) Скачать SVG
+        
+
+      .wds__stack-S
+      section
+        h2#type Типографика
+        p Фирменный шрифт Винвестора — Root UI в начертаниях Regular, Medium и Bold. 
+
+      .wds__text
+        section
+          p Узнаваемая особенность заголовков Винвестора — частичное смысловое выделение подчёркиванием:
+          h1 Маркетспейс<br><mark>инвестиционных<br>продуктов</mark>
+        section
+          p PT Root — закрытый гротеск с фиксированной шириной знаков в различных начертаниях — эта особенность позволяет переключаться между начертаниями без изменения длины строки, что особенно удобно для заголовков и элементов интерфейса.
+          p
+            a(href="https://www.paratype.ru/fonts/pt/pt-root-ui") Скачать шрифт
+
+      .wds__stack-S
+    .wds__text
+      section
+        h2#graphic Иллюстрации
+        p Фирменная графика Винвестора использует расширенную палитру и отличается характерными приёмами:
+    .wds__grid.wds__grid-size-L.wds__grid-align-bottom.wds__grid-inset-L
+      .wds__grid-cell        
+        figure
+          img(src="/assets/images/illustrations/style_2020.04-06.png")
+          figcaption Градиент с «шумной» текстурой
+      .wds__grid-cell        
+        figure
+          img(src="/assets/images/illustrations/style_2020.04-07.png")
+          figcaption Сочетание линий и градиентных заливок
+      .wds__grid-cell        
+        figure
+          img(src="/assets/images/illustrations/style_2020.04-08.png")
+          figcaption Характерные тонкие линии
+      .wds__grid-cell        
+        figure
+          img(src="/assets/images/illustrations/style_2020.04-09.png")
+          figcaption Паттерн из живописных мазков
+      .wds__grid-cell        
+        figure
+          img(src="/assets/images/illustrations/style_2020.04-10.png")
+          figcaption Геометричные фигуры с искажениями
+      .wds__grid-cell        
+        figure
+          img(src="/assets/images/illustrations/style_2020.04-12.png")
+          figcaption Жёсткие тени остроугольной формы
+    .wds__text
+      p Несколько готовых к использованию иллюстраций:
+
+    .wds__grid.wds__grid-size-M.wds__grid-align-bottom.wds__grid-inset-L
+      .wds__grid-cell        
+        figure
+          img(src="/assets/images/illustrations/apartment.png")
+      .wds__grid-cell        
+        figure
+          img(src="/assets/images/illustrations/fireman.png")
+      .wds__grid-cell        
+        figure
+          img(src="/assets/images/illustrations/boomerang.png")
+      .wds__grid-cell        
+        figure
+          img(src="/assets/images/illustrations/pelican.png")
+      .wds__grid-cell        
+        figure
+          img(src="/assets/images/illustrations/antelope.png")
+      .wds__grid-cell        
+        figure
+          img(src="/assets/images/illustrations/Color-line-03.png")
+      .wds__grid-cell        
+        figure
+          img(src="/assets/images/illustrations/Color-line-04.png")
+      .wds__grid-cell        
+        figure
+          img(src="/assets/images/illustrations/Color-line-05.png")
+      .wds__grid-cell        
+        figure
+          img(src="/assets/images/illustrations/Color-line-02.png")
+    .wds__text
+      section
+        p
+          a(href="https://yadi.sk/d/f7vyFAo4CAm9LA/%D0%98%D0%BB%D0%BB%D1%8E%D1%81%D1%82%D1%80%D0%B0%D1%86%D0%B8%D0%B8") Скачать иллюстрации
+
+      
+
+
+
 
 
   .plug

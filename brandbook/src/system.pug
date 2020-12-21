@@ -7,16 +7,31 @@ block header
         img(src="/assets/images/winvestor-sign.svg")
       a.system__sign(href="#top")
         img(src="/assets/images/wds-sign.svg")
+
     .system__sidebar-nav
       .system__sidebar-nav-link
         a(href="#principles") Принципы
+      .system__sidebar-nav-link.inner
+        a(href="#namespace") Пространство имён
+      .system__sidebar-nav-link.inner
+        a(href="#units") Размерности
+
+    .system__sidebar-nav
       .system__sidebar-nav-link
+        a(href="#variables") Переменные
+      .system__sidebar-nav-link.inner
         a(href="#typography") Типографика
+      .system__sidebar-nav-link.inner
+        a(href="#color") Цвет
+
+    .system__sidebar-nav
       .system__sidebar-nav-link
         a(href="#components") Компоненты
-      //- .system__sidebar-nav-link
-        a(href="#variables") Переменные
-
+      .system__sidebar-nav-link.inner
+        a(href="#editorial") Редакционные форматы
+      .system__sidebar-nav-link.inner
+        a(href="#ui") Элементы интерфейса
+      
 block content
   a.theme-button
 
@@ -43,7 +58,7 @@ block content
 
 
       .wds__stack-S
-      h2(id="principles") Принципы
+      h2#principles Принципы
 
       p WDS предоставляет компоненты и переменные. Компоненты — это готовые к использованию элементы интерфейса, а переменные помогают делать собственные элементы консистентными.
 
@@ -57,14 +72,14 @@ block content
 
 
       section
-        h3 Пространство имён
+        h3#namespace Пространство имён
 
         p Чтобы использовать компоненты дизайн-системы, достаточно поместить их в контейнер с классом <code>wds</code>. Этот класс можно назначить тегу <code>body</code> или создать отдельные контейнеры во всей местах, где должна работать дизайн-система.
 
         p Все имена классов и переменных имеют префикс <code>wds__</code>. Cтандартным хтмл-элементам не требуется специальный класс, их оформление определено для тегов внутри <code>.wds</code>.
 
       section
-        h3 Размерности
+        h3#units Размерности
         p Система знает только два типа устройств: <code>mobile</code> (с экраном шириной до 768 CSS-пикселей) и <code>desktop</code> (все остальные).
 
         p Основная единица измерения — <code>em</code>, в них заданы не только кегль с интерлиньяжем, но и все поля и отступы. По умолчанию 1&thinsp;em равняется 20&thinsp;px для ширины экрана до 1400&thinsp;px и 21&thinsp;px для большей ширины. Для мобильных 1&thinsp;em по умолчанию равен 17&thinsp;px. Эти значения можно переопределить.
@@ -75,8 +90,15 @@ block content
         p Значение по-умолчанию — 1.3em, рекомендованный диапазон значений — от 0.8em (очень плотная вёрстка, нужен шрифт с крупным очком и короткими выносными элементами) до 1.8em (очень разреженная вёрстка, адекватно для светлых шрифтов с мелким очком и длинными выносными элементами)
 
       section
-        h3 Цвето-шрифтовые схемы
+        h2#variables Переменные
         p WDS позволяет настроить цветовую палитру и основные параметры типографики через переменные. 
+
+      section
+        h3#typography Типографика
+        p Шрифт по-умолчанию — PT Root в начертаниях Regular, Medium и Bold.
+
+      section
+        h3#color Цвет
         ul
           li
             code $wds__background-color
@@ -100,8 +122,6 @@ block content
             code $wds__success-color
             | — цвет для сообщений об успешном выполнении
 
-      section
-        p Шрифт по-умолчанию — PT Root в начертаниях Regular, Medium и Bold.
 
 
 
@@ -111,8 +131,9 @@ block content
 
       section
         .wds__stack-S
-        h1(id="typography") Типографика и редакционные форматы
+        h2#components Компоненты 
         .wds__divider-line
+        h3#editorial Редакционные форматы
       section
         .wds__stack-XS
         h3
@@ -276,7 +297,7 @@ block content
 
       section
         .wds__stack-S
-        h1(id="components") Интерфейсные компоненты
+        h3#ui Элементы интерфейса
         .wds__divider-line
 
       section

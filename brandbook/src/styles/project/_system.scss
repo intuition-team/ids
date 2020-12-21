@@ -1,6 +1,6 @@
 .system__sidebar {
   position: fixed;
-  width: 12em;
+  width: 13em;
   top: 0;
   left: 0;
   bottom: 0;
@@ -39,8 +39,23 @@
   }
 
   .system__sidebar-nav {
+    margin-bottom: 0.8em;
+
     .system__sidebar-nav-link {
       margin-bottom: 0.3em;
+      font-weight: bold;
+
+      &.inner {
+        font-weight: normal;
+        position: relative;
+        padding-left: calc(#{$wds__density} * 0.6);
+
+        &:before {
+          position: absolute;
+          left: -0.1em;
+          content: '⋅ ';
+        }
+      }
     }
   }
 }
