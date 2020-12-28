@@ -4,7 +4,6 @@
   top: 0;
   left: 0;
   bottom: 0;
-  border-right: 1px solid theme-color(wds__divider-color);
   @include wds__default-padding;
   z-index: 10000;
 
@@ -92,7 +91,7 @@ h1.huge-wds-title {
     margin-bottom: 2em;
     display: flex;
     flex-wrap: wrap;
-    border-top: 1px solid theme-color(wds__divider-color);
+    border-top: 1px solid rgba(var(--wds__text-RGB), 0.1);
     padding-top: 0.5em;
 
     .rule-no {

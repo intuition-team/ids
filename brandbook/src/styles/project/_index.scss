@@ -24,7 +24,7 @@ body {
 
   height: 20em;
 
-  background-color: theme-color(wds__surface-color);
+  background-color: RGB(var(--wds__surface-RGB));
   padding: calc(var(--wds__density) * 0.75em);
   padding-right: 3em;
   border-radius: $wds__radius;
@@ -36,12 +36,12 @@ body {
   }
 
   .wds__label {
-    background-color: theme-color(wds__link-color);
+    background-color: RGB(var(--wds__link-RGB));
   }
 
   &:hover {
     .wds__label {
-      background-color: theme-color(wds__link-hover-color);
+      background-color: RGB(var(--wds__hover-RGB));
     }
   }
 }

@@ -286,7 +286,7 @@
   details {
     padding: .5em;
     cursor: pointer;
-    border: 1px solid theme-color(wds__divider-color);
+    // border: 1px solid rgba(var(--wds__text-RGB), 0.1);
     border-radius: $wds__radius;
 
     summary {
@@ -317,7 +317,7 @@
 
     &.wds__label-outline {
       background-color: RGB(var(--wds__on-accent-RGB));
-      color: theme-color(main-color);
+      color: RGB(var(--wds__text-RGB));
       border: 2px solid RGB(var(--wds__accent-RGB));
     }
 
