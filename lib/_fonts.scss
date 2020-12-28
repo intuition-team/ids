@@ -1,18 +1,15 @@
-// Настройки
-
 $wds__fonts-path: '/assets/fonts' !default;
-$wds__font: 'Root UI', Arial, sans-serif !default;
 
-// Переменные
-
-// Миксины
-
-@function font-path($path) {
-  @return '#{$wds__fonts-path}/#{$path}';
+:root {
+  --wds__font: 'Root UI', Arial, sans-serif;
 }
 
 @function font-url($path) {
-  @return url(font-path($path));
+  @if (str-index($path, 'http') == 1) {
+    @return $path;
+  } @else {
+    @return url('#{$wds__fonts-path}/#{$path}');
+  }
 }
 
 @function image-url($path) {
@@ -25,20 +22,17 @@ $wds__font: 'Root UI', Arial, sans-serif !default;
     font-weight: $weight;
     font-style: $style;
     src: font-url('#{$path}.eot#iefix') format('embedded-opentype'),
-      font-url('#{$path}.woff2') format('woff2'),
-      font-url('#{$path}.woff') format('woff'),
-      font-url('#{$path}.ttf') format('truetype');
+         font-url('#{$path}.woff2') format('woff2'),
+         font-url('#{$path}.woff') format('woff'),
+         font-url('#{$path}.ttf') format('truetype');
   }
 }
-
 
 @mixin wds__normalize-line-height {
   line-height: $wds__density;
 }
 
-// Подключение файлов
-
-// @include font-face('Root UI', 'PT_Root_UI_Light', 300, normal);
-@include font-face('Root UI', 'PT_Root_UI_Regular', 400, normal);
-@include font-face('Root UI', 'PT_Root_UI_Medium', 500, normal);
-@include font-face('Root UI', 'PT_Root_UI_Bold', 700, normal);
+// Подключение шрифтов по умолчанию из CDN
+@include font-face('Root UI', 'https://336416.selcdn.ru/winvestor-journal/fonts/PT_Root_UI_Bold_Regular', 400, normal);
+@include font-face('Root UI', 'https://336416.selcdn.ru/winvestor-journal/fonts/PT_Root_UI_Bold_Medium', 500, normal);
+@include font-face('Root UI', 'https://336416.selcdn.ru/winvestor-journal/fonts/PT_Root_UI_Bold_Bold', 700, normal);
