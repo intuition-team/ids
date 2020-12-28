@@ -28,10 +28,6 @@ $wds__fonts-path: '/assets/fonts' !default;
   }
 }
 
-@mixin wds__normalize-line-height {
-  line-height: var(--wds__density);
-}
-
 // Подключение шрифтов по умолчанию из CDN
 @include font-face('Root UI', 'https://336416.selcdn.ru/winvestor-journal/fonts/PT_Root_UI_Bold_Regular', 400, normal);
 @include font-face('Root UI', 'https://336416.selcdn.ru/winvestor-journal/fonts/PT_Root_UI_Bold_Medium', 500, normal);

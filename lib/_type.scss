@@ -111,12 +111,12 @@
   .wds__lead {
     font-size: 1.2em;
     font-weight: 500;
-    @include wds__normalize-line-height;
+    line-height: var(--wds__density);
     margin-bottom: calc(var(--wds__density) * 0.4em);
 
     @media #{$wds__mobile} {
       font-size: 1em;
-      @include wds__normalize-line-height;
+      line-height: var(--wds__density);
     }
   }
 
