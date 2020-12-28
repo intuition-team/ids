@@ -26,7 +26,7 @@
   .palette-bar {
     width: 25%;
     height: 5em;
-    padding: calc(#{$wds__density} * 0.4) calc(#{$wds__density} * 0.5);
+    padding: calc(var(--wds__density) * 0.4em) calc(var(--wds__density) * 0.5em);
 
     @media #{$wds__mobile} {
       width: 50%;
@@ -50,7 +50,7 @@
 
 .font-letter {
   font-size: 2.5em;
-  line-height: calc(#{$wds__density} / 1.2);
+  line-height: calc(var(--wds__density) / 1.2);
   margin-bottom: 0.5em;
 
   &.regular {

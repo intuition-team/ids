@@ -85,10 +85,10 @@
 
 .wds {
   section {
-    margin-top: calc(#{$wds__density} * 1.5);
+    margin-top: calc(var(--wds__density) * 1.5em);
   
     @media #{$wds__mobile} {
-      margin-top: calc(#{$wds__density} / 2);
+      margin-top: calc(var(--wds__density) * 1em / 2);
     }
   }
   
@@ -105,14 +105,14 @@
 
   p {
     margin-top: 0;
-    margin-bottom: calc(#{$wds__density} * 0.4);
+    margin-bottom: calc(var(--wds__density) * 0.4em);
   }
 
   .wds__lead {
     font-size: 1.2em;
     font-weight: 500;
     @include wds__normalize-line-height;
-    margin-bottom: calc(#{$wds__density} * 0.4);
+    margin-bottom: calc(var(--wds__density) * 0.4em);
 
     @media #{$wds__mobile} {
       font-size: 1em;
@@ -139,38 +139,38 @@
 
   h1 {
     font-size: var(--step-3);
-    line-height: calc(#{$wds__density} / 1.3);
+    line-height: calc(var(--wds__density) / 1.3);
     margin-bottom: 0.4em;
   }
 
   h2 {
     font-size: var(--step-2);
-    line-height: calc(#{$wds__density} / 1.2);
+    line-height: calc(var(--wds__density) / 1.2);
     margin-bottom: 0.5em;
   }
 
   h3 {
     font-size: var(--step-1);
-    line-height: calc(#{$wds__density} / 1.1);
+    line-height: calc(var(--wds__density) / 1.1);
     margin-bottom: 0.6em;
   }
 
   h4 {
     font-size: var(--step-0);
-    line-height: $wds__density;
+    line-height: var(--wds__density);
     margin-bottom: 0.6em;
   }
 
   h5 {
     font-size: calc(var(--step-0) * 0.8);
-    line-height: $wds__density;
+    line-height: var(--wds__density);
     margin-bottom: 0.7em;
   }
 
   h6 {
     font-size: calc(var(--step-0) * 0.6);
     text-transform: uppercase;
-    line-height: $wds__density;
+    line-height: var(--wds__density);
     margin-bottom: 0.7em;
   }
 
@@ -191,19 +191,19 @@
 
   ul,
   ol {
-    margin: 0 0 calc(#{$wds__density} * 0.75) 0;
+    margin: 0 0 calc(var(--wds__density) * 0.75em) 0;
     padding: 0;
 
     li {
       position: relative;
-      margin-bottom: calc(#{$wds__density} * 0.5);
+      margin-bottom: calc(var(--wds__density) * 0.5em);
     }
   }
 
   ul {
     li {
       list-style-type: none;
-      padding-left: calc(#{$wds__density} * 0.75);
+      padding-left: calc(var(--wds__density) * 0.75em);
 
       &:before {
         position: absolute;
@@ -237,18 +237,18 @@
 
   blockquote {
     font-size: 1.4em;
-    line-height: $wds__density;
+    line-height: var(--wds__density);
     margin: 0;
-    padding-left: calc(#{$wds__density} * 0.75);
-    margin-bottom: $wds__density;
+    padding-left: calc(var(--wds__density) * 0.75em);
+    margin-bottom: calc(var(--wds__density) * 1em);
   }
 
   aside {
     margin: 0;
-    margin-bottom: calc(#{$wds__density} * 0.75);
+    margin-bottom: calc(var(--wds__density) * 0.75em);
     background: RGB(var(--wds__surface-RGB));
-    padding: calc(#{$wds__density} * 0.75);
-    padding-right: calc(#{$wds__density} * 2);
+    padding: calc(var(--wds__density) * 0.75em);
+    padding-right: calc(var(--wds__density) * 2em);
     border-radius: $wds__radius;
   }
 
@@ -263,7 +263,7 @@
   }
 
   figure {
-    margin: 0 0 calc(#{$wds__density} * 0.5) 0;
+    margin: 0 0 calc(var(--wds__density) * 0.5em) 0;
 
     &.wds__figure__XXS {
       width: 25%;
@@ -276,9 +276,9 @@
     }
 
     figcaption {
-      margin-top: calc(#{$wds__density} * 0.25);
+      margin-top: calc(var(--wds__density) * 0.25em);
       font-size: 0.8em;
-      line-height: $wds__density;
+      line-height: var(--wds__density);
       opacity: 0.7;
     }
   }

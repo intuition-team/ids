@@ -8,50 +8,50 @@ $wds__button-padding-left-right: 1em !default;
 
 $wds__padding: $wds__button-padding-top $wds__button-padding-left-right
   $wds__button-padding-bottom;
-$wds__micro-padding: 0 calc(#{$wds__density} * 0.2);
+$wds__micro-padding: 0 calc(var(--wds__density) * 0.2em);
 
 // Миксины
 
 @mixin wds__default-padding {
-  padding: calc(#{$wds__density} * 0.75);
+  padding: calc(var(--wds__density) * 0.75em);
 }
 
 // Компоненты
 
 .wds__stack {
   &-XS {
-    height: $wds__density;
+    height: calc(var(--wds__density) * 1em);
 
     @media #{$wds__mobile} {
-      height: calc(#{$wds__density} / 3);
+      height: calc(var(--wds__density) * 1em / 3);
     }
   }
   &-S {
-    height: $wds__density * 2;
+    height: calc(var(--wds__density) * 2em);
 
     @media #{$wds__mobile} {
-      height: calc(#{$wds__density} / 2);
+      height: calc(var(--wds__density) * 1em / 2);
     }
   }
   &-M {
-    height: $wds__density * 4;
+    height: calc(var(--wds__density) * 4em);
 
     @media #{$wds__mobile} {
-      height: $wds__density;
+      height: calc(var(--wds__density) * 1em);
     }
   }
   &-L {
-    height: $wds__density * 8;
+    height: calc(var(--wds__density) * 8em);
 
     @media #{$wds__mobile} {
-      height: calc(#{$wds__density} * 2);
+      height: calc(var(--wds__density) * 2em);
     }
   }
   &-XL {
-    height: $wds__density * 16;
+    height: calc(var(--wds__density) * 16em);
 
     @media #{$wds__mobile} {
-      height: calc(#{$wds__density} * 4);
+      height: calc(var(--wds__density) * 4em);
     }
   }
 }

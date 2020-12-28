@@ -3,7 +3,7 @@
   width: 100%;
   height: 1px;
   background-color: rgba(var(--wds__text-RGB), 0.2);
-  margin-bottom: $wds__density;
+  margin-bottom: calc(var(--wds__density) * 1em);
 }
 
 .wds__admin-form {
@@ -17,7 +17,7 @@
   width: 20em;
   padding: $wds__padding;
   border-radius: $wds__radius;
-  margin-bottom: $wds__density;
+  margin-bottom: calc(var(--wds__density) * 1em);
 }
 
 .wds__error-toast {

@@ -48,7 +48,7 @@
       &.inner {
         font-weight: normal;
         position: relative;
-        padding-left: calc(#{$wds__density} * 0.6);
+        padding-left: calc(var(--wds__density) * 0.6em);
 
         &:before {
           position: absolute;

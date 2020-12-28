@@ -25,10 +25,10 @@ body {
   height: 20em;
 
   background-color: theme-color(wds__surface-color);
-  padding: calc(#{$wds__density} * 0.75);
+  padding: calc(var(--wds__density) * 0.75em);
   padding-right: 3em;
   border-radius: $wds__radius;
-  margin-bottom: calc(#{$wds__density} * 0.75);
+  margin-bottom: calc(var(--wds__density) * 0.75em);
 
   h2 {
     margin-top: 0.2em;

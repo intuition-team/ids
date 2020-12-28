@@ -16,8 +16,8 @@
     background-color: RGB(var(--wds__accent-RGB));
     color: RGB(var(--wds__on-accent-RGB));
     border-radius: $wds__radius;
-    padding: $wds__density/3 $wds__density $wds__density/2.5;
-    line-height: $wds__density;
+    padding: calc(var(--wds__density) * 1em / 3) calc(var(--wds__density) * 1em) calc(var(--wds__density) * 1em / 2.5);
+    line-height: var(--wds__density);
     white-space: nowrap;
     cursor: pointer;
 
@@ -25,7 +25,7 @@
       font-size: .6em;
       text-transform: uppercase;
       letter-spacing: 0.1em;
-      padding-top: $wds__density/2.5;
+      padding-top: calc(var(--wds__density) * 1em / 2.5);
     }
 
     &.size-S {
@@ -36,12 +36,12 @@
 
     &.size-L {
       font-size: 1.5em;
-      padding: $wds__density/5 $wds__density/1.5 $wds__density/4; //мб не 5, а 4.5
+      padding: calc(var(--wds__density)*1em/5) calc(var(--wds__density)*1em/1.5) calc(var(--wds__density)*1em/4); //мб не 5, а 4.5
     }
 
     &.size-XL {
       font-size: 2.5em;
-      padding: $wds__density/5 $wds__density/1.5 $wds__density/4;
+      padding: calc(var(--wds__density)*1em/5) calc(var(--wds__density)*1em/1.5) calc(var(--wds__density)*1em/4);
     }
 
     &:hover {
@@ -69,13 +69,13 @@
   }
 
   .wds__form-field {
-    margin-bottom: $wds__density;
+    margin-bottom: calc(var(--wds__density) * 1em);
   }
 
   input, textarea {
     width: 100%;
-    padding: $wds__density/3 $wds__density $wds__density/2.5;
-    padding-left: calc(#{$wds__density} / 2);
+    padding: calc(var(--wds__density) * 1em / 3) calc(var(--wds__density) * 1em) calc(var(--wds__density) * 1em / 2.5);
+    padding-left: calc(var(--wds__density) * 1em / 2);
     border: 1px solid RGB(var(--wds__text-RGB));
     border-bottom: 2px solid RGB(var(--wds__text-RGB));
     border-radius: $wds__radius;
@@ -94,14 +94,14 @@
 
     &.size-L {
       font-size: 1.5em;
-      padding-top: $wds__density/5;
-      padding-bottom: $wds__density/4;
+      padding-top: calc(var(--wds__density)*1em/5);
+      padding-bottom: calc(var(--wds__density)*1em/4);
     }
 
     &.size-XL {
       font-size: 2.5em;
-      padding-top: $wds__density/5;
-      padding-bottom: $wds__density/4;
+      padding-top: calc(var(--wds__density)*1em/5);
+      padding-bottom: calc(var(--wds__density)*1em/4);
     }
 
     &.wds__input-error-state {
@@ -324,7 +324,7 @@
       }
 
       label {
-        padding: $wds__density/3 $wds__density $wds__density/2.5;
+        padding: calc(var(--wds__density) * 1em / 3) calc(var(--wds__density) * 1em) calc(var(--wds__density) * 1em / 2.5);
         background-color: rgba(var(--wds__text-RGB), .1);
         cursor: pointer;
 
@@ -370,7 +370,7 @@
     }
 
     td {
-      padding: calc(#{$wds__density} * 0.6) 0;
+      padding: calc(var(--wds__density) * 0.6em) 0;
       border-bottom: 1px solid rgba(var(--wds__text-RGB), .15);
     }
 

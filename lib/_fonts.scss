@@ -29,7 +29,7 @@ $wds__fonts-path: '/assets/fonts' !default;
 }
 
 @mixin wds__normalize-line-height {
-  line-height: $wds__density;
+  line-height: var(--wds__density);
 }
 
 // Подключение шрифтов по умолчанию из CDN

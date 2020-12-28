@@ -1,7 +1,9 @@
 $wds__mobile: '(max-width: 767px)';
 $wds__desktop: '(min-width: 768px)';
 
-$wds__density: 1.3em !default;
+:root {
+    --wds__density: 1.3;
+}
 
 $wds__radius: 0.3em !default;
 
