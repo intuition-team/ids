@@ -6,7 +6,7 @@ $wds__fonts-path: '/assets/fonts' !default;
 
 @function font-url($path) {
   @if (str-index($path, 'http') == 1) {
-    @return $path;
+    @return url($path);
   } @else {
     @return url('#{$wds__fonts-path}/#{$path}');
   }
@@ -29,6 +29,6 @@ $wds__fonts-path: '/assets/fonts' !default;
 }
 
 // Подключение шрифтов по умолчанию из CDN
-@include font-face('Root UI', 'https://336416.selcdn.ru/winvestor-journal/fonts/PT_Root_UI_Bold_Regular', 400, normal);
-@include font-face('Root UI', 'https://336416.selcdn.ru/winvestor-journal/fonts/PT_Root_UI_Bold_Medium', 500, normal);
-@include font-face('Root UI', 'https://336416.selcdn.ru/winvestor-journal/fonts/PT_Root_UI_Bold_Bold', 700, normal);
+@include font-face('Root UI', 'https://336416.selcdn.ru/winvestor-journal/fonts/PT_Root_UI_Regular', 400, normal);
+@include font-face('Root UI', 'https://336416.selcdn.ru/winvestor-journal/fonts/PT_Root_UI_Medium', 500, normal);
+@include font-face('Root UI', 'https://336416.selcdn.ru/winvestor-journal/fonts/PT_Root_UI_Bold', 700, normal);
