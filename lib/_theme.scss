@@ -1,12 +1,27 @@
-// тема состоит из
-// 1. названия
-// 2. цветов (переписывает цвета по умолчанию)
-// 3. шрифтов (подулючаются с помощью font-face миксина)
-// 4. типографики
-@mixin define-theme($name, $colors) {
+// любая тема состоит из названия, цветов, шрифтов и типографики
+
+@mixin define-theme($name, $colors, $fonts: ()) {
   :root .#{$name} {
     @each $colorName, $colorValue in $colors {
       --wds__#{$colorName}-RGB: #{$colorValue};
+    }
+
+    @if length($fonts) > 0 {
+      $fontName: nth($fonts, 1);
+      $fontValues: nth($fonts, 2);
+
+      @if map-has-key($fontValues, "regular") {
+        $value: map-get($fontValues, "regular");
+        @include font-face(#{$fontName}, #{$value}, 400, normal);
+      }
+      @if map-has-key($fontValues, "medium") {
+        $value: map-get($fontValues, "medium");
+        @include font-face(#{$fontName}, #{$value}, 500, normal);
+      }
+      @if map-has-key($fontValues, "bold") {
+        $value: map-get($fontValues, "bold");
+        @include font-face(#{$fontName}, #{$value}, 700, normal);
+      }
     }
   }
 }
@@ -37,5 +52,10 @@
     ("link", "80, 150, 255"),
     ("hover", "100, 230, 100"),
     ("outline", "255, 221, 0")
-  )
+  ),
+  ("Root UI", (
+    "regular": "https://336416.selcdn.ru/winvestor-journal/fonts/PT_Root_UI_Regular",
+    "medium": "https://336416.selcdn.ru/winvestor-journal/fonts/PT_Root_UI_Medium",
+    "bold": "https://336416.selcdn.ru/winvestor-journal/fonts/PT_Root_UI_Bold"
+  ))
 )
