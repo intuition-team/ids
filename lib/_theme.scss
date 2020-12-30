@@ -1,0 +1,41 @@
+// тема состоит из
+// 1. названия
+// 2. цветов (переписывает цвета по умолчанию)
+// 3. шрифтов (подулючаются с помощью font-face миксина)
+// 4. типографики
+@mixin define-theme($name, $colors) {
+  :root .#{$name} {
+    @each $colorName, $colorValue in $colors {
+      --wds__#{$colorName}-RGB: #{$colorValue};
+    }
+  }
+}
+
+@include define-theme(
+  "wj-default",
+  (
+    ("main", "255, 221, 0"),
+    ("outline", "255, 221, 0"),
+  )
+)
+
+@include define-theme(
+  "wj-dark",
+  (
+    ("background", "40, 40, 40"),
+    ("text", "255, 255, 255"),
+    ("accent", "255, 255, 255"),
+    ("main", "255, 255, 255"),
+    ("surface", "60, 60, 60"),
+    ("error", "229, 0, 60"),
+    ("success", "0, 229, 121"),
+    ("mark", "100, 100, 100"),
+    ("code", "200, 50, 50"),
+    ("on-main", "5, 5, 5"),
+    ("on-accent", "40, 40, 40"),
+    ("on-surface", "255, 255, 255"),
+    ("link", "80, 150, 255"),
+    ("hover", "100, 230, 100"),
+    ("outline", "255, 221, 0")
+  )
+)
