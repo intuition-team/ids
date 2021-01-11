@@ -16,18 +16,6 @@ $wds__fonts-path: '/assets/fonts' !default;
   @return url(image-path($path));
 }
 
-@mixin font-face($family, $path, $weight: normal, $style: normal) {
-  @font-face {
-    font-family: $family;
-    font-weight: $weight;
-    font-style: $style;
-    src: font-url('#{$path}.eot#iefix') format('embedded-opentype'),
-         font-url('#{$path}.woff2') format('woff2'),
-         font-url('#{$path}.woff') format('woff'),
-         font-url('#{$path}.ttf') format('truetype');
-  }
-}
-
 // Подключение шрифтов по умолчанию из CDN
 @include font-face('Root UI', 'https://336416.selcdn.ru/winvestor-journal/fonts/PT_Root_UI_Regular', 400, normal);
 @include font-face('Root UI', 'https://336416.selcdn.ru/winvestor-journal/fonts/PT_Root_UI_Medium', 500, normal);
