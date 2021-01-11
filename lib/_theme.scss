@@ -43,7 +43,7 @@
       @if map-has-key($desktopTypo, "font-size-max") {
         --f-0-max: #{map-get($desktopTypo, "font-size-max")};
       }
-      @if map-has-key($desktopTypo, "font-size-max") {
+      @if map-has-key($desktopTypo, "font-scale") {
         --type-scale-desktop: #{map-get($desktopTypo, "font-scale")};
       }
     }
@@ -56,7 +56,7 @@
         @if map-has-key($mobileTypo, "font-size-max") {
           --f-0-max: #{map-get($mobileTypo, "font-size-max")};
         }
-        @if map-has-key($mobileTypo, "font-size-max") {
+        @if map-has-key($mobileTypo, "font-scale") {
           --type-scale-desktop: #{map-get($mobileTypo, "font-scale")};
         }
       }
