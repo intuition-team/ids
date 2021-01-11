@@ -51,10 +51,11 @@
 }
 
 // любая тема состоит из названия, цветов, шрифтов и типографики
-@mixin define-theme($name, $colors, $fonts: (), $typo: ()) {
-  @each $colorName, $colorValue in $colors {
-    :root .#{$name} {
-      --wds__#{$colorName}-RGB: #{$colorValue};
+@mixin define-theme($name, $colors: (), $fonts: (), $typo: ()) {
+  :root .#{$name} {
+    $keys: map-keys($colors);
+    @each $key in $keys {
+      --wds__#{$key}-RGB: #{map-get($colors, $key)};
     }
   }
 
