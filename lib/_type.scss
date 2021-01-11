@@ -1,64 +1,21 @@
 :root {
   --fluid-min-width: 1000;
   --fluid-max-width: 1600;
-
   --fluid-screen: 100vw; // шрифт растягивается с этим параметром. если его зафиксировать в пикс, не растягивается
-  --fluid-bp: calc(
-    (var(--fluid-screen) - var(--fluid-min-width) / 16 * 1rem) /
-      (var(--fluid-max-width) - var(--fluid-min-width))
-  );
 
-  //базовое
   --type-scale-desktop: 1.5; //коэффициент увеличения шрифта десктоп
   --f-0-min: 16.00; //размер шрифта мин десктоп
   --f-0-max: 20.00; //размер шрифта макс десктоп
-  --step-0: calc(
-    ((var(--f-0-min) / 16) * 1rem) + (var(--f-0-max) - var(--f-0-min)) *
-      var(--fluid-bp)
-  );
 
-  //положительные
-  --f-1-min: calc(var(--f-0-min) * var(--type-scale-desktop));
-  --f-1-max: calc(var(--f-0-max) * var(--type-scale-desktop));
-  --step-1: calc(
-    ((var(--f-1-min) / 16) * 1rem) + (var(--f-1-max) - var(--f-1-min)) *
-      var(--fluid-bp)
-  );
-
-  --f-2-min: calc(var(--f-1-min) * var(--type-scale-desktop));
-  --f-2-max: calc(var(--f-1-max) * var(--type-scale-desktop));
-  --step-2: calc(
-    ((var(--f-2-min) / 16) * 1rem) + (var(--f-2-max) - var(--f-2-min)) *
-      var(--fluid-bp)
-  );
-
-  --f-3-min: calc(var(--f-2-min) * var(--type-scale-desktop));
-  --f-3-max: calc(var(--f-2-max) * var(--type-scale-desktop));
-  --step-3: calc(
-    ((var(--f-3-min) / 16) * 1rem) + (var(--f-3-max) - var(--f-3-min)) *
-      var(--fluid-bp)
-  );
-
-  //отрицательные
-  --f--1-min: calc(var(--f-0-min) / var(--type-scale-desktop));
-  --f--1-max: calc(var(--f-0-max) / var(--type-scale-desktop));
-  --step--1: calc(
-    ((var(--f--1-min) / 16) * 1rem) + (var(--f--1-max) - var(--f--1-min)) *
-      var(--fluid-bp)
-  );
-
-  --f--2-min: calc(var(--f--1-min) / var(--type-scale-desktop));
-  --f--2-max: calc(var(--f--1-max) / var(--type-scale-desktop));
-  --step--2: calc(
-    ((var(--f--2-min) / 16) * 1rem) + (var(--f--2-max) - var(--f--2-min)) *
-      var(--fluid-bp)
-  );
+  @include typoVariables();
 }
 
 //на ширине экрана меньше 1000px шрифт не уменьшается
 @media screen and (max-width: 1000px) {
   :root {
     --fluid-screen: calc(var(--fluid-min-width) * 1px);
+
+    @include typoVariables();
   }
 }
 
@@ -66,6 +23,8 @@
 @media screen and (min-width: 1600px) {
   :root {
     --fluid-screen: calc(var(--fluid-max-width) * 1px);
+
+    @include typoVariables();
   }
 }
 
@@ -78,6 +37,8 @@
     --type-scale-desktop: 1.333; //коэффициент увеличения шрифта телефон
     --f-0-min: 17.00; //размер шрифта мин телефон
     --f-0-max: 17.00; //размер шрифта макс телефон
+
+    @include typoVariables();
   }
 }
 
