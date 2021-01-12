@@ -1,51 +1,61 @@
 @include define-theme(
-  'wj-default',
   (
-    'main': '255, 221, 0',
-    'outline': '255, 221, 0',
+    'name': 'wj-default',
+    'colors': (
+      'main': '255, 221, 0',
+      'outline': '255, 221, 0',
+    ),
   )
 );
 
 @include define-theme(
-  'wj-dark',
   (
-    'background': '40, 40, 40',
-    'text': '255, 255, 255',
-    'accent': '255, 255, 255',
-    'main': '255, 255, 255',
-    'surface': '60, 60, 60',
-    'error': '229, 0, 60',
-    'success': '0, 229, 121',
-    'mark': '100, 100, 100',
-    'code': '200, 50, 50',
-    'on-main': '5, 5, 5',
-    'on-accent': '40, 40, 40',
-    'on-surface': '255, 255, 255',
-    'link': '80, 150, 255',
-    'hover': '100, 230, 100',
-    'outline': '255, 221, 0',
-  ),
-  (
-    'Root UI',
-    (
-      'regular':
-        'https://336416.selcdn.ru/winvestor-journal/fonts/PT_Root_UI_Regular',
+    'name': 'wj-dark',
+    'colors': (
+      'background': '40, 40, 40',
+      'text': '255, 255, 255',
+      'accent': '255, 255, 255',
+      'main': '255, 255, 255',
+      'surface': '60, 60, 60',
+      'error': '229, 0, 60',
+      'success': '0, 229, 121',
+      'mark': '100, 100, 100',
+      'code': '200, 50, 50',
+      'on-main': '5, 5, 5',
+      'on-accent': '40, 40, 40',
+      'on-surface': '255, 255, 255',
+      'link': '80, 150, 255',
+      'hover': '100, 230, 100',
+      'outline': '255, 221, 0',
+    ),
+    'fonts': (
+      'name': 'Root UI',
+      'regular': (
+        'woff':
+          'https://336416.selcdn.ru/winvestor-journal/fonts/PT_Root_UI_Regular/test1',
+        'woff2':
+          'https://336416.selcdn.ru/winvestor-journal/fonts/PT_Root_UI_Regular/test2',
+        'ttf':
+          'https://336416.selcdn.ru/winvestor-journal/fonts/PT_Root_UI_Regular/test3',
+        'eot':
+          'https://336416.selcdn.ru/winvestor-journal/fonts/PT_Root_UI_Regular/test4',
+      ),
       'medium':
         'https://336416.selcdn.ru/winvestor-journal/fonts/PT_Root_UI_Medium',
-      'bold': 'https://336416.selcdn.ru/winvestor-journal/fonts/PT_Root_UI_Bold'
-    )
-  ),
-  (
-    'desktop': (
-      'font-size-min': '16',
-      'font-size-max': '20',
-      'font-scale': '1.5',
+      'bold': 'https://336416.selcdn.ru/winvestor-journal/fonts/PT_Root_UI_Bold',
     ),
-    'mobile': (
-      'font-size-min': '17',
-      'font-size-max': '17',
-      'font-scale': '1.333',
+    'typography': (
+      'density': '1.3',
+      'desktop': (
+        'font-size-min': '16',
+        'font-size-max': '20',
+        'font-scale': '1.5',
+      ),
+      'mobile': (
+        'font-size-min': '17',
+        'font-size-max': '17',
+        'font-scale': '1.333',
+      ),
     ),
-    'density': '1.3',
   )
 );

@@ -1,13 +1,26 @@
 // миксин для подключения шрифта
+$font-types: (
+  'woff': 'woff2',
+  'woff2': 'woff',
+  'ttf': 'truetype',
+  'eot': 'embedded-opentype',
+);
+
 @mixin font-face($family, $path, $weight: normal, $style: normal) {
   @font-face {
     font-family: $family;
     font-weight: $weight;
     font-style: $style;
-    src: font-url('#{$path}.woff2') format('woff2'),
-         font-url('#{$path}.woff') format('woff'),
-         font-url('#{$path}.ttf') format('truetype'),
-         font-url('#{$path}.eot#iefix') format('embedded-opentype');
+    @if type-of($path) == 'map' {
+      @each $value in map-keys($path) {
+        src: url(map-get($path, $value)) format(map-get($font-types, $value));
+      }
+    } @else {
+      src: font-url('#{$path}.woff2') format('woff2'),
+           font-url('#{$path}.woff') format('woff'),
+           font-url('#{$path}.ttf') format('truetype'),
+           font-url('#{$path}.eot#iefix') format('embedded-opentype');
+    }
   }
 }
 
@@ -64,77 +77,88 @@
 }
 
 // любая тема состоит из названия, цветов, шрифтов и типографики
-@mixin define-theme($name, $colors: (), $fonts: (), $typo: ()) {
-  :root .#{$name} {
-    $keys: map-keys($colors);
-    @each $key in $keys {
-      --wds__#{$key}-RGB: #{map-get($colors, $key)};
-    }
-  }
+@mixin define-theme($args) {
+  $name: map-get($args, 'name');
 
-  @if length($fonts) > 0 {
-    $fontName: nth($fonts, 1);
-    $fontValues: nth($fonts, 2);
+  @if map-has-key($args, 'colors') {
+    $colors: map-get($args, 'colors');
 
     :root .#{$name} {
-      --wds__font: "#{$fontName}", Arial, sans-serif;
-    }
+      $keys: map-keys($colors);
 
-    @if map-has-key($fontValues, "regular") {
-      $value: map-get($fontValues, "regular");
-      @include font-face("#{$fontName}", #{$value}, 400, normal);
-    }
-    @if map-has-key($fontValues, "medium") {
-      $value: map-get($fontValues, "medium");
-      @include font-face("#{$fontName}", #{$value}, 500, normal);
-    }
-    @if map-has-key($fontValues, "bold") {
-      $value: map-get($fontValues, "bold");
-      @include font-face("#{$fontName}", #{$value}, 700, normal);
+      @each $key in $keys {
+        --wds__#{$key}-RGB: #{map-get($colors, $key)};
+      }
     }
   }
 
-  :root .#{$name} {
-    @if map-has-key($typo, "density") {
-      --wds__density: #{map-get($typo, "density")};
-    }
-    @if map-has-key($typo, "desktop") {
-      $desktopTypo: map-get($typo, "desktop");
-      $hasMin: map-has-key($desktopTypo, "font-size-min");
-      $hasMax: map-has-key($desktopTypo, "font-size-max");
-      $hasScale: map-has-key($desktopTypo, "font-scale");
+  @if map-has-key($args, 'fonts') {
+    $fonts: map-get($args, 'fonts');
+    $name: map-get($fonts, 'name');
 
-      @if $hasMin == true {
-        --f-0-min: #{map-get($desktopTypo, "font-size-min")};
-      }
-      @if $hasMax == true {
-        --f-0-max: #{map-get($desktopTypo, "font-size-max")};
-      }
-      @if $hasScale == true {
-        --type-scale-desktop: #{map-get($desktopTypo, "font-scale")};
-      }
-      @if $hasMin == true or $hasMax == true or $hasScale == true {
-        @include typoVariables();
-      }
+    :root .#{$name} {
+      --wds__font: '#{$name}', Arial, sans-serif;
     }
-    @if map-has-key($typo, "mobile") {
-      $mobileTypo: map-get($typo, "mobile");
-      $hasMin: map-has-key($mobileTypo, "font-size-min");
-      $hasMax: map-has-key($mobileTypo, "font-size-max");
-      $hasScale: map-has-key($mobileTypo, "font-scale");
 
-      @include mediaMobile() {
+    @if map-has-key($fonts, 'regular') {
+      $value: map-get($fonts, 'regular');
+      @include font-face('#{$name}', $value, 400, normal);
+    }
+    @if map-has-key($fonts, 'medium') {
+      $value: map-get($fonts, 'medium');
+      @include font-face('#{$name}', $value, 500, normal);
+    }
+    @if map-has-key($fonts, 'bold') {
+      $value: map-get($fonts, 'bold');
+      @include font-face('#{$name}', $value, 700, normal);
+    }
+  }
+
+  @if map-has-key($args, 'typography') {
+    $typography: map-get($args, 'typography');
+
+    :root .#{$name} {
+      @if map-has-key($typography, 'density') {
+        --wds__density: #{map-get($typography, 'density')};
+      }
+      @if map-has-key($typography, 'desktop') {
+        $desktopTypo: map-get($typography, 'desktop');
+        $hasMin: map-has-key($desktopTypo, 'font-size-min');
+        $hasMax: map-has-key($desktopTypo, 'font-size-max');
+        $hasScale: map-has-key($desktopTypo, 'font-scale');
+
         @if $hasMin == true {
-          --f-0-min: #{map-get($mobileTypo, "font-size-min")};
+          --f-0-min: #{map-get($desktopTypo, 'font-size-min')};
         }
         @if $hasMax == true {
-          --f-0-max: #{map-get($mobileTypo, "font-size-max")};
+          --f-0-max: #{map-get($desktopTypo, 'font-size-max')};
         }
         @if $hasScale == true {
-          --type-scale-desktop: #{map-get($mobileTypo, "font-scale")};
+          --type-scale-desktop: #{map-get($desktopTypo, 'font-scale')};
         }
         @if $hasMin == true or $hasMax == true or $hasScale == true {
           @include typoVariables();
+        }
+      }
+      @if map-has-key($typography, 'mobile') {
+        $mobileTypo: map-get($typography, 'mobile');
+        $hasMin: map-has-key($mobileTypo, 'font-size-min');
+        $hasMax: map-has-key($mobileTypo, 'font-size-max');
+        $hasScale: map-has-key($mobileTypo, 'font-scale');
+
+        @include mediaMobile() {
+          @if $hasMin == true {
+            --f-0-min: #{map-get($mobileTypo, 'font-size-min')};
+          }
+          @if $hasMax == true {
+            --f-0-max: #{map-get($mobileTypo, 'font-size-max')};
+          }
+          @if $hasScale == true {
+            --type-scale-desktop: #{map-get($mobileTypo, 'font-scale')};
+          }
+          @if $hasMin == true or $hasMax == true or $hasScale == true {
+            @include typoVariables();
+          }
         }
       }
     }
