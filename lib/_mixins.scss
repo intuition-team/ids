@@ -7,20 +7,18 @@ $font-types: (
 );
 
 @mixin font-face($family, $path, $weight: normal, $style: normal) {
-  @if type-of($path) == 'string' or length($path) > 0 {
-    @font-face {
-      font-family: $family;
-      font-weight: $weight;
-      font-style: $style;
-      @if type-of($path) == 'string' {
-        src: font-url('#{$path}.woff2') format('woff2'),
-             font-url('#{$path}.woff') format('woff'),
-             font-url('#{$path}.ttf') format('truetype'),
-             font-url('#{$path}.eot#iefix') format('embedded-opentype');
-      } @else {
-        @each $value in map-keys($path) {
-          src: url(map-get($path, $value)) format(map-get($font-types, $value));
-        }
+  @font-face {
+    font-family: $family;
+    font-weight: $weight;
+    font-style: $style;
+    @if type-of($path) == 'string' {
+      src: font-url('#{$path}.woff2') format('woff2'),
+           font-url('#{$path}.woff') format('woff'),
+           font-url('#{$path}.ttf') format('truetype'),
+           font-url('#{$path}.eot#iefix') format('embedded-opentype');
+    } @else {
+      @each $value in map-keys($path) {
+        src: url(map-get($path, $value)) format(map-get($font-types, $value));
       }
     }
   }
@@ -98,21 +96,24 @@ $font-types: (
     $fonts: map-get($args, 'fonts');
     $name: map-get($fonts, 'name');
 
-    :root .#{$name} {
-      --wds__font: '#{$name}', Arial, sans-serif;
+    $regular: map-get($fonts, 'regular');
+    $medium: map-get($fonts, 'medium');
+    $bold: map-get($fonts, 'bold');
+
+    @if length($regular) + length($medium) + length($bold) > 0 {
+      :root .#{$name} {
+        --wds__font: '#{$name}', Arial, sans-serif;
+      }
     }
 
-    @if map-has-key($fonts, 'regular') {
-      $value: map-get($fonts, 'regular');
-      @include font-face('#{$name}', $value, 400, normal);
+    @if length($regular) > 0 {
+      @include font-face('#{$name}', $regular, 400, normal);
     }
-    @if map-has-key($fonts, 'medium') {
-      $value: map-get($fonts, 'medium');
-      @include font-face('#{$name}', $value, 500, normal);
+    @if length($medium) > 0 {
+      @include font-face('#{$name}', $medium, 500, normal);
     }
-    @if map-has-key($fonts, 'bold') {
-      $value: map-get($fonts, 'bold');
-      @include font-face('#{$name}', $value, 700, normal);
+    @if length($bold) > 0 {
+      @include font-face('#{$name}', $bold, 700, normal);
     }
   }
 
