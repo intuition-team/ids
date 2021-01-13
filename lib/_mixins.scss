@@ -7,19 +7,21 @@ $font-types: (
 );
 
 @mixin font-face($family, $path, $weight: normal, $style: normal) {
-  @font-face {
-    font-family: $family;
-    font-weight: $weight;
-    font-style: $style;
-    @if type-of($path) == 'map' {
-      @each $value in map-keys($path) {
-        src: url(map-get($path, $value)) format(map-get($font-types, $value));
+  @if type-of($path) == 'string' or length($path) > 0 {
+    @font-face {
+      font-family: $family;
+      font-weight: $weight;
+      font-style: $style;
+      @if type-of($path) == 'string' {
+        src: font-url('#{$path}.woff2') format('woff2'),
+             font-url('#{$path}.woff') format('woff'),
+             font-url('#{$path}.ttf') format('truetype'),
+             font-url('#{$path}.eot#iefix') format('embedded-opentype');
+      } @else {
+        @each $value in map-keys($path) {
+          src: url(map-get($path, $value)) format(map-get($font-types, $value));
+        }
       }
-    } @else {
-      src: font-url('#{$path}.woff2') format('woff2'),
-           font-url('#{$path}.woff') format('woff'),
-           font-url('#{$path}.ttf') format('truetype'),
-           font-url('#{$path}.eot#iefix') format('embedded-opentype');
     }
   }
 }
