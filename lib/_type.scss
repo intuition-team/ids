@@ -7,6 +7,10 @@
   --f-0-min: 16.00; //размер шрифта мин десктоп
   --f-0-max: 20.00; //размер шрифта макс десктоп
 
+  --type-scale-mobile: 1.333; //коэффициент увеличения шрифта телефон
+  --f-0-min-mobile: 17.00; //размер шрифта мин телефон
+  --f-0-max-mobile: 17.00; //размер шрифта макс телефон
+
   @include typoVariables();
 }
 
@@ -32,11 +36,11 @@
   :root {
     --fluid-min-width: 320;
     --fluid-max-width: 768;
-    --fluid-screen: calc(var(768) * 1px);
+    --fluid-screen: calc(var(--fluid-max-width) * 1px);
 
-    --type-scale-desktop: 1.333; //коэффициент увеличения шрифта телефон
-    --f-0-min: 17.00; //размер шрифта мин телефон
-    --f-0-max: 17.00; //размер шрифта макс телефон
+    --type-scale-desktop: var(--type-scale-mobile);
+    --f-0-min: var(--f-0-min-mobile);
+    --f-0-max: var(--f-0-max-mobile);
 
     @include typoVariables();
   }
