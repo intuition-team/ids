@@ -4,17 +4,29 @@
   --fluid-screen: 100vw; // шрифт растягивается с этим параметром. если его зафиксировать в пикс, не растягивается
 
   --type-scale-desktop: 1.5; //коэффициент увеличения шрифта десктоп
-  --f-0-min: 16.00; //размер шрифта мин десктоп
-  --f-0-max: 20.00; //размер шрифта макс десктоп
-
+  --font-size-min: 16.00; //размер шрифта мин десктоп
+  --font-size-max: 20.00; //размер шрифта макс десктоп
+  
   --type-scale-mobile: 1.333; //коэффициент увеличения шрифта телефон
-  --f-0-min-mobile: 17.00; //размер шрифта мин телефон
-  --f-0-max-mobile: 17.00; //размер шрифта макс телефон
+  --font-size-min-mobile: 17.00; //размер шрифта мин телефон
+  --font-size-max-mobile: 19.00; //размер шрифта макс телефон
+
+  @media #{$wds__desktop} {
+    --f-0-min: var(--font-size-min);
+    --f-0-max: var(--font-size-max);
+    --type-scale: var(--type-scale-desktop);
+  }
+
+  @media #{$wds__mobile} {
+    --f-0-min: var(--font-size-min-mobile);
+    --f-0-max: var(--font-size-max-mobile);
+    --type-scale: var(--type-scale-mobile);
+  }
 
   @include typoVariables();
 }
 
-//на ширине экрана меньше 1000px шрифт не уменьшается
+// на ширине экрана меньше 1000px шрифт не уменьшается
 @media screen and (max-width: 1000px) {
   :root {
     --fluid-screen: calc(var(--fluid-min-width) * 1px);
@@ -32,15 +44,11 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media #{$wds__mobile} {
   :root {
     --fluid-min-width: 320;
     --fluid-max-width: 768;
-    --fluid-screen: calc(var(--fluid-max-width) * 1px);
-
-    --type-scale-desktop: var(--type-scale-mobile);
-    --f-0-min: var(--f-0-min-mobile);
-    --f-0-max: var(--f-0-max-mobile);
+    --fluid-screen: 100vw;
 
     @include typoVariables();
   }

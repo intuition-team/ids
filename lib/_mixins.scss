@@ -36,33 +36,33 @@ $font-types: (
       var(--fluid-bp)
   );
   //положительные
-  --f-1-min: calc(var(--f-0-min) * var(--type-scale-desktop));
-  --f-1-max: calc(var(--f-0-max) * var(--type-scale-desktop));
+  --f-1-min: calc(var(--f-0-min) * var(--type-scale));
+  --f-1-max: calc(var(--f-0-max) * var(--type-scale));
   --step-1: calc(
     ((var(--f-1-min) / 16) * 1rem) + (var(--f-1-max) - var(--f-1-min)) *
       var(--fluid-bp)
   );
-  --f-2-min: calc(var(--f-1-min) * var(--type-scale-desktop));
-  --f-2-max: calc(var(--f-1-max) * var(--type-scale-desktop));
+  --f-2-min: calc(var(--f-1-min) * var(--type-scale));
+  --f-2-max: calc(var(--f-1-max) * var(--type-scale));
   --step-2: calc(
     ((var(--f-2-min) / 16) * 1rem) + (var(--f-2-max) - var(--f-2-min)) *
       var(--fluid-bp)
   );
-  --f-3-min: calc(var(--f-2-min) * var(--type-scale-desktop));
-  --f-3-max: calc(var(--f-2-max) * var(--type-scale-desktop));
+  --f-3-min: calc(var(--f-2-min) * var(--type-scale));
+  --f-3-max: calc(var(--f-2-max) * var(--type-scale));
   --step-3: calc(
     ((var(--f-3-min) / 16) * 1rem) + (var(--f-3-max) - var(--f-3-min)) *
       var(--fluid-bp)
   );
   //отрицательные
-  --f--1-min: calc(var(--f-0-min) / var(--type-scale-desktop));
-  --f--1-max: calc(var(--f-0-max) / var(--type-scale-desktop));
+  --f--1-min: calc(var(--f-0-min) / var(--type-scale));
+  --f--1-max: calc(var(--f-0-max) / var(--type-scale));
   --step--1: calc(
     ((var(--f--1-min) / 16) * 1rem) + (var(--f--1-max) - var(--f--1-min)) *
       var(--fluid-bp)
   );
-  --f--2-min: calc(var(--f--1-min) / var(--type-scale-desktop));
-  --f--2-max: calc(var(--f--1-max) / var(--type-scale-desktop));
+  --f--2-min: calc(var(--f--1-min) / var(--type-scale));
+  --f--2-max: calc(var(--f--1-max) / var(--type-scale));
   --step--2: calc(
     ((var(--f--2-min) / 16) * 1rem) + (var(--f--2-max) - var(--f--2-min)) *
       var(--fluid-bp)
@@ -71,7 +71,7 @@ $font-types: (
 
 // миксин для переопределения переменных на мобильных экранах
 @mixin mediaMobile() {
-  @media screen and (max-width: 768px) {
+  @media #{$wds__mobile} {
     @content;
   }
 }
@@ -131,10 +131,10 @@ $font-types: (
         $hasScale: map-has-key($desktopTypo, 'font-scale');
 
         @if $hasMin == true {
-          --f-0-min: #{map-get($desktopTypo, 'font-size-min')};
+          --font-size-min: #{map-get($desktopTypo, 'font-size-min')};
         }
         @if $hasMax == true {
-          --f-0-max: #{map-get($desktopTypo, 'font-size-max')};
+          --font-size-max: #{map-get($desktopTypo, 'font-size-max')};
         }
         @if $hasScale == true {
           --type-scale-desktop: #{map-get($desktopTypo, 'font-scale')};
@@ -151,13 +151,13 @@ $font-types: (
 
         @include mediaMobile() {
           @if $hasMin == true {
-            --f-0-min: #{map-get($mobileTypo, 'font-size-min')};
+            --font-size-min-mobile: #{map-get($mobileTypo, 'font-size-min')};
           }
           @if $hasMax == true {
-            --f-0-max: #{map-get($mobileTypo, 'font-size-max')};
+            --font-size-max-mobile: #{map-get($mobileTypo, 'font-size-max')};
           }
           @if $hasScale == true {
-            --type-scale-desktop: #{map-get($mobileTypo, 'font-scale')};
+            --type-scale-mobile: #{map-get($mobileTypo, 'font-scale')};
           }
           @if $hasMin == true or $hasMax == true or $hasScale == true {
             @include typoVariables();
