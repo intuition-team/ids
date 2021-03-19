@@ -1,8 +1,8 @@
 {
-  "name": "@intuition.team/wds-brandbook",
+  "name": "@intuition.team/ids-brandbook",
   "version": "0.2.0",
   "description": "Winvestor Design System Brandbook",
-  "repository": "https://github.com/intuition-team/wds.git",
+  "repository": "https://github.com/intuition-team/ids.git",
   "scripts": {
     "start": "yarn && parcel serve src/index.pug src/*.pug",
     "prestart": "yarn && yarn clean && open-cli http://localhost:1234/index.html",

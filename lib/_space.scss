@@ -1,57 +1,57 @@
 // Настройки
 
-$wds__button-padding-top: 0.4em !default;
-$wds__button-padding-bottom: 0.5em !default;
-$wds__button-padding-left-right: 1em !default;
+$ids__button-padding-top: 0.4em !default;
+$ids__button-padding-bottom: 0.5em !default;
+$ids__button-padding-left-right: 1em !default;
 
 // Переменные
 
-$wds__padding: $wds__button-padding-top $wds__button-padding-left-right
-  $wds__button-padding-bottom;
-$wds__micro-padding: 0 calc(var(--wds__density) * 0.2em);
+$ids__padding: $ids__button-padding-top $ids__button-padding-left-right
+  $ids__button-padding-bottom;
+$ids__micro-padding: 0 calc(var(--ids__density) * 0.2em);
 
 // Миксины
 
-@mixin wds__default-padding {
-  padding: calc(var(--wds__density) * 0.75em);
+@mixin ids__default-padding {
+  padding: calc(var(--ids__density) * 0.75em);
 }
 
 // Компоненты
 
-.wds__stack {
+.ids__stack {
   &-XS {
-    height: calc(var(--wds__density) * 1em);
+    height: calc(var(--ids__density) * 1em);
 
-    @media #{$wds__mobile} {
-      height: calc(var(--wds__density) * 1em / 3);
+    @media #{$ids__mobile} {
+      height: calc(var(--ids__density) * 1em / 3);
     }
   }
   &-S {
-    height: calc(var(--wds__density) * 2em);
+    height: calc(var(--ids__density) * 2em);
 
-    @media #{$wds__mobile} {
-      height: calc(var(--wds__density) * 1em / 2);
+    @media #{$ids__mobile} {
+      height: calc(var(--ids__density) * 1em / 2);
     }
   }
   &-M {
-    height: calc(var(--wds__density) * 4em);
+    height: calc(var(--ids__density) * 4em);
 
-    @media #{$wds__mobile} {
-      height: calc(var(--wds__density) * 1em);
+    @media #{$ids__mobile} {
+      height: calc(var(--ids__density) * 1em);
     }
   }
   &-L {
-    height: calc(var(--wds__density) * 8em);
+    height: calc(var(--ids__density) * 8em);
 
-    @media #{$wds__mobile} {
-      height: calc(var(--wds__density) * 2em);
+    @media #{$ids__mobile} {
+      height: calc(var(--ids__density) * 2em);
     }
   }
   &-XL {
-    height: calc(var(--wds__density) * 16em);
+    height: calc(var(--ids__density) * 16em);
 
-    @media #{$wds__mobile} {
-      height: calc(var(--wds__density) * 4em);
+    @media #{$ids__mobile} {
+      height: calc(var(--ids__density) * 4em);
     }
   }
 }

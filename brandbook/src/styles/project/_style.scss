@@ -1,5 +1,5 @@
 .right-shifted {
-  @media #{$wds__desktop} {
+  @media #{$ids__desktop} {
     padding-left: 12em;
   }
 }
@@ -26,9 +26,9 @@
   .palette-bar {
     width: 25%;
     height: 5em;
-    padding: calc(var(--wds__density) * 0.4em) calc(var(--wds__density) * 0.5em);
+    padding: calc(var(--ids__density) * 0.4em) calc(var(--ids__density) * 0.5em);
 
-    @media #{$wds__mobile} {
+    @media #{$ids__mobile} {
       width: 50%;
     }
   }
@@ -50,7 +50,7 @@
 
 .font-letter {
   font-size: 2.5em;
-  line-height: calc(var(--wds__density) / 1.2);
+  line-height: calc(var(--ids__density) / 1.2);
   margin-bottom: 0.5em;
 
   &.regular {
@@ -63,7 +63,7 @@
     font-weight: 700;
   }
 
-  @media #{$wds__mobile} {
+  @media #{$ids__mobile} {
     font-size: 2.2em;
   }
 }

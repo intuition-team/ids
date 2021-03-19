@@ -4,30 +4,30 @@ block header
   include pages/partials/design-header.pug
 
 block content
-  .wds__wrapper
-    .wds__text
-      .wds__section
+  .ids__wrapper
+    .ids__text
+      .ids__section
         h2 Компоненты
-      .wds__stack-XXS
+      .ids__stack-XXS
 
-      .wds__section
+      .ids__section
         h3 Кнопка
-        .wds__grid.wds__grid-size-L.wds__grid-inset-L
-          .wds__grid-cell
+        .ids__grid.ids__grid-size-L.ids__grid-inset-L
+          .ids__grid-cell
             p default
             button Кликни меня
-          .wds__grid-cell
+          .ids__grid-cell
             p disabled
             button(disabled) Кликни меня
 
         h3 Кнопка-ссылка
-        .wds__grid.wds__grid-size-L.wds__grid-inset-L
-          .wds__grid-cell
+        .ids__grid.ids__grid-size-L.ids__grid-inset-L
+          .ids__grid-cell
             p default
-            a.wds__button-link(href="/components-test.pug") Кликни меня
-          .wds__grid-cell
+            a.ids__button-link(href="/components-test.pug") Кликни меня
+          .ids__grid-cell
             p disabled
-            a.wds__button-link(href="/components-test.pug" disabled) Кликни меня
+            a.ids__button-link(href="/components-test.pug" disabled) Кликни меня
 
       .section
         .error-plate
@@ -35,133 +35,133 @@ block content
         .success-plate
           | Ну! Можешь же, когда захочешь!
         h3 Инпут
-        .wds__grid.wds__grid-size-XL.wds__grid-inset-L
-          .wds__grid-cell
+        .ids__grid.ids__grid-size-XL.ids__grid-inset-L
+          .ids__grid-cell
             p default
             input(type='text' placeholder='Введи сюда свой текст')
             
-          .wds__grid-cell
+          .ids__grid-cell
             p disabled
             input(type='text' placeholder='Введи сюда свой текст' disabled)
 
-        .wds__form-field
+        .ids__form-field
           label Выбери меня
           input.error-state(type='text' placeholder='Введи сюда свой текст')
           .form-error-message
             | Это поле обязательно для заполнения
-        .wds__form-field
+        .ids__form-field
           label Выбери меня
           input(type='text' placeholder='Введи сюда свой текст')
-        .wds__form-field
+        .ids__form-field
           label Выбери меня
           input(type='text' placeholder='Введи сюда свой текст')
 
         h3 Текстовая зона
-        .wds__grid.wds__grid-size-XL.wds__grid-inset-L
-          .wds__grid-cell
+        .ids__grid.ids__grid-size-XL.ids__grid-inset-L
+          .ids__grid-cell
             p default
             textarea(placeholder='Введи сюда свой текст')
-          .wds__grid-cell
+          .ids__grid-cell
             p disabled
             textarea(placeholder='Введи сюда свой текст' disabled)
         
         h3 Инпут вариант 2
-        .wds__grid.wds__grid-size-XL.wds__grid-inset-L
-          .wds__grid-cell
+        .ids__grid.ids__grid-size-XL.ids__grid-inset-L
+          .ids__grid-cell
             p default
             
-            input.wds__input-text-line(type='text' placeholder='Введи сюда свой текст')
+            input.ids__input-text-line(type='text' placeholder='Введи сюда свой текст')
             
-          .wds__grid-cell
+          .ids__grid-cell
             p disabled
-            input.wds__input-text-line(type='text' placeholder='Введи сюда свой текст' disabled)
+            input.ids__input-text-line(type='text' placeholder='Введи сюда свой текст' disabled)
 
         h3 Текстовая зона вариант 2
-        .wds__grid.wds__grid-size-XL.wds__grid-inset-L
-          .wds__grid-cell
+        .ids__grid.ids__grid-size-XL.ids__grid-inset-L
+          .ids__grid-cell
             p default
-            textarea.wds__input-text-line(placeholder='Введи сюда свой текст')
-          .wds__grid-cell
+            textarea.ids__input-text-line(placeholder='Введи сюда свой текст')
+          .ids__grid-cell
             p disabled
-            textarea.wds__input-text-line(placeholder='Введи сюда свой текст' disabled)
+            textarea.ids__input-text-line(placeholder='Введи сюда свой текст' disabled)
 
         h3 Чекбокс
-        .wds__grid.wds__grid-size-M.wds__grid-inset-L
-          .wds__grid-cell
+        .ids__grid.ids__grid-size-M.ids__grid-inset-L
+          .ids__grid-cell
             p default
-            .wds__checkbox
+            .ids__checkbox
               input(type='checkbox')
               label Выбери меня
-          .wds__grid-cell
+          .ids__grid-cell
             p checked
-            .wds__checkbox
+            .ids__checkbox
               input(type='checkbox' checked)
               label Выбери меня
-          .wds__grid-cell
+          .ids__grid-cell
             p disabled
-            .wds__checkbox
+            .ids__checkbox
               input(type='checkbox' disabled)
               label Выбери меня
-          .wds__grid-cell
+          .ids__grid-cell
             p disabled checked
-            .wds__checkbox
+            .ids__checkbox
               input(type='checkbox' checked disabled)
               label Выбери меня
 
         h3 Радиокнопка
-        .wds__grid.wds__grid-size-M.wds__grid-inset-L
-          .wds__grid-cell
+        .ids__grid.ids__grid-size-M.ids__grid-inset-L
+          .ids__grid-cell
             p default
-            .wds__radio
+            .ids__radio
               input(type='radio' id='email-login')
               label(for='email-login') Выбери меня
-          .wds__grid-cell
+          .ids__grid-cell
             p checked
-            .wds__radio
+            .ids__radio
               input(type='radio' id='email-login' checked)
               label(for='email-login') Выбери меня
-          .wds__grid-cell
+          .ids__grid-cell
             p disabled
-            .wds__radio
+            .ids__radio
               input(type='radio' id='email-login' disabled)
               label(for='email-login') Выбери меня
-          .wds__grid-cell
+          .ids__grid-cell
             p disabled checked
-            .wds__radio
+            .ids__radio
               input(type='radio' id='email-login' checked disabled)
               label(for='email-login') Выбери меня
 
         //- h3 Радиогруппа
-        //- .wds__radiogroup-line
-        //-   .wds__radio
+        //- .ids__radiogroup-line
+        //-   .ids__radio
         //-     input(type='radio' name='radiogroup')
         //-     label Выбери меня
-        //-   .wds__radio
+        //-   .ids__radio
         //-     input(type='radio' name='radiogroup')
         //-     label Выбери меня
-        //-   .wds__radio
+        //-   .ids__radio
         //-     input(type='radio' name='radiogroup')
         //-     label Выбери меня
-        //-   .wds__radio
+        //-   .ids__radio
         //-     input(type='radio' name='radiogroup')
         //-     label Выбери меня
 
         h3 Радиогруппа
-        .wds__radiogroup-toggle
-          .wds__radiogroup-option
+        .ids__radiogroup-toggle
+          .ids__radiogroup-option
             input(type='radio' id='option1' name='radiobuttons')
             label(for='option1') Письма 
-          .wds__radiogroup-option
+          .ids__radiogroup-option
             input(type='radio' id='option2' name='radiobuttons')
             label(for='option2') Найти деньги
-          .wds__radiogroup-option
+          .ids__radiogroup-option
             input(type='radio' id='option3' name='radiobuttons')
             label(for='option3') Что делать с деньгами
-          .wds__radiogroup-option
+          .ids__radiogroup-option
             input(type='radio' id='option4' name='radiobuttons')
             label(for='option4') Как инвестировать
 
-      .wds__section
+      .ids__section
         h3 Таблица
         table
           tr 

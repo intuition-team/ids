@@ -2,13 +2,13 @@ body {
   min-width: 1100px;
   max-width: 2000px;
 
-  @media #{$wds__mobile} {
+  @media #{$ids__mobile} {
     min-width: auto;
   }
 }
 
 .design-header {
-  @include wds__default-padding;
+  @include ids__default-padding;
 }
 
 .design-logo {
@@ -24,24 +24,24 @@ body {
 
   height: 20em;
 
-  background-color: RGB(var(--wds__surface-RGB));
-  padding: calc(var(--wds__density) * 0.75em);
+  background-color: RGB(var(--ids__surface-RGB));
+  padding: calc(var(--ids__density) * 0.75em);
   padding-right: 3em;
-  border-radius: $wds__radius;
-  margin-bottom: calc(var(--wds__density) * 0.75em);
+  border-radius: $ids__radius;
+  margin-bottom: calc(var(--ids__density) * 0.75em);
 
   h2 {
     margin-top: 0.2em;
     line-height: 1;
   }
 
-  .wds__label {
-    background-color: RGB(var(--wds__link-RGB));
+  .ids__label {
+    background-color: RGB(var(--ids__link-RGB));
   }
 
   &:hover {
-    .wds__label {
-      background-color: RGB(var(--wds__hover-RGB));
+    .ids__label {
+      background-color: RGB(var(--ids__hover-RGB));
     }
   }
 }
@@ -51,7 +51,7 @@ body {
   width: 100%;
 }
 
-.wds {
+.ids {
   .theme-button {
     position: fixed;
     top: 1em;

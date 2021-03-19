@@ -1,22 +1,22 @@
 {
-  "name": "@intuition.team/wds",
+  "name": "@intuition.team/ids",
   "version": "0.4.0",
-  "description": "Winvestor Design System",
+  "description": "Intuition Design System",
   "author": {
     "name": "Intuition Design Bureau",
     "url": "https://intuition.team",
     "email": "e@intuition.team"
   },
   "license": "LGPL-2.1-only",
-  "repository": "https://github.com/intuition-team/wds.git",
-  "main": "wds.scss",
+  "repository": "https://github.com/intuition-team/ids.git",
+  "main": "ids.scss",
   "scripts": {
-    "build": "yarn && yarn clean && yarn build-wds && yarn build-brandbook",
-    "build-wds": "yarn build-sass && yarn build-autoprefix && yarn build-cleancss",
+    "build": "yarn && yarn clean && yarn build-ids && yarn build-brandbook",
+    "build-ids": "yarn build-sass && yarn build-autoprefix && yarn build-cleancss",
     "build-brandbook": "(cd brandbook && yarn build)",
-    "build-autoprefix": "postcss --use autoprefixer --map false --output dist/wds.css dist/wds.css",
-    "build-cleancss": "cleancss -o dist/wds.min.css dist/wds.css",
-    "build-sass": "node-sass --importer node_modules/node-sass-package-importer/dist/cli.js --output-style expanded --source-map true wds.scss dist/wds.css",
+    "build-autoprefix": "postcss --use autoprefixer --map false --output dist/ids.css dist/ids.css",
+    "build-cleancss": "cleancss -o dist/ids.min.css dist/ids.css",
+    "build-sass": "node-sass --importer node_modules/node-sass-package-importer/dist/cli.js --output-style expanded --source-map true ids.scss dist/ids.css",
     "clean": "rimraf dist",
     "dev": "yarn build-sass -- --watch",
     "start": "(cd brandbook && yarn start)"

@@ -1,186 +1,186 @@
 // Если есть доступ к body, надо добавить туда этот класс
 // Компоненты
 
-.wds__wrapper {
+.ids__wrapper {
   position: relative;
   width: 76%;
   margin: 0 auto;
 
-  @media #{$wds__mobile} {
+  @media #{$ids__mobile} {
     width: 100%;
-    padding: 0 calc(var(--wds__density) * 0.6em);
+    padding: 0 calc(var(--ids__density) * 0.6em);
   }
 
-  &.wds__full-width {
+  &.ids__full-width {
     width: 100%;
-    padding: 0 calc(var(--wds__density) * 0.75em);
+    padding: 0 calc(var(--ids__density) * 0.75em);
 
-    @media #{$wds__mobile} {
-      padding: 0 calc(var(--wds__density) * 0.6em);
+    @media #{$ids__mobile} {
+      padding: 0 calc(var(--ids__density) * 0.6em);
     }
   }
 
-  &.wds__edge-to-edge {
+  &.ids__edge-to-edge {
     width: 100%;
   }
 
-  &.wds__shift-right {
-    @media #{$wds__desktop} {
+  &.ids__shift-right {
+    @media #{$ids__desktop} {
       padding-left: 6em;
     }
   }
 
-  &.wds__shift-left {
-    @media #{$wds__desktop} {
+  &.ids__shift-left {
+    @media #{$ids__desktop} {
       padding-right: 6em;
     }
   }
 }
 
-.wds {
-  color: RGB(var(--wds__text-RGB));
-  background-color: RGB(var(--wds__background-RGB));
-  font-family: var(--wds__font);
+.ids {
+  color: RGB(var(--ids__text-RGB));
+  background-color: RGB(var(--ids__background-RGB));
+  font-family: var(--ids__font);
 
   font-size: var(--step-0);
-  line-height: var(--wds__density);
+  line-height: var(--ids__density);
 }
 
-.wds__section {
-  margin-top: calc(var(--wds__density) * 1.5em);
+.ids__section {
+  margin-top: calc(var(--ids__density) * 1.5em);
 
-  @media #{$wds__mobile} {
-    margin-top: calc(var(--wds__density) * 1em / 2);
+  @media #{$ids__mobile} {
+    margin-top: calc(var(--ids__density) * 1em / 2);
   }
 }
 
-.wds__text {
+.ids__text {
   width: 85%;
 
-  @media #{$wds__mobile} {
+  @media #{$ids__mobile} {
     width: 100%;
   }
 }
 
-.wds__grid {
-  margin-top: calc(var(--wds__density) * 1em);
+.ids__grid {
+  margin-top: calc(var(--ids__density) * 1em);
   display: flex;
   flex-wrap: wrap;
 
-  &.wds__grid-align-bottom {
+  &.ids__grid-align-bottom {
     align-items: flex-end;
   }
 
-  .wds__grid-cell {
+  .ids__grid-cell {
     width: 50%;
     
-    &.wds__grid-cell-align-bottom {
+    &.ids__grid-cell-align-bottom {
       align-self: flex-end;
     }
 
-    @media #{$wds__mobile} {
+    @media #{$ids__mobile} {
       width: 100%;
     }
   }
 
-  &.wds__grid-with-gaps {
+  &.ids__grid-with-gaps {
     justify-content: space-between;
 
-    .wds__grid-cell {
+    .ids__grid-cell {
       width: 49.5%;
   
-      @media #{$wds__mobile} {
+      @media #{$ids__mobile} {
         width: 100%;
       }
     }
   }
 
-  &.wds__grid-size-XXL {
-    .wds__grid-cell {
+  &.ids__grid-size-XXL {
+    .ids__grid-cell {
       width: calc(100% / 2);
   
-      @media #{$wds__mobile} {
+      @media #{$ids__mobile} {
         width: 100%;
       }
     }  
   }
 
-  &.wds__grid-size-XL {
-    .wds__grid-cell {
+  &.ids__grid-size-XL {
+    .ids__grid-cell {
       width: calc(100% / 3);
   
-      @media #{$wds__mobile} {
+      @media #{$ids__mobile} {
         width: 100%;
       }
     }  
   }
 
-  &.wds__grid-size-L {
-    .wds__grid-cell {
+  &.ids__grid-size-L {
+    .ids__grid-cell {
       width: calc(100% / 4);
   
-      @media #{$wds__mobile} {
+      @media #{$ids__mobile} {
         width: calc(100% / 2);
       }
     }  
   }
 
-  &.wds__grid-size-M {
-    .wds__grid-cell {
+  &.ids__grid-size-M {
+    .ids__grid-cell {
       width: calc(100% / 5);
   
-      @media #{$wds__mobile} {
+      @media #{$ids__mobile} {
         width: calc(100% / 3);
       }
     }  
   }
 
-  &.wds__grid-size-S {
-    .wds__grid-cell {
+  &.ids__grid-size-S {
+    .ids__grid-cell {
       width: calc(100% / 6);
   
-      @media #{$wds__mobile} {
+      @media #{$ids__mobile} {
         width: calc(100% / 3);
       }
     }  
   }
 
-  &.wds__grid-size-XS {
-    .wds__grid-cell {
+  &.ids__grid-size-XS {
+    .ids__grid-cell {
       width: calc(100% / 7);
   
-      @media #{$wds__mobile} {
+      @media #{$ids__mobile} {
         width: calc(100% / 4);
       }
     }  
   }
 
-  &.wds__grid-size-XXS {
-    .wds__grid-cell {
+  &.ids__grid-size-XXS {
+    .ids__grid-cell {
       width: calc(100% / 8);
   
-      @media #{$wds__mobile} {
+      @media #{$ids__mobile} {
         width: calc(100% / 4);
       }
     }  
   }
 
-  &.wds__grid-inset-L {
-    .wds__grid-cell {
-      padding-right: calc(var(--wds__density) * 2em);
-      padding-bottom: calc(var(--wds__density) * 2em);
+  &.ids__grid-inset-L {
+    .ids__grid-cell {
+      padding-right: calc(var(--ids__density) * 2em);
+      padding-bottom: calc(var(--ids__density) * 2em);
     }
   }
-  &.wds__grid-inset-M {
-    .wds__grid-cell {
-      padding-right: calc(var(--wds__density) * 1em);
-      padding-bottom: calc(var(--wds__density) * 1em);
+  &.ids__grid-inset-M {
+    .ids__grid-cell {
+      padding-right: calc(var(--ids__density) * 1em);
+      padding-bottom: calc(var(--ids__density) * 1em);
     }
   }
-  &.wds__grid-inset-S {
-    .wds__grid-cell {
-      padding-right: calc(var(--wds__density) * .5em);
-      padding-bottom: calc(var(--wds__density) * .5em);
+  &.ids__grid-inset-S {
+    .ids__grid-cell {
+      padding-right: calc(var(--ids__density) * .5em);
+      padding-bottom: calc(var(--ids__density) * .5em);
     }
   }
 

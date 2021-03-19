@@ -2,20 +2,20 @@
 
 1. Установить зависимость
     ```shell
-    npm install @intuition.team/wds
+    npm install @intuition.team/ids
     ```
    или
     ```shell
-    yarn add @intuition.team/wds
+    yarn add @intuition.team/ids
     ```
 
 2. Импортировать css файл
     ```css
-    @import 'node_modules/@intuition.team/wds/dist/wds';
+    @import 'node_modules/@intuition.team/ids/dist/ids';
     ```
    или scss файл
     ```css
-    @import 'node_modules/@intuition.team/wds/wds';
+    @import 'node_modules/@intuition.team/ids/ids';
     ```
 
 ## Как запустить локально

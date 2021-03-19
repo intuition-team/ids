@@ -1,14 +1,14 @@
-$wds__fonts-path: '/assets/fonts' !default;
+$ids__fonts-path: '/assets/fonts' !default;
 
 :root {
-  --wds__font: 'Root UI', Arial, sans-serif;
+  --ids__font: 'Root UI', Arial, sans-serif;
 }
 
 @function font-url($path) {
   @if (str-index($path, 'http') == 1) {
     @return url($path);
   } @else {
-    @return url('#{$wds__fonts-path}/#{$path}');
+    @return url('#{$ids__fonts-path}/#{$path}');
   }
 }
 

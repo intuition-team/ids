@@ -6,7 +6,7 @@ block header
       a.system__sign(href="/index.pug")
         img(src="/assets/images/winvestor-sign.svg")
       a.system__sign(href="#top")
-        img(src="/assets/images/wds-sign.svg")
+        img(src="/assets/images/ids-sign.svg")
 
     .system__sidebar-nav
       .system__sidebar-nav-link
@@ -36,37 +36,37 @@ block content
   a.theme-button
 
   .plug#top
-  .wds__wrapper.wds__shift-right
-    .wds__text
+  .ids__wrapper.ids__shift-right
+    .ids__text
 
-      h1.huge-wds-title
-        span .wds
-      p WDS, Winvestor Design System — это дизайн-система для сборки онлайн-публикаций, лендингов и любых интерфейсов. Она реализована как CSS-фреймворк и поставляется в виде npm-пакета:
+      h1.huge-ids-title
+        span .ids
+      p IDS, Intuition Design System — это дизайн-система для сборки онлайн-публикаций, лендингов и любых интерфейсов. Она реализована как CSS-фреймворк и поставляется в виде npm-пакета:
 
       aside
-        code npm install @intuition.team/wds
+        code npm install @intuition.team/ids
 
       p Чтобы использовать компоненты в стандартной цвето-шрифтовой схеме, достаточно подключить один только CSS-файл:
 
       aside
-        code @intuition.team/wds/dist/wds
+        code @intuition.team/ids/dist/ids
 
       p Чтобы менять шрифт и любые настройки, подключите все SCSS-файлы и обеспечте их сборку в проекте:
 
       aside
-        code @import '@intuition.team/wds/wds'
+        code @import '@intuition.team/ids/ids'
 
 
-      .wds__stack-S
+      .ids__stack-S
       h2#principles Принципы
 
-      p WDS предоставляет компоненты и переменные. Компоненты — это готовые к использованию элементы интерфейса, а переменные помогают делать собственные элементы консистентными.
+      p IDS предоставляет компоненты и переменные. Компоненты — это готовые к использованию элементы интерфейса, а переменные помогают делать собственные элементы консистентными.
 
-      p WDS подразумевает, что у одного и того же содержимого на разных устройствах должен быть максимально одинаковый, минимально искажённый адаптацией дизайн. Мы задаём компонентам как можно меньше специфичных для устройств стилей, а базовые стили делаем как можно универсальнее.
+      p IDS подразумевает, что у одного и того же содержимого на разных устройствах должен быть максимально одинаковый, минимально искажённый адаптацией дизайн. Мы задаём компонентам как можно меньше специфичных для устройств стилей, а базовые стили делаем как можно универсальнее.
 
-      p Важная особенность системы — типографическая гибкость. Базовый элемент системы — это текст, а в качестве точки отсчёта для вычисления размеров вместо единичного модуля используется интерлиньяж этого текста. WDS позволяет подключить любой шрифт и предоставляет инструменты для точной настройки типографики. 
+      p Важная особенность системы — типографическая гибкость. Базовый элемент системы — это текст, а в качестве точки отсчёта для вычисления размеров вместо единичного модуля используется интерлиньяж этого текста. IDS позволяет подключить любой шрифт и предоставляет инструменты для точной настройки типографики. 
 
-      p WDS не содержит набора готовых иконок они считаются иллюстративной графикой, подбираются в соответствии с выбранным шрифтом и встраиваются как изображения.
+      p IDS не содержит набора готовых иконок они считаются иллюстративной графикой, подбираются в соответствии с выбранным шрифтом и встраиваются как изображения.
 
 
 
@@ -74,9 +74,9 @@ block content
       section
         h3#namespace Пространство имён
 
-        p Чтобы использовать компоненты дизайн-системы, достаточно поместить их в контейнер с классом <code>wds</code>. Этот класс можно назначить тегу <code>body</code> или создать отдельные контейнеры во всей местах, где должна работать дизайн-система.
+        p Чтобы использовать компоненты дизайн-системы, достаточно поместить их в контейнер с классом <code>ids</code>. Этот класс можно назначить тегу <code>body</code> или создать отдельные контейнеры во всей местах, где должна работать дизайн-система.
 
-        p Все имена классов и переменных имеют префикс <code>wds__</code>. Cтандартным хтмл-элементам не требуется специальный класс, их оформление определено для тегов внутри <code>.wds</code>.
+        p Все имена классов и переменных имеют префикс <code>ids__</code>. Cтандартным хтмл-элементам не требуется специальный класс, их оформление определено для тегов внутри <code>.ids</code>.
 
       section
         h3#units Размерности
@@ -84,20 +84,20 @@ block content
 
         p Основная единица измерения — <code>em</code>, в них заданы не только кегль с интерлиньяжем, но и все поля и отступы. По умолчанию 1&thinsp;em равняется 20&thinsp;px для ширины экрана до 1400&thinsp;px и 21&thinsp;px для большей ширины. Для мобильных 1&thinsp;em по умолчанию равен 17&thinsp;px. Эти значения можно переопределить.
 
-        p Выбирая шрифт, пользователь системы задаёт «коэффициент плотности вёрстки» — глобальную переменную <code>--wds__density</code>. Она соответствует стандартному интерлиньяжу, такжн  и их неё вычисляются значения внутренних полей и внешних отступой всех компонентов.
+        p Выбирая шрифт, пользователь системы задаёт «коэффициент плотности вёрстки» — глобальную переменную <code>--ids__density</code>. Она соответствует стандартному интерлиньяжу, такжн  и их неё вычисляются значения внутренних полей и внешних отступой всех компонентов.
 
       
         p Значение по-умолчанию — 1.3, рекомендованный диапазон значений — от 0.8 (очень плотная вёрстка, нужен шрифт с крупным очком и короткими выносными элементами) до 1.8 (очень разреженная вёрстка, адекватно для светлых шрифтов с мелким очком и длинными выносными элементами)
 
       section
         h2#variables Переменные
-        p WDS позволяет настроить цветовую палитру и основные параметры типографики через css-переменные. 
+        p IDS позволяет настроить цветовую палитру и основные параметры типографики через css-переменные. 
 
       section
         h3#typography Типографика
         p Шрифт по-умолчанию — PT Root в начертаниях Regular, Medium и Bold.
 
-        p #[code --wds__density] — коэффициент плотности вёрстки.
+        p #[code --ids__density] — коэффициент плотности вёрстки.
 
         p Размеры шрифта увеличиваются в заданных диапазонах на заданных ширинах экрана. По умолчанию это от 16 до 20 пикселей на компьютерах при ширине от 1000 до 1600 пикселей и нескалируемые 17 пикселей на телефонах при ширине от 320 до 768 пикселей.
 
@@ -155,61 +155,61 @@ block content
         h3#color Цвет
         p Цвета хранятся в виде трёх чисел RGB. Это позволяет гибко настраивать прозрачность.
         aside
-          code --wds__text-RGB: 5, 5, 5;
+          code --ids__text-RGB: 5, 5, 5;
         p Чтобы задавать цвета css-переменными, используется css-функция #[code RGB()] (капсом) вместо sass-функции #[code rgb()]:
         aside
-          code color: RGB(var(--wds__text-RGB));
+          code color: RGB(var(--ids__text-RGB));
         
         h4 Основные
         ul
           li
-            code --wds__text-RGB
+            code --ids__text-RGB
             | — цвет текста
           li
-            code --wds__link-RGB
+            code --ids__link-RGB
             | — цвет ссылки
           li
-            code --wds__hover-RGB
+            code --ids__hover-RGB
             | — цвет подсветки активных элементов при наведении курсора
           li
-            code --wds__accent-RGB
+            code --ids__accent-RGB
             | — цвет для кнопок и других кликабельных или активных элементов; отличается от цвета бренда, чтобы оставаться заметным среди брендовых иллюстраций
           li
-            code --wds__surface-RGB
+            code --ids__surface-RGB
             | — цвет для плашей, текстовых полей и других «поверхностей», лежащих «в другом визуальном слое»
           
         h4 Дополнительные
         ul
           li
-            code --wds__background-RGB
+            code --ids__background-RGB
             | — цвет фона
           li
-            code --wds__main-RGB
-            | — узнаваемый цвет бренда; по умолчанию наследует #[code --wds__accent-RGB]
+            code --ids__main-RGB
+            | — узнаваемый цвет бренда; по умолчанию наследует #[code --ids__accent-RGB]
           li
-            code --wds__code-RGB
+            code --ids__code-RGB
             | — цвет для выделения кода
           li
-            code --wds__error-RGB
+            code --ids__error-RGB
             | — цвет для сообщений об ошибках
           li
-            code --wds__success-RGB
+            code --ids__success-RGB
             | — цвет для сообщений об успешном выполнении
           li
-            code --wds__outline-RGB
-            | — цвет обводки для элементов в фокусе; по умолчанию наследует #[code --wds__surface-RGB]
+            code --ids__outline-RGB
+            | — цвет обводки для элементов в фокусе; по умолчанию наследует #[code --ids__surface-RGB]
         
         h4 Для тёмных тем
         ul
           li
-            code --wds__on-accent-RGB
-            | — цвет текста на фоне цвета accent; по умолчанию наследует #[code --wds__background-RGB]
+            code --ids__on-accent-RGB
+            | — цвет текста на фоне цвета accent; по умолчанию наследует #[code --ids__background-RGB]
           li
-            code --wds__on-main-RGB
-            | — цвет текста на фоне цвета main; по умолчанию наследует #[code --wds__background-RGB]
+            code --ids__on-main-RGB
+            | — цвет текста на фоне цвета main; по умолчанию наследует #[code --ids__background-RGB]
           li
-            code --wds__on-surface-RGB
-            | — цвет текста на фоне цвета surface; по умолчанию наследует #[code --wds__text-RGB]
+            code --ids__on-surface-RGB
+            | — цвет текста на фоне цвета surface; по умолчанию наследует #[code --ids__text-RGB]
 
 
 
@@ -218,22 +218,22 @@ block content
 
 
       section
-        .wds__stack-S
+        .ids__stack-S
         h2#components Компоненты 
-        .wds__divider-line
+        .ids__divider-line
         h3#editorial Редакционные форматы
       section
-        .wds__stack-XS
+        .ids__stack-XS
         h3
           | Абзац текста 
           code &lt;p&gt;
         p Винвестор работает с октября 2018 года. За это время мы успели разработать транзакционную платформу и провести десятки рыночных исследований. В команде около 40 человек: программисты, специалисты по безопасности, профессиональные брокеры и инвесторы, менеджеры, дизайнеры, редакторы и аналитики.
 
-        .wds__stack-XS
+        .ids__stack-XS
         h3 Лидер-абзац 
-          code p.wds__lead
+          code p.ids__lead
 
-        .wds__lead В команде около 40 человек: программисты, специалисты по безопасности, профессиональные брокеры и инвесторы, менеджеры, дизайнеры, редакторы и аналитики. У нас два офиса — в Москве и Ростове-на-Дону.
+        .ids__lead В команде около 40 человек: программисты, специалисты по безопасности, профессиональные брокеры и инвесторы, менеджеры, дизайнеры, редакторы и аналитики. У нас два офиса — в Москве и Ростове-на-Дону.
 
 
       section
@@ -242,30 +242,30 @@ block content
         h3
           code &lt;h1&gt;
         h1 Полюбить свои цифры
-        .wds__stack-XS
+        .ids__stack-XS
         h3
           code &lt;h2&gt;
         h2 Привычки скучных людей
-        .wds__stack-XS
+        .ids__stack-XS
         h3
           code &lt;h3&gt;
         h3 Считать деньги с удовольствием
-        .wds__stack-XS
+        .ids__stack-XS
         h3
           code &lt;h4&gt;
         h4 Раскладывать по полочкам и заработать на квартиру
-        .wds__stack-XS
+        .ids__stack-XS
         h3
           code &lt;h5&gt;
         h5 Радовать себя и сделать ремонт
-        .wds__stack-XS
+        .ids__stack-XS
         h3
           code &lt;h6&gt;
         h6 Получать кэшбек и развлекаться
 
 
       section
-        .wds__stack-XS
+        .ids__stack-XS
         h3
           | Маркер 
           code &lt;mark&gt;
@@ -274,7 +274,7 @@ block content
 
 
 
-        .wds__stack-XS
+        .ids__stack-XS
         h3
           | Цитата 
           code &lt;blockquote&gt;
@@ -284,7 +284,7 @@ block content
 
 
 
-        .wds__stack-XS
+        .ids__stack-XS
         h3
           | Нумерованный список 
           code &lt;ol&gt;
@@ -296,7 +296,7 @@ block content
           li Пункт номер 3
 
 
-        .wds__stack-XS
+        .ids__stack-XS
         h3 
           | Ненумерованный список 
           code &lt;ul&gt;
@@ -305,7 +305,7 @@ block content
           li Пункт номер 2
           li Пункт номер 3
 
-        .wds__stack-XS
+        .ids__stack-XS
         h4
           code &lt;ul.checked&gt;
         ul.checked
@@ -313,28 +313,28 @@ block content
           li Пункт номер 2
           li Пункт номер 3
 
-        .wds__stack-XS
+        .ids__stack-XS
         h3
           | Лейбл 
-          code .wds__label
+          code .ids__label
 
-        .wds__label Привычка №1
-        .wds__stack-XS
+        .ids__label Привычка №1
+        .ids__stack-XS
 
-        h4 <code>.wds__label-outline</code>
-        .wds__label.wds__label-outline Просто прелестно
+        h4 <code>.ids__label-outline</code>
+        .ids__label.ids__label-outline Просто прелестно
 
-        .wds__stack-XS
+        .ids__stack-XS
         h3
           | Подробности 
           code &lt;details&gt;
 
         details
           summary Винвестор работает с октября 2018 года
-          .wds__stack-XS
+          .ids__stack-XS
           p За это время мы успели разработать транзакционную платформу и провести десятки рыночных исследований. В команде около 40 человек: программисты, специалисты по безопасности, профессиональные брокеры и инвесторы, менеджеры, дизайнеры, редакторы и аналитики. У нас два офиса — в Москве и Ростове-на-Дону.
 
-        .wds__stack-XS
+        .ids__stack-XS
         h3
           | Плашка 
           code &lt;aside&gt;
@@ -348,133 +348,133 @@ block content
           | Иллюстрация 
           code &lt;figure&gt;
         figure
-          img(src="/assets/images/wds-pic-1.jpg")
-        .wds__stack-XS
+          img(src="/assets/images/ids-pic-1.jpg")
+        .ids__stack-XS
         h4
           | Подпись к иллюстрации 
           code &lt;figcaption&gt;
         figure
           figcaption Эту картинку я сделал из фотографии экрана
 
-        .wds__stack-XS
+        .ids__stack-XS
         p Иллюстрация с подписью:
         figure
-          img(src="/assets/images/wds-pic-1.jpg")
+          img(src="/assets/images/ids-pic-1.jpg")
           figcaption Эту картинку я сделал из фотографии экрана
 
       section
         p Модификаторы
         h4
 
-          code .wds__figure__XXS
-        figure.wds__figure__XXS
-          img(src="/assets/images/wds-pic-1.jpg")
+          code .ids__figure__XXS
+        figure.ids__figure__XXS
+          img(src="/assets/images/ids-pic-1.jpg")
 
       section
         h4
-          code .wds__figure__XS
-        figure.wds__figure__XS
-          img(src="/assets/images/wds-pic-1.jpg")
+          code .ids__figure__XS
+        figure.ids__figure__XS
+          img(src="/assets/images/ids-pic-1.jpg")
 
       section
         h4
-          code .wds__figure__S
+          code .ids__figure__S
 
-        figure.wds__figure__S
-          img(src="/assets/images/wds-pic-1.jpg")
+        figure.ids__figure__S
+          img(src="/assets/images/ids-pic-1.jpg")
 
       section
-        .wds__stack-S
+        .ids__stack-S
         h3#ui Элементы интерфейса
-        .wds__divider-line
+        .ids__divider-line
 
       section
-        .wds__stack-XS
+        .ids__stack-XS
         h3
           | Кнопка 
           code &lt;button&gt;
         button Отправить
-        .wds__stack-XS
+        .ids__stack-XS
         p Модификаторы:
         p
           code button.size-XS
         button.size-XS Отправить
-        .wds__stack-XS
+        .ids__stack-XS
         p
           code button.size-S
         button.size-S Отправить
-        .wds__stack-XS
+        .ids__stack-XS
         p
           code button.size-M
           | — стандартный размер
         button.size-M Отправить
-        .wds__stack-XS
+        .ids__stack-XS
         p
           code button.size-L
         button.size-L Отправить
-        .wds__stack-XS
+        .ids__stack-XS
         p
           code button.size-XL
         button.size-XL Отправить
-        .wds__stack-S
+        .ids__stack-S
 
         h3
           | Кнопка-ссылка 
-          code .wds__button-link
-        a.wds__button-link(href="/system.pug") Заполнить заявку
-        .wds__stack-S
+          code .ids__button-link
+        a.ids__button-link(href="/system.pug") Заполнить заявку
+        .ids__stack-S
 
         h3
           | Текстовое поле 
           code &lt;input type="text"&gt;
         input(type='text' placeholder='Например, ')
-        .wds__stack-XS
+        .ids__stack-XS
         p Модификаторы:
         p
           code input.size-XS(type='text')
         input.size-XS(type='text' placeholder='Например, ')
-        .wds__stack-XS
+        .ids__stack-XS
         p
           code input.size-S(type='text')
         input.size-S(type='text' placeholder='Например, ')
-        .wds__stack-XS
+        .ids__stack-XS
         p
           code input.size-M(type='text')
           | — стандартный размер
         input.size-M(type='text' placeholder='Например, ')
-        .wds__stack-XS
+        .ids__stack-XS
         p
           code input.size-L(type='text')
         input.size-L(type='text' placeholder='Например, ')
-        .wds__stack-XS
+        .ids__stack-XS
         p
           code input.size-XL(type='text')
         input.size-XL(type='text' placeholder='Например, ')
-        .wds__stack-S
+        .ids__stack-S
 
         h4
-          code .wds__input-text-line
-        input.wds__input-text-line(type='text' placeholder='Например, ')
-        .wds__stack-S
+          code .ids__input-text-line
+        input.ids__input-text-line(type='text' placeholder='Например, ')
+        .ids__stack-S
 
         h3
           | Текстовая зона 
           code &lt;textarea&gt;
         textarea(placeholder='Например, ')
-        .wds__stack-S
+        .ids__stack-S
 
         h3
           | Чекбокс 
-          code .wds__checkbox
-        .wds__checkbox
+          code .ids__checkbox
+        .ids__checkbox
           input(type='checkbox' id="checkbox-sample")
           label(for="checkbox-sample") Согласен, что данные обработаются
-        .wds__stack-S
+        .ids__stack-S
 
         h3
           | Радиогруппа 
-          code .wds__radio
-        .wds__radio
+          code .ids__radio
+        .ids__radio
           input(type='radio' id='radio-sample-1' name='radio-sample')
           label(for='radio-sample-1') Приобрести ПИФ
           br
@@ -483,24 +483,24 @@ block content
           br
           input(type='radio' id='radio-sample-3' name='radio-sample')
           label(for='radio-sample-3') Копить деньги и ждать
-        .wds__stack-S
+        .ids__stack-S
 
         h4
-          code .wds__radiogroup-toggle
-        .wds__radiogroup-toggle
-          .wds__radiogroup-option
+          code .ids__radiogroup-toggle
+        .ids__radiogroup-toggle
+          .ids__radiogroup-option
             input(type='radio' id='option1' name='radio-toggle-sample' checked)
             label(for='option1') Облигация
-          .wds__radiogroup-option
+          .ids__radiogroup-option
             input(type='radio' id='option2' name='radio-toggle-sample')
             label(for='option2') Акция
-          .wds__radiogroup-option
+          .ids__radiogroup-option
             input(type='radio' id='option3' name='radio-toggle-sample')
             label(for='option3') ПИФ
-          .wds__radiogroup-option
+          .ids__radiogroup-option
             input(type='radio' id='option4' name='radio-toggle-sample')
             label(for='option4') Вклад
-        .wds__stack-S
+        .ids__stack-S
 
         //- h3
         //-   code &lt;table&gt;
@@ -522,12 +522,12 @@ block content
         //-     td Колонка2
         //-     td Колонка3
 
-        //- .wds__stack-S
+        //- .ids__stack-S
 
       //- section
         h2(id="variables") Переменные
 
-        .wds__stack-XS
+        .ids__stack-XS
         h4
           code 
 
