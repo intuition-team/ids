@@ -9,7 +9,7 @@
   
   --type-scale-mobile: 1.333; //коэффициент увеличения шрифта телефон
   --font-size-min-mobile: 17.00; //размер шрифта мин телефон
-  --font-size-max-mobile: 19.00; //размер шрифта макс телефон
+  --font-size-max-mobile: 17.00; //размер шрифта макс телефон
 
   @media #{$wds__desktop} {
     --f-0-min: var(--font-size-min);
