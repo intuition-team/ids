@@ -223,6 +223,10 @@
     padding: calc(var(--ids__density) * 0.75em);
     padding-right: calc(var(--ids__density) * 2em);
     border-radius: $ids__radius;
+
+    @media #{$ids__mobile} {
+      padding-right: calc(var(--ids__density) * 0.75em);
+    }
   }
 
   code {
