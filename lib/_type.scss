@@ -188,11 +188,10 @@
     &.checked {
       li {
         &:before {
-          content: ' ';
+          content: '✓';
           position: absolute;
           left: 0;
           top: .45em;
-          background-image: url("/assets/images/icon-check-mark.svg");
           background-size: contain;
           background-repeat: no-repeat;
           width: 0.7em;

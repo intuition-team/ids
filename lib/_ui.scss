@@ -24,8 +24,8 @@
     color: RGB(var(--ids__success-RGB));
 
     a {
-      color: RGB(var(--ids__error-RGB));
-      border-color: rgba(var(--ids__error-RGB), .3);
+      color: RGB(var(--ids__success-RGB));
+      border-color: rgba(var(--ids__success-RGB), .3);
     }
   }
 
