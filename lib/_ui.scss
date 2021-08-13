@@ -4,11 +4,29 @@
     margin: 0 0 0.6em 0;
   }
 
-  .ids__form-error-message {
-    color: RGB(var(--ids__error-RGB));
+  .ids__form-error-message,
+  .ids__form-success-message {
     font-size: 0.8em;
     line-height: 1.2;
     margin-top: .2em;
+  }
+
+  .ids__form-error-message {
+    color: RGB(var(--ids__error-RGB));
+
+    a {
+      color: RGB(var(--ids__error-RGB));
+      border-color: rgba(var(--ids__error-RGB), .3);
+    }
+  }
+  
+  .ids__form-success-message {
+    color: RGB(var(--ids__success-RGB));
+
+    a {
+      color: RGB(var(--ids__error-RGB));
+      border-color: rgba(var(--ids__error-RGB), .3);
+    }
   }
 
   button, a.ids__button-link {
@@ -56,6 +74,8 @@
     &:disabled {
       opacity: .15;
       cursor: default;
+      pointer-events: none;
+      
       &:hover {
         background-color: RGB(var(--ids__accent-RGB));
       }
@@ -163,6 +183,47 @@
   label {
     display: inline-block;
     margin-bottom: .2em;
+  }
+
+  .ids__select {
+    position: relative;
+    display: inline-block;
+
+    select {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      padding: calc(var(--ids__density) * 1em / 3) calc(var(--ids__density) * 1.5em) calc(var(--ids__density) * 1em / 2.5);
+      padding-left: calc(var(--ids__density) * 1em / 2);
+      border: 1px solid RGB(var(--ids__text-RGB));
+      border-bottom: 2px solid RGB(var(--ids__text-RGB));
+      border-radius: $ids__radius;
+      background: transparent;
+      color: RGB(var(--ids__text-RGB));
+
+      @media #{$ids__mobile} {
+        max-width: 16em;
+      }
+
+      &:hover {
+        background-color: rgba(var(--ids__surface-RGB), 1);
+      }
+
+      &:focus {
+        box-shadow: 0 0 0 5px rgba(var(--ids__outline-RGB), 1);
+        outline: none;
+      }
+    }
+
+    &:after {
+      position: absolute;
+      content: '〈';
+      top: 0.8em;
+      right: calc(var(--ids__density) * 1em / 2);
+      transform: rotate(-90deg) scaleX(1.2) scaleY(0.7);
+      z-index: 10;
+      pointer-events: none;
+    }
   }
 
   .ids__checkbox {
@@ -346,6 +407,7 @@
       }
     }
 
+    // работает неправильно FIX ME
     &:disabled {
       opacity: .35;
       cursor: default;
@@ -357,6 +419,37 @@
       }
     }
     
+    &.monochrome {
+      .ids__radiogroup-option {
+        input[type='radio']:checked + label {
+          background-color: RGB(var(--ids__text-RGB));
+          color: RGB(var(--ids__background-RGB));
+        }
+
+        label {
+          background-color: transparent;
+          color: RGB(var(--ids__text-RGB));
+          border-top: 1px solid RGB(var(--ids__text-RGB));
+          border-bottom: 1px solid RGB(var(--ids__text-RGB));
+
+          &:hover {
+            background-color: rgba(var(--ids__text-RGB), 0.15);
+          }
+        }
+      }
+
+      .ids__radiogroup-option:first-child {
+        label {
+          border-left: 1px solid RGB(var(--ids__text-RGB));
+        }
+      }
+
+      .ids__radiogroup-option:last-child {
+        label {
+          border-right: 1px solid RGB(var(--ids__text-RGB));
+        }
+      }
+    }
   }
 
   table {
@@ -365,8 +458,9 @@
 
     th {
       text-align: left;
+      vertical-align: top;
       padding: .5em 0;
-      border-bottom: 2px solid RGB(var(--ids__accent-RGB));
+      border-bottom: 2px solid RGB(var(--ids__text-RGB));
     }
 
     td {
