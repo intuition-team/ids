@@ -95,7 +95,8 @@
     }
   }
 
-  &.ids__grid-size-XXL {
+  &.XXL,
+  &.ids__grid-size-XXL { //LEGACY NAME
     .ids__grid-cell {
       width: calc(100% / 2);
   
@@ -105,7 +106,8 @@
     }  
   }
 
-  &.ids__grid-size-XL {
+  &.XL,
+  &.ids__grid-size-XL { //LEGACY NAME
     .ids__grid-cell {
       width: calc(100% / 3);
   
@@ -115,7 +117,8 @@
     }  
   }
 
-  &.ids__grid-size-L {
+  &.L,
+  &.ids__grid-size-L { //LEGACY NAME
     .ids__grid-cell {
       width: calc(100% / 4);
   
@@ -125,7 +128,8 @@
     }  
   }
 
-  &.ids__grid-size-M {
+  &.M,
+  &.ids__grid-size-M { //LEGACY NAME
     .ids__grid-cell {
       width: calc(100% / 5);
   
@@ -135,7 +139,8 @@
     }  
   }
 
-  &.ids__grid-size-S {
+  &.S,
+  &.ids__grid-size-S { //LEGACY NAME
     .ids__grid-cell {
       width: calc(100% / 6);
   
@@ -145,7 +150,8 @@
     }  
   }
 
-  &.ids__grid-size-XS {
+  &.XS,
+  &.ids__grid-size-XS { //LEGACY NAME
     .ids__grid-cell {
       width: calc(100% / 7);
   
@@ -155,7 +161,8 @@
     }  
   }
 
-  &.ids__grid-size-XXS {
+  &.XXS,
+  &.ids__grid-size-XXS { //LEGACY NAME
     .ids__grid-cell {
       width: calc(100% / 8);
   

@@ -19,35 +19,40 @@ $ids__micro-padding: 0 calc(var(--ids__density) * 0.2em);
 // Компоненты
 
 .ids__stack {
-  &-XS {
+  &.XS,
+  &-XS { //LEGACY NAME
     height: calc(var(--ids__density) * 1em);
 
     @media #{$ids__mobile} {
       height: calc(var(--ids__density) * 1em / 3);
     }
   }
-  &-S {
+  &.S,
+  &-S { //LEGACY NAME
     height: calc(var(--ids__density) * 2em);
 
     @media #{$ids__mobile} {
       height: calc(var(--ids__density) * 1em / 2);
     }
   }
-  &-M {
+  &.M,
+  &-M { //LEGACY NAME
     height: calc(var(--ids__density) * 4em);
 
     @media #{$ids__mobile} {
       height: calc(var(--ids__density) * 1em);
     }
   }
-  &-L {
+  &.L,
+  &-L { //LEGACY NAME
     height: calc(var(--ids__density) * 8em);
 
     @media #{$ids__mobile} {
       height: calc(var(--ids__density) * 2em);
     }
   }
-  &-XL {
+  &.XL,
+  &-XL { //LEGACY NAME
     height: calc(var(--ids__density) * 16em);
 
     @media #{$ids__mobile} {

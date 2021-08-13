@@ -39,25 +39,30 @@
     white-space: nowrap;
     cursor: pointer;
 
-    &.size-XS {
+    &.XS,
+    &.size-XS { //LEGACY NAME
       font-size: .6em;
       text-transform: uppercase;
       letter-spacing: 0.1em;
       padding-top: calc(var(--ids__density) * 1em / 2.5);
     }
 
-    &.size-S {
+    &.S,
+    &.size-S { //LEGACY NAME
       font-size: .8em;
     }
 
-    &.size-M {} //default
+    &.M,
+    &.size-M {} //default //LEGACY NAME
 
-    &.size-L {
+    &.L,
+    &.size-L { //LEGACY NAME
       font-size: 1.5em;
       padding: calc(var(--ids__density)*1em/5) calc(var(--ids__density)*1em/1.5) calc(var(--ids__density)*1em/4); //мб не 5, а 4.5
     }
 
-    &.size-XL {
+    &.XL,
+    &.size-XL { //LEGACY NAME
       font-size: 2.5em;
       padding: calc(var(--ids__density)*1em/5) calc(var(--ids__density)*1em/1.5) calc(var(--ids__density)*1em/4);
     }
@@ -102,23 +107,28 @@
     background: transparent;
     color: RGB(var(--ids__text-RGB));
 
-    &.size-XS {
+    &.XS,
+    &.size-XS { //LEGACY NAME
       font-size: .6em;
     }
 
-    &.size-S {
+    &.S,
+    &.size-S { //LEGACY NAME
       font-size: .8em;
     }
 
-    &.size-M {} //default
+    &.M,
+    &.size-M {} //default //LEGACY NAME
 
-    &.size-L {
+    &.L,
+    &.size-L { //LEGACY NAME
       font-size: 1.5em;
       padding-top: calc(var(--ids__density)*1em/5);
       padding-bottom: calc(var(--ids__density)*1em/4);
     }
 
-    &.size-XL {
+    &.XL,
+    &.size-XL { //LEGACY NAME
       font-size: 2.5em;
       padding-top: calc(var(--ids__density)*1em/5);
       padding-bottom: calc(var(--ids__density)*1em/4);

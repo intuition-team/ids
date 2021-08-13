@@ -238,13 +238,16 @@
   figure {
     margin: 0 0 calc(var(--ids__density) * 0.5em) 0;
 
-    &.ids__figure__XXS {
+    &.XXS,
+    &.ids__figure__XXS { //LEGACY NAME
       width: 25%;
     }
-    &.ids__figure__XS {
+    &.XS,
+    &.ids__figure__XS { //LEGACY NAME
       width: 50%;
     }
-    &.ids__figure__S {
+    &.S,
+    &.ids__figure__S { //LEGACY NAME
       width: 75%;
     }
 
