@@ -2,7 +2,7 @@ body {
   min-width: 1100px;
   max-width: 2000px;
 
-  @media #{$ids__mobile} {
+  @media screen and #{$ids__mobile} {
     min-width: auto;
   }
 }

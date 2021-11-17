@@ -23,7 +23,7 @@ $ids__micro-padding: 0 calc(var(--ids__density) * 0.2em);
   &-XS { //LEGACY NAME
     height: calc(var(--ids__density) * 1em);
 
-    @media #{$ids__mobile} {
+    @media screen and #{$ids__mobile} {
       height: calc(var(--ids__density) * 1em / 3);
     }
   }
@@ -31,7 +31,7 @@ $ids__micro-padding: 0 calc(var(--ids__density) * 0.2em);
   &-S { //LEGACY NAME
     height: calc(var(--ids__density) * 2em);
 
-    @media #{$ids__mobile} {
+    @media screen and #{$ids__mobile} {
       height: calc(var(--ids__density) * 1em / 2);
     }
   }
@@ -39,7 +39,7 @@ $ids__micro-padding: 0 calc(var(--ids__density) * 0.2em);
   &-M { //LEGACY NAME
     height: calc(var(--ids__density) * 4em);
 
-    @media #{$ids__mobile} {
+    @media screen and #{$ids__mobile} {
       height: calc(var(--ids__density) * 1em);
     }
   }
@@ -47,7 +47,7 @@ $ids__micro-padding: 0 calc(var(--ids__density) * 0.2em);
   &-L { //LEGACY NAME
     height: calc(var(--ids__density) * 8em);
 
-    @media #{$ids__mobile} {
+    @media screen and #{$ids__mobile} {
       height: calc(var(--ids__density) * 2em);
     }
   }
@@ -55,7 +55,7 @@ $ids__micro-padding: 0 calc(var(--ids__density) * 0.2em);
   &-XL { //LEGACY NAME
     height: calc(var(--ids__density) * 16em);
 
-    @media #{$ids__mobile} {
+    @media screen and #{$ids__mobile} {
       height: calc(var(--ids__density) * 4em);
     }
   }

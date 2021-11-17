@@ -1,5 +1,5 @@
 .right-shifted {
-  @media #{$ids__desktop} {
+  @media screen and #{$ids__desktop} {
     padding-left: 12em;
   }
 }
@@ -28,7 +28,7 @@
     height: 5em;
     padding: calc(var(--ids__density) * 0.4em) calc(var(--ids__density) * 0.5em);
 
-    @media #{$ids__mobile} {
+    @media screen and #{$ids__mobile} {
       width: 50%;
     }
   }
@@ -63,7 +63,7 @@
     font-weight: 700;
   }
 
-  @media #{$ids__mobile} {
+  @media screen and #{$ids__mobile} {
     font-size: 2.2em;
   }
 }

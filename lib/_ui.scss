@@ -211,7 +211,7 @@
       background: transparent;
       color: RGB(var(--ids__text-RGB));
 
-      @media #{$ids__mobile} {
+      @media screen and #{$ids__mobile} {
         max-width: 16em;
       }
 
@@ -278,7 +278,7 @@
           top: .025em;
           transform: rotate(45deg);
 
-          @media #{$ids__mobile} {
+          @media screen and #{$ids__mobile} {
             left: .20em;
             top: .08em;
           }

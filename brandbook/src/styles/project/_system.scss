@@ -7,7 +7,7 @@
   @include ids__default-padding;
   z-index: 10000;
 
-  @media #{$ids__mobile} {
+  @media screen and #{$ids__mobile} {
     display: none;
   }
 

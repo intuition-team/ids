@@ -11,13 +11,13 @@
   --font-size-min-mobile: 17.00; //размер шрифта мин телефон
   --font-size-max-mobile: 17.00; //размер шрифта макс телефон
 
-  @media #{$ids__desktop} {
+  @media screen and #{$ids__desktop} {
     --f-0-min: var(--font-size-min);
     --f-0-max: var(--font-size-max);
     --type-scale: var(--type-scale-desktop);
   }
 
-  @media #{$ids__mobile} {
+  @media screen and #{$ids__mobile} {
     --f-0-min: var(--font-size-min-mobile);
     --f-0-max: var(--font-size-max-mobile);
     --type-scale: var(--type-scale-mobile);
@@ -44,7 +44,7 @@
   }
 }
 
-@media #{$ids__mobile} {
+@media screen and #{$ids__mobile} {
   :root {
     --fluid-min-width: 320;
     --fluid-max-width: 768;
@@ -60,7 +60,7 @@
   section {
     margin-top: calc(var(--ids__density) * 1.5em);
   
-    @media #{$ids__mobile} {
+    @media screen and #{$ids__mobile} {
       margin-top: calc(var(--ids__density) * 1em / 2);
     }
   }
@@ -87,7 +87,7 @@
     line-height: var(--ids__density);
     margin-bottom: calc(var(--ids__density) * 0.4em);
 
-    @media #{$ids__mobile} {
+    @media screen and #{$ids__mobile} {
       font-size: 1em;
       line-height: var(--ids__density);
     }
@@ -220,7 +220,7 @@
     padding-right: calc(var(--ids__density) * 2em);
     border-radius: $ids__radius;
 
-    @media #{$ids__mobile} {
+    @media screen and #{$ids__mobile} {
       padding-right: calc(var(--ids__density) * 0.75em);
     }
   }

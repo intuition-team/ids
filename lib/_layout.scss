@@ -6,7 +6,7 @@
   width: 76%;
   margin: 0 auto;
 
-  @media #{$ids__mobile} {
+  @media screen and #{$ids__mobile} {
     width: 100%;
     padding: 0 calc(var(--ids__density) * 0.6em);
   }
@@ -15,7 +15,7 @@
     width: 100%;
     padding: 0 calc(var(--ids__density) * 0.75em);
 
-    @media #{$ids__mobile} {
+    @media screen and #{$ids__mobile} {
       padding: 0 calc(var(--ids__density) * 0.6em);
     }
   }
@@ -25,13 +25,13 @@
   }
 
   &.ids__shift-right {
-    @media #{$ids__desktop} {
+    @media screen and #{$ids__desktop} {
       padding-left: 6em;
     }
   }
 
   &.ids__shift-left {
-    @media #{$ids__desktop} {
+    @media screen and #{$ids__desktop} {
       padding-right: 6em;
     }
   }
@@ -49,7 +49,7 @@
 .ids__section {
   margin-top: calc(var(--ids__density) * 1.5em);
 
-  @media #{$ids__mobile} {
+  @media screen and #{$ids__mobile} {
     margin-top: calc(var(--ids__density) * 1em / 2);
   }
 }
@@ -57,7 +57,7 @@
 .ids__text {
   width: 85%;
 
-  @media #{$ids__mobile} {
+  @media screen and #{$ids__mobile} {
     width: 100%;
   }
 }
@@ -78,7 +78,7 @@
       align-self: flex-end;
     }
 
-    @media #{$ids__mobile} {
+    @media screen and #{$ids__mobile} {
       width: 100%;
     }
   }
@@ -89,7 +89,7 @@
     .ids__grid-cell {
       width: 49.5%;
   
-      @media #{$ids__mobile} {
+      @media screen and #{$ids__mobile} {
         width: 100%;
       }
     }
@@ -100,7 +100,7 @@
     .ids__grid-cell {
       width: calc(100% / 2);
   
-      @media #{$ids__mobile} {
+      @media screen and #{$ids__mobile} {
         width: 100%;
       }
     }  
@@ -111,7 +111,7 @@
     .ids__grid-cell {
       width: calc(100% / 3);
   
-      @media #{$ids__mobile} {
+      @media screen and #{$ids__mobile} {
         width: 100%;
       }
     }  
@@ -122,7 +122,7 @@
     .ids__grid-cell {
       width: calc(100% / 4);
   
-      @media #{$ids__mobile} {
+      @media screen and #{$ids__mobile} {
         width: calc(100% / 2);
       }
     }  
@@ -133,7 +133,7 @@
     .ids__grid-cell {
       width: calc(100% / 5);
   
-      @media #{$ids__mobile} {
+      @media screen and #{$ids__mobile} {
         width: calc(100% / 3);
       }
     }  
@@ -144,7 +144,7 @@
     .ids__grid-cell {
       width: calc(100% / 6);
   
-      @media #{$ids__mobile} {
+      @media screen and #{$ids__mobile} {
         width: calc(100% / 3);
       }
     }  
@@ -155,7 +155,7 @@
     .ids__grid-cell {
       width: calc(100% / 7);
   
-      @media #{$ids__mobile} {
+      @media screen and #{$ids__mobile} {
         width: calc(100% / 4);
       }
     }  
@@ -166,7 +166,7 @@
     .ids__grid-cell {
       width: calc(100% / 8);
   
-      @media #{$ids__mobile} {
+      @media screen and #{$ids__mobile} {
         width: calc(100% / 4);
       }
     }  

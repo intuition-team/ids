@@ -71,7 +71,7 @@ $font-types: (
 
 // миксин для переопределения переменных на мобильных экранах
 @mixin mediaMobile() {
-  @media #{$ids__mobile} {
+  @media screen and #{$ids__mobile} {
     @content;
   }
 }
