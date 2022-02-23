@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - staging
+      - master
 jobs:
   deploy:
     name: Deploy application
